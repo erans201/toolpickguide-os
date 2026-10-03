@@ -1,0 +1,21 @@
+url,perf_score,lab_lcp_s,lab_cls,lab_tbt_ms,field_lcp_s,field_inp_ms,field_cls,field_category,verdict
+https://toolpickguide.com/website-builders-for-service-businesses/,98,2.1,0,38,,,,,pass
+https://toolpickguide.com/best-form-builders-for-lead-capture/,99,1.95,0,60,,,,,pass
+https://toolpickguide.com/best-customer-onboarding-software/,79,4.11,0,55,,,,,fix LCP
+https://toolpickguide.com/best-crm-for-law-firms/,80,3.93,0,54,,,,,fix LCP
+https://toolpickguide.com/best-doc-signing-tools/,80,3.97,0,65,,,,,fix LCP
+https://toolpickguide.com/what-is-client-relationship-management-software/,77,4.06,0,150,,,,,fix LCP
+https://toolpickguide.com/client-onboarding-software/,76,4.18,0,158,,,,,fix LCP
+https://toolpickguide.com/client-management-software-for-photographers/,96,2.81,0,58,,,,,fix LCP
+https://toolpickguide.com/,86,3.49,0,0,,,,,fix LCP
+https://toolpickguide.com/client-management-software-for-coaches/,78,3.94,0,150,,,,,fix LCP
+https://toolpickguide.com/free-client-management-software/,80,3.85,0,116,,,,,fix LCP
+https://toolpickguide.com/contact/,83,3.92,0,30,,,,,fix LCP
+https://toolpickguide.com/best-legal-case-management-software/,100,1.68,0,53,,,,,pass
+https://toolpickguide.com/latest-reviews/,84,4.33,0,111,,,,,fix LCP
+https://toolpickguide.com/legal-practice-management-software/,84,3.74,0,20,,,,,fix LCP
+https://toolpickguide.com/photography-client-questionnaire/,94,3.01,0,51,,,,,fix LCP
+https://toolpickguide.com/best-client-management-software-real-estate/,82,3.69,0,50,,,,,fix LCP
+https://toolpickguide.com/best-practice-management-accountants/,85,3.62,0,19,,,,,fix LCP
+https://toolpickguide.com/help-desk-tools-for-tiny-teams-under-5/,76,4.04,0,209,,,,,fix LCP+TBT
+https://toolpickguide.com/crm-operations-best-client-management-software/,82,4.07,0,23,,,,,fix LCP

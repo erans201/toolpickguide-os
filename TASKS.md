@@ -84,7 +84,7 @@ The Sheet tab `Tasks` mirrors this list (ID in the Task column). Status changes 
 2. If either file held a password you still use, revoke that WordPress application password (Users → Profile → Application Passwords → Revoke) and create a fresh one in `.env`.
 - **Done when:** both files are gone. (Git already ignores them, so they never reached GitHub.)
 
-### T0.11 · PageSpeed key + speed baseline · U then A · due Oct 8
+### T0.11 · PageSpeed key + speed baseline · U then A · due Oct 8 · ✅ DONE 2026-10-03 (key in .env + robot env; baseline in GROWTH_PLAN §1; fix list in T1.16)
 1. U: Google Cloud (same project) → **APIs & Services → Library** → "PageSpeed Insights API" → **Enable** → **Credentials → Create credentials → API key** → **Restrict key** → API restrictions: PageSpeed Insights API → **Save**. Add `PAGESPEED_API_KEY=<key>` to `.env` and to the cloud environment.
 2. A: run `python pagespeed_pull.py` → write the CWV baseline into `GROWTH_PLAN.md` §1 and a fix list into `ONSITE_PLANS.md`.
 - **Done when:** LCP/INP/CLS are recorded for the top 20 pages.
@@ -205,11 +205,14 @@ Apply at each (use toolpickguide.com, describe the site honestly as "independent
 - **Done when:** the file is live.
 
 ### T1.16 · Speed fixes from the CWV baseline · U · due Nov 13 · needs T0.11
-1. LiteSpeed Cache: change **one setting at a time**, purging the cache and re-testing in between. The agent re-runs `pagespeed_pull.py` and reverts anything that breaks layout.
-   - Page Optimization → CSS Settings → **CSS Minify ON**
-   - JS Settings → **JS Minify ON**, **Load JS Deferred: Deferred**
-   - Media Settings → **Lazy Load Images ON**
-   - Image Optimization → **WebP Replacement ON** (after "Gather image data" + "Send optimization request")
+**Measured cause (2026-10-03, `data/psi-2026-10-03.csv`):** 17 of 20 pages miss mobile LCP (3.5–4.3 s lab; target ≤ 2.5 s). The LCP element is the in-article featured image (1024×1024). It is not lazy-loaded and downloads in ~0.5 s, but it waits ~1.6 s for render-blocking files: `jquery.min.js` + `jquery-migrate.min.js` (~750 ms) and Blocksy's `main.min.css` plus small CSS files (`related-posts`, `posts-nav`). Server response is fast (90–145 ms) and CLS is 0 everywhere. No real-user (CrUX) data exists yet, so for now this is about visitor experience more than ranking. Lab scores vary ±15 between runs, so re-test any page twice.
+1. LiteSpeed Cache: change **one setting at a time**, purging the cache and re-testing in between. The agent re-runs `pagespeed_pull.py` and reports anything that breaks layout so the user can switch it back.
+   - JS Settings → **Load JS Deferred: Deferred** (biggest expected win: removes jQuery from the render path). Then check that menus, the table of contents and FAQ toggles still work.
+   - CSS Settings → **CSS Minify ON** and **CSS Combine ON** (merges the small Blocksy CSS files).
+   - JS Settings → **JS Minify ON**
+   - Image Optimization → **WebP Replacement ON** (after "Gather image data" + "Send optimization request").
+   - **Leave Media → Lazy Load Images OFF** unless the first image is excluded: lazy-loading the featured image would make LCP worse.
+   - Optional, later: Google's tag (`gtag.js`, ~180 KB) is the biggest file on every page. Delaying it would speed things up but loses visits from people who leave without interacting. Not recommended while traffic is this low.
 - **Done when:** the top 20 pages pass mobile CWV, or the remaining failures are listed with a cause.
 
 ### T1.17 · Junia settings · U · due Oct 12

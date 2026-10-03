@@ -17,7 +17,8 @@
 | Rankings | **0 of 67 target searches in the top 10**; best positions ~51 | Search Console + DataForSEO |
 | AI Overview citations | **0 of 15** tracked searches (13 show an AI Overview) | DataForSEO |
 | Pages with no internal links in | 1 (`/photography-client-questionnaire/`) | crawl 2026-10-02 |
-| Server speed | TTFB 0.26–0.83 s, LiteSpeed cache on, HTML 84–129 KB per page. **Core Web Vitals not measured yet** (T0.11) | curl 2026-10-03 |
+| Server speed | TTFB 0.26–0.83 s (curl) / 90–145 ms (Lighthouse), LiteSpeed cache on, HTML 84–129 KB per page | curl + PageSpeed 2026-10-03 |
+| Core Web Vitals (mobile, lab, top 20 pages) | **3 of 20 pass.** Scores 76–100. LCP 1.7–4.3 s (17 pages > 2.5 s; cause: render-blocking jQuery + theme CSS, fix list in T1.16). CLS 0 on all pages. TBT ≤ 160 ms except 1 page (209 ms). No real-user data yet (too little traffic) | `data/psi-2026-10-03.csv` |
 | Backlinks | **Unknown** (not measured; T3.4) | — |
 | Affiliate programs joined | **0 confirmed** (researched: accounting, coaching, legal) | MEMORY.md |
 | Revenue | **$0** | — |

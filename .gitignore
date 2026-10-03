@@ -25,3 +25,6 @@ logs/
 upload_state.json
 *.WRONG-MATCH
 .claude/settings.local.json
+
+# Personal notes that may hold passwords
+*robot*.txt

@@ -204,7 +204,8 @@ Apply at each (use toolpickguide.com, describe the site honestly as "independent
 3. A: verify https://toolpickguide.com/llms.txt returns 200.
 - **Done when:** the file is live.
 
-### T1.16 · Speed fixes from the CWV baseline · U · due Nov 13 · needs T0.11
+### T1.16 · Speed fixes from the CWV baseline · A with the user present (new settings rule 2026-10-03) · due Nov 13 · needs T0.11
+*User: log in to WP admin in the in-app browser once; the agent does the clicks, asks before each change and logs it in `wordpress/SETTINGS-LOG.md`.*
 **Measured cause (2026-10-03, `data/psi-2026-10-03.csv`):** 17 of 20 pages miss mobile LCP (3.5–4.3 s lab; target ≤ 2.5 s). The LCP element is the in-article featured image (1024×1024). It is not lazy-loaded and downloads in ~0.5 s, but it waits ~1.6 s for render-blocking files: `jquery.min.js` + `jquery-migrate.min.js` (~750 ms) and Blocksy's `main.min.css` plus small CSS files (`related-posts`, `posts-nav`). Server response is fast (90–145 ms) and CLS is 0 everywhere. No real-user (CrUX) data exists yet, so for now this is about visitor experience more than ranking. Lab scores vary ±15 between runs, so re-test any page twice.
 1. LiteSpeed Cache: change **one setting at a time**, purging the cache and re-testing in between. The agent re-runs `pagespeed_pull.py` and reports anything that breaks layout so the user can switch it back.
    - JS Settings → **Load JS Deferred: Deferred** (biggest expected win: removes jQuery from the render path). Then check that menus, the table of contents and FAQ toggles still work.

@@ -11,6 +11,8 @@ Put them in .env:  DATAFORSEO_LOGIN=...  DATAFORSEO_PASSWORD=...   (never in cha
     python dfs_pull.py --volume --gap --serp   # everything; the report combines what exists
 
 US, English. Every run prints the number of paid requests first and the actual cost (from the API) at the end.
+Autopilot (TPG_AUTOPILOT=1): refuses to start if the month's spend + this run's estimate would pass $5
+(autopilot/ledger.json); the real cost of each request is added to the ledger.
 """
 
 import argparse
@@ -23,7 +25,9 @@ from pathlib import Path
 
 import requests
 
-API = "https://api.dataforseo.com/v3"
+from autopilot import guard
+
+API ="https://api.dataforseo.com/v3"
 DATA = Path("data")
 SITE = "toolpickguide.com"
 US, EN = 2840, "en"
@@ -32,6 +36,8 @@ SCOPE_RE = ("crm|client management|practice management|case management|client po
             "electronic signature|form builder|website builder|honeybook|dubsado|proposal|invoic|scheduling software|"
             "booking software|transaction management|contract template|questionnaire")
 spent = 0.0
+# Cautious per-request estimates (USD), used only for the autopilot budget check before buying.
+EST_USD = {"volume": 0.10, "gap": 0.10, "serp": 0.02}
 
 
 def auth():
@@ -58,6 +64,7 @@ def call(creds, path, body=None):
                  "(not your website password).")
     j = r.json()
     spent += float(j.get("cost") or 0)
+    guard.dfs_spent(float(j.get("cost") or 0))  # per request, so a run that stops early still counts
     task = (j.get("tasks") or [{}])[0]
     if j.get("status_code") != 20000 or task.get("status_code") not in (20000, None):
         sys.exit(f"ERROR: DataForSEO {path}: {task.get('status_message') or j.get('status_message')}")
@@ -199,6 +206,7 @@ def main():
     n_comp = len([l for l in (DATA / "competitors.txt").read_text(encoding="utf-8").splitlines()
                   if l.strip() and not l.startswith("#")]) if a.gap else 0
     print(f"Paid requests this run: {int(a.volume) + n_comp + (a.top if a.serp else 0)}")
+    guard.dfs_check(EST_USD["volume"] * a.volume + EST_USD["gap"] * n_comp + EST_USD["serp"] * (a.top if a.serp else 0))
     stamp = date.today().isoformat()
     DATA.mkdir(exist_ok=True)
     if a.volume:

@@ -3,6 +3,7 @@ gsc_pull.py: pull Google Search Console data (read-only) into data/ and write an
 
 Setup (once): Google Cloud service account with the Search Console API enabled, added in Search Console as a
 "Restricted" user; its JSON key saved as gsc-key.json in this folder (or set GSC_KEY_FILE in .env).
+Cloud runs: no file; the key comes from the GSC_KEY_JSON environment variable (one line).
 Never print, copy, or commit the key.
 
     python gsc_pull.py --check              # confirm access: lists the sites the key can read
@@ -44,7 +45,17 @@ def service():
         from googleapiclient.discovery import build
     except ImportError:
         sys.exit("ERROR: run  pip install google-api-python-client google-auth")
-    creds = service_account.Credentials.from_service_account_file(str(key_file()), scopes=SCOPES)
+    try:
+        from dotenv import load_dotenv
+        load_dotenv()
+    except ImportError:
+        pass
+    if not Path(os.getenv("GSC_KEY_FILE", "gsc-key.json")).is_file() and os.getenv("GSC_KEY_JSON", "").strip():
+        # Cloud runs: the key arrives as one line in the environment, never as a file.
+        import json
+        creds = service_account.Credentials.from_service_account_info(json.loads(os.environ["GSC_KEY_JSON"]), scopes=SCOPES)
+    else:
+        creds = service_account.Credentials.from_service_account_file(str(key_file()), scopes=SCOPES)
     return build("searchconsole", "v1", credentials=creds, cache_discovery=False)
 
 

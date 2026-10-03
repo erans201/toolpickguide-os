@@ -21,6 +21,8 @@ Safety:
   - Refuses posts that have a knowledge/upgrade-<ID>-*.md source file (edit the Markdown, then --replace-live),
     so this tool and the upgrade files can never overwrite each other. Block-style links stay with link_injector.py.
   - Never runs from the scheduler.
+  - Autopilot (TPG_AUTOPILOT=1, AUTOPILOT.md): kill switch, max 6 links per day across runs, and every write is
+    re-read; if a link is missing or status/slug changed, the post is restored at once and a strike is recorded.
 """
 
 import argparse
@@ -34,6 +36,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+
+from autopilot import guard
 
 SITE = "https://toolpickguide.com"
 API = f"{SITE}/wp-json/wp/v2"
@@ -116,6 +120,19 @@ def target_live(target):
         return False
 
 
+def link_present(raw, target):
+    return re.search(r'href="(?:' + re.escape(SITE) + r')?' + re.escape(target) + '"', raw) is not None
+
+
+def undo_failed(session, pid, entry, backup, why):
+    """Autopilot: put the original content back at once and record a strike."""
+    from upload_draft import wp
+    wp(session, "POST", f"{API}/posts/{pid}", f"RESTORE FAILED for post {pid}: run python inject_links.py --restore {backup}",
+       json={"content": entry["original"]})
+    paused = guard.strike(f"inject_links post {pid}: {why}")
+    print(f"⚠️  ALERT post {pid}: {why}. Restored from {backup}." + (" Autopilot is now PAUSED (2 strikes)." if paused else ""))
+
+
 def restore(path):
     from upload_draft import make_session, wp
     session, _ = make_session()
@@ -135,6 +152,8 @@ def main():
     if a.restore:
         return restore(a.restore)
     write = a.upload or a.apply
+    guard.stop_if_paused()
+    day_budget = guard.allowance("links", 10**6) if write else 10**6
 
     rows = load_roadmap(a.only)
     todo = [r for r in rows if r["status"] == "TODO"]
@@ -153,6 +172,9 @@ def main():
             continue
         if not target_live(r["target"]):
             print(f"⛔ {tag}\n    skipped: target is not live (HTTP 200 required).\n")
+            continue
+        if sum(per_post.values()) >= day_budget:
+            print(f"⏭️  {tag}\n    skipped: autopilot daily cap reached ({guard.DAILY_CAPS['links']} links per day).\n")
             continue
         if per_post.get(r["source"], 0) >= MAX_PER_POST:
             print(f"⏭️  {tag}\n    skipped: already {MAX_PER_POST} new links for this post in this run.\n")
@@ -173,6 +195,8 @@ def main():
             print(f"⏭️  {tag}\n    skipped: {info}\n")
             continue
         entry["content"] = new
+        entry.setdefault("ids", []).append(r["id"])
+        entry.setdefault("targets", []).append(r["target"])
         per_post[r["source"]] = per_post.get(r["source"], 0) + 1
         print(f"✅ {tag}\n    …{info}…\n")
 
@@ -189,8 +213,19 @@ def main():
                                       "content": e["original"]}, indent=2, ensure_ascii=False), encoding="utf-8")
         result = wp(session, "POST", f"{API}/posts/{pid}", "WordPress rejected the update.", json={"content": e["content"]})
         if result.get("status") != e["post"]["status"] or result.get("slug") != e["post"]["slug"]:
+            if guard.active():
+                undo_failed(session, pid, e, backup, "status/slug changed")
+                continue
             sys.exit(f"SAFETY ERROR: post {pid} status/slug changed. Restore: python inject_links.py --restore {backup}")
-        print(f"💾 {backup}\n✅ post {pid} updated ({per_post[pid]} link(s)). Undo: python inject_links.py --restore {backup}")
+        if guard.active():
+            check = wp(session, "GET", f"{API}/posts/{pid}", f"Could not re-read post {pid}.", params={"context": "edit"})
+            missing = [t for t in e["targets"] if not link_present(check["content"]["raw"], t)]
+            if missing:
+                undo_failed(session, pid, e, backup, f"links missing after write: {', '.join(missing)}")
+                continue
+        undo = f"python inject_links.py --restore {backup}"
+        guard.record("links", per_post[pid], target=f"post {pid}", detail=", ".join(e["ids"]), undo=undo)
+        print(f"💾 {backup}\n✅ post {pid} updated ({per_post[pid]} link(s)). Undo: {undo}")
     print("\nNext: tell the agent. It verifies the live links and marks the roadmap rows DONE.")
 
 

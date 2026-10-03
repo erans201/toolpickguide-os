@@ -20,6 +20,8 @@ keyword placement (title, first paragraph, subheadings, density), word count, lo
   - Rank Math score fixes: puts the featured image in the content (keyword alt), adds the focus keyword to the
     FAQ heading if no subheading has it, adds missing required internal links, adds official-source links for
     tools mentioned without one
+Autopilot (TPG_AUTOPILOT=1, AUTOPILOT.md): kill switch; --apply only when the QA gate is clean; max 3 draft
+updates per day; each write is re-read and restored at once (plus a strike) if it doesn't match.
 Rank Math recalculates the score when the draft is opened in the editor and saved.
 """
 
@@ -30,6 +32,8 @@ import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+
+from autopilot import guard
 
 SITE = "https://toolpickguide.com"
 API = f"{SITE}/wp-json/wp/v2"
@@ -278,6 +282,25 @@ def export_all(session):
     print("\nDone. Nothing was changed in WordPress. Tell the agent the exports are ready.")
 
 
+def gate_clean(a):
+    """True when no QA GATE item needs a human edit (AUTOPILOT.md: Tier B may only --apply clean drafts)."""
+    short_of_claim = a["claimed_n"] and "question" in a["title"].lower() and a["question_items"] < a["claimed_n"]
+    return not (a["unknown_amounts"] or a["banned"] or a["tested"] or a["long_paragraphs"] or short_of_claim
+                or a["leftovers"] or a["hotlinked_images"] or a["offlist_external"] or a["missing_tools"]
+                or a["excluded_present"] or a["missing_external"])
+
+
+def undo_failed(session, backup, why):
+    """Autopilot: restore the draft from its backup at once and record a strike."""
+    from upload_draft import wp
+    data = json.loads(Path(backup).read_text(encoding="utf-8"))
+    wp(session, "POST", f"{API}/posts/{data['id']}", f"RESTORE FAILED: run python junia_draft.py --restore {backup}",
+       json={"title": data["title"], "content": data["content"], "slug": data["slug"], "excerpt": data["excerpt"],
+             "status": "draft"})
+    paused = guard.strike(f"junia_draft {data['id']}: {why}")
+    print(f"⚠️  ALERT draft {data['id']}: {why}. Restored from {backup}." + (" Autopilot is now PAUSED (2 strikes)." if paused else ""))
+
+
 def refuse_in_scheduler():
     import os
     if os.environ.get("TPG_SCHEDULER"):
@@ -300,6 +323,7 @@ def main():
                         help="Read-only: export every draft that matches a brief in knowledge/briefs/junia/ (+ QA report files)")
     args = parser.parse_args()
     refuse_in_scheduler()
+    guard.stop_if_paused()
 
     from upload_draft import explain_error, make_session, resolve_categories, resolve_tags, upload_image, wp
     session, _ = make_session()
@@ -334,6 +358,11 @@ def main():
     if not args.apply:
         print("\nDRY RUN: nothing changed. Add --apply to fix and inject SEO (the post stays a draft).")
         return
+    if guard.active():
+        if not gate_clean(a):
+            sys.exit(f"AUTOPILOT: draft {post['id']} fails the QA gate (❌ items above). Not applied; listed as Tier C.")
+        if guard.allowance("drafts", 1) < 1:
+            sys.exit(f"AUTOPILOT: daily cap reached ({guard.DAILY_CAPS['drafts']} draft updates per day). Not applied.")
 
     BACKUP_DIR.mkdir(parents=True, exist_ok=True)
     backup = BACKUP_DIR / f"junia-{post['id']}-{datetime.now():%Y%m%d-%H%M%S}.json"
@@ -362,7 +391,16 @@ def main():
         payload["featured_media"] = media["id"]
     result = wp(session, "POST", f"{API}/posts/{post['id']}", "WordPress rejected the update.", json=payload)
     if result.get("status") != "draft":
+        if guard.active():
+            undo_failed(session, backup, f"status became '{result.get('status')}'")
         sys.exit(f"SAFETY ERROR: post {post['id']} is now '{result.get('status')}'. Restore: python junia_draft.py --restore {backup}")
+    if guard.active():
+        check = wp(session, "GET", f"{API}/posts/{post['id']}", "Could not re-read the draft.", params={"context": "edit"})
+        if check["status"] != "draft" or check["slug"] != brief["slug"] or len(check["content"]["raw"]) < len(content) * 0.9:
+            undo_failed(session, backup, "re-read did not match what was written")
+            sys.exit(f"AUTOPILOT: draft {post['id']} restored after a failed verification.")
+        guard.record("drafts", 1, target=f"draft {post['id']}", detail=brief["slug"],
+                     undo=f"python junia_draft.py --restore {backup}")
 
     keywords = [brief["focus"]] + [k for k in brief["secondary"] if k.lower() != brief["focus"]]
     rm = session.post(f"{SITE}/wp-json/rankmath/v1/updateMeta", timeout=60, json={"objectType": "post", "objectID": post["id"], "meta": {
@@ -375,10 +413,7 @@ def main():
     for c in changes:
         print(f"   • {c}")
     print("   • Rank Math meta " + ("saved" if rm.status_code < 400 else "NOT saved:\n" + explain_error(rm)))
-    short_of_claim = a["claimed_n"] and "question" in a["title"].lower() and a["question_items"] < a["claimed_n"]
-    if (a["unknown_amounts"] or a["banned"] or a["tested"] or a["long_paragraphs"] or short_of_claim or a["leftovers"]
-            or a["hotlinked_images"] or a["offlist_external"] or a["missing_tools"] or a["excluded_present"]
-            or a["missing_external"]):
+    if not gate_clean(a):
         print("\n⚠️ Still needs a human edit before publishing: see the QA GATE items marked ❌ above.")
     print("\nNext: open the draft in WordPress and click Save Draft. Rank Math recalculates the score on save.")
     print(f"Undo: python junia_draft.py --restore {backup}")

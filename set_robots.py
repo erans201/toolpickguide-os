@@ -3,6 +3,7 @@ set_robots.py: switch posts to noindex (or back to index) through Rank Math. Lin
 
     python set_robots.py --noindex 85 82 87 103 105 110 112            # dry run: shows the current robots tag per post
     python set_robots.py --noindex 85 82 87 103 105 110 112 --apply    # do it (backup first, then verify live)
+    python set_robots.py --noindex-pages 9 --apply                     # same for WordPress pages (e.g. /home/)
     python set_robots.py --restore backups/robots-<time>.json          # undo: back to index
 
 Rank Math drops noindexed posts from its sitemap automatically. The page stays live at the same URL;
@@ -33,16 +34,18 @@ def live_robots(link):
     return m.group(1) if m else "(no robots tag)"
 
 
-def apply(session, ids, robots):
+def apply(session, items, robots):
+    """items: [(id, "posts" | "pages")]. Rank Math treats pages as objectType "post" too."""
     from upload_draft import wp
-    for pid in ids:
+    for pid, kind in items:
+        noun = kind[:-1]
         r = session.post(f"{SITE}/wp-json/rankmath/v1/updateMeta", timeout=60,
                          json={"objectType": "post", "objectID": pid, "meta": {"rank_math_robots": robots}})
         if r.status_code >= 400:
-            sys.exit(f"ERROR: Rank Math refused post {pid} (HTTP {r.status_code}). Stopped; earlier posts are done.")
-        p = wp(session, "GET", f"{API}/posts/{pid}", f"Could not load post {pid}.", params={"context": "edit"})
-        wp(session, "POST", f"{API}/posts/{pid}", f"Could not re-save post {pid}.", json={"title": p["title"]["raw"]})  # purges LiteSpeed
-        print(f"   ✓ post {pid} → {', '.join(robots)}")
+            sys.exit(f"ERROR: Rank Math refused {noun} {pid} (HTTP {r.status_code}). Stopped; earlier ones are done.")
+        p = wp(session, "GET", f"{API}/{kind}/{pid}", f"Could not load {noun} {pid}.", params={"context": "edit"})
+        wp(session, "POST", f"{API}/{kind}/{pid}", f"Could not re-save {noun} {pid}.", json={"title": p["title"]["raw"]})  # purges LiteSpeed
+        print(f"   ✓ {noun} {pid} → {', '.join(robots)}")
 
 
 def verify(posts, want):
@@ -59,7 +62,8 @@ def verify(posts, want):
 
 def main():
     ap = argparse.ArgumentParser(description="Set noindex/index via Rank Math (dry run by default).")
-    ap.add_argument("--noindex", type=int, nargs="*", default=[])
+    ap.add_argument("--noindex", type=int, nargs="*", default=[], help="post IDs")
+    ap.add_argument("--noindex-pages", type=int, nargs="*", default=[], help="page IDs (e.g. 9 for /home/)")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--restore", metavar="BACKUP.json")
     a = ap.parse_args()
@@ -70,21 +74,22 @@ def main():
         from upload_draft import make_session
         data = json.loads(Path(a.restore).read_text(encoding="utf-8"))
         session, _ = make_session()
-        print(f"Restoring index on {len(data['posts'])} post(s) from {a.restore}")
-        apply(session, [p["id"] for p in data["posts"]], ["index"])
+        print(f"Restoring index on {len(data['posts'])} item(s) from {a.restore}")
+        apply(session, [(p["id"], p.get("kind", "posts")) for p in data["posts"]], ["index"])
         verify(data["posts"], "index")
         return
 
-    if not a.noindex:
-        sys.exit("Nothing to do. Use --noindex IDS or --restore BACKUP.json")
+    if not (a.noindex or a.noindex_pages):
+        sys.exit("Nothing to do. Use --noindex POST_IDS, --noindex-pages PAGE_IDS, or --restore BACKUP.json")
     posts = []
-    for pid in a.noindex:
-        p = requests.get(f"{API}/posts/{pid}", params={"_fields": "id,slug,status,link"}, timeout=30).json()
+    for pid, kind in [(i, "posts") for i in a.noindex] + [(i, "pages") for i in a.noindex_pages]:
+        p = requests.get(f"{API}/{kind}/{pid}", params={"_fields": "id,slug,status,link"}, timeout=30).json()
         if p.get("status") != "publish":
-            sys.exit(f"ABORT: post {pid} is not a published post.")
+            sys.exit(f"ABORT: {kind[:-1]} {pid} is not a published {kind[:-1]}.")
+        p["kind"] = kind
         p["robots_before"] = live_robots(p["link"])
         posts.append(p)
-        print(f"  {pid} /{p['slug']}/  now: {p['robots_before']}  →  noindex, follow")
+        print(f"  {kind[:-1]} {pid} /{p['slug']}/  now: {p['robots_before']}  →  noindex, follow")
     if not a.apply:
         print("\nDRY RUN: nothing changed. Add --apply.")
         return
@@ -96,7 +101,7 @@ def main():
                                  indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\n💾 Backup: {backup}")
     session, _ = make_session()
-    apply(session, a.noindex, ["noindex"])
+    apply(session, [(p["id"], p["kind"]) for p in posts], ["noindex"])
     print("\nLive check:")
     verify(posts, "noindex")
     print(f"\n   Undo: python set_robots.py --restore {backup}")

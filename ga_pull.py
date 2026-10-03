@@ -2,6 +2,7 @@
 ga_pull.py: pull Google Analytics 4 data (read-only) into data/ and write an insights report.
 
 Setup (once): same service account and key as gsc_pull.py (gsc-key.json, or GSC_KEY_FILE in .env).
+Cloud runs: no file; the key comes from the GSC_KEY_JSON environment variable (one line).
   1. Google Cloud (same project) → enable "Google Analytics Data API".
   2. GA4 → Admin → Property access management → add the service-account email as **Viewer**.
   3. GA4 → Admin → Property details → copy the numeric Property ID; put GA4_PROPERTY_ID=<id> in .env
@@ -46,6 +47,10 @@ def client():
     except ImportError:
         sys.exit("ERROR: run  pip install google-analytics-data")
     path = Path(os.getenv("GSC_KEY_FILE", "gsc-key.json"))
+    if not path.is_file() and os.getenv("GSC_KEY_JSON", "").strip():
+        # Cloud runs: the key arrives as one line in the environment, never as a file.
+        import json
+        return BetaAnalyticsDataClient.from_service_account_info(json.loads(os.environ["GSC_KEY_JSON"]))
     if not path.is_file():
         sys.exit(f"ERROR: key file not found ({path.name}). It is the same key gsc_pull.py uses.")
     return BetaAnalyticsDataClient.from_service_account_file(str(path))

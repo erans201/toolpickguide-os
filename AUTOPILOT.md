@@ -60,8 +60,8 @@ Model: `claude-sonnet-5-5` for Daily Ops; `claude-opus-5-5` for Weekly and Month
 
 ### 5.1 Daily Ops
 1. `git pull`. If `AUTOPILOT_PAUSED` exists, log "paused" and stop.
-2. **Health check:** HTTP 200 for `/`, `sitemap_index.xml` and every URL in the sitemap. Robots tag unchanged versus `autopilot/baseline-robots.json`. Sitemap URL count unchanged versus yesterday (± explained by publishes).
-3. **Verify yesterday:** every Tier B action in `autopilot/ledger.json` from the last 24 h is still live and correct.
+2. **Health check:** `python -m autopilot.healthcheck` (exit 1 = ALERT). HTTP 200 for `/`, `sitemap_index.xml` and every URL in the sitemap. Robots tag unchanged versus `autopilot/baseline-robots.json`. Sitemap URL count unchanged versus yesterday (± explained by publishes). After a planned publish or noindex, the agent refreshes the baseline with `--init-baseline` and says so in the digest.
+3. **Verify yesterday:** every Tier B action in `autopilot/ledger.json` from the last 24 h is still live and correct. `python -m autopilot.guard` prints today's counts, the month's DataForSEO spend and strikes for the digest's Numbers section.
 4. **Drafts:** `python junia_draft.py --export-all`. Apply Tier B fixes to drafts that pass the gate; prepare corrected versions for the rest (listed as Tier C).
 5. **Links:** `python inject_links.py`. If the dry run is clean, `--upload` within the caps, then verify live.
 6. **Ledger + log:** update `autopilot/ledger.json`; append one line per action to `LOOP.md` with its undo command.

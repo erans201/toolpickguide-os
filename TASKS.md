@@ -55,7 +55,7 @@ The Sheet tab `Tasks` mirrors this list (ID in the Task column). Status changes 
 4. **Save.**
 - **Done when:** the agent's test run (T0.8 step 3) reports "env OK" without printing any value.
 
-### T0.7 · Make the tools cloud-ready · A · due Oct 6
+### T0.7 · Make the tools cloud-ready · A · due Oct 6 · ✅ DONE 2026-10-03 (12 offline tests pass: `python -m unittest discover -s tests`)
 1. `gsc_pull.py` and `ga_pull.py`: read the key from the `GSC_KEY_JSON` environment variable when the file is absent.
 2. New `autopilot/guard.py`:
    - kill switch (`AUTOPILOT_PAUSED`)

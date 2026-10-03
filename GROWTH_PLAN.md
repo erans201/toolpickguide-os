@@ -18,7 +18,7 @@
 | AI Overview citations | **0 of 15** tracked searches (13 show an AI Overview) | DataForSEO |
 | Pages with no internal links in | 1 (`/photography-client-questionnaire/`) | crawl 2026-10-02 |
 | Server speed | TTFB 0.26–0.83 s, LiteSpeed cache on, HTML 84–129 KB per page. **Core Web Vitals not measured yet** (T0.11) | curl 2026-10-03 |
-| Backlinks | **Unknown** (not measured; T2.9) | — |
+| Backlinks | **Unknown** (not measured; T3.4) | — |
 | Affiliate programs joined | **0 confirmed** (researched: accounting, coaching, legal) | MEMORY.md |
 | Revenue | **$0** | — |
 

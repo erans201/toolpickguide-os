@@ -67,7 +67,7 @@ The Sheet tab `Tasks` mirrors this list (ID in the Task column). Status changes 
 6. Offline tests; commit; push.
 - **Done when:** the tests pass and the commit is on GitHub.
 
-### T0.8 · Create the cloud routines · A · due Oct 7 · needs T0.3, T0.6, T0.7
+### T0.8 · Create the cloud routines · A · due Oct 7 · needs T0.3, T0.6, T0.7 · ✅ created 2026-10-03 in SHADOW MODE (environment robot): Daily `trig_019Gyymnstw37fncEMdeLMkR` · Weekly `trig_01BSJ83tE327KXC11s7CssNR` · Monthly `trig_01VEzonPQmfYbkHM4AQMBbey` (claude.ai/code/routines). Shadow mode lives in each routine's prompt; the local agent removes it only after the user approves the practice-week digests.
 1. Create **TPG Daily Ops** (`0 5 * * *`), **TPG Weekly Review** (`0 6 * * 1`) and **TPG Monthly Report** (`0 7 1 * *`) with the prompts in `AUTOPILOT.md` §5, the repo `toolpickguide-os`, and the Google Drive + Sheets connectors.
 2. **Shadow week (Oct 7–13):** Tier B runs as **dry-run only**; the digest lists what *would* have been done.
 3. **Run now** once and read the run log: env OK, health check OK, digest Doc created in Drive.

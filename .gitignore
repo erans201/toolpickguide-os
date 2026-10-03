@@ -1,0 +1,27 @@
+# ToolPickGuide vault: NEVER commit secrets (CLAUDE.md security guardrails)
+.env
+.env.*
+*.env.txt
+.env.txt
+New Application Password.txt
+*password*.txt
+*Password*.txt
+gsc-key.json
+*-key.json
+google-ads.yaml
+ads-oauth-client.json
+kp-config.json
+*.pem
+*.p12
+
+# Backups hold full copies of live posts; they stay local
+backups/
+
+# Transient / generated
+__pycache__/
+*.pyc
+knowledge/_preview/
+logs/
+upload_state.json
+*.WRONG-MATCH
+.claude/settings.local.json

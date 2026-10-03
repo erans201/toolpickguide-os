@@ -1,0 +1,22 @@
+Date,Agent,Task,Status,Next action owner,Next action,File / command,Changed by Koala update
+2026-10-01,Onsite,Fix post 558 images (Canon logo + poppy photo + Unsplash hotlink) and purge stale cache on 492/372,Waiting,User,Run media_fix.py with --apply,media_fix.py --post-id 558 ... --touch 492 372 --apply,No
+2026-10-01,Onsite,Breadcrumb 'No title' fix (Blocksy → Rank Math),Done,—,Re-scan after 558 fix purges last stale pages,ONSITE_PLANS.md,No
+2026-09-29,Onsite,Retire duplicate posts 508 and 509 (301 + Trash),Done,—,—,retire_post.py · toolpickguide-redirects.php,No
+2026-09-29,Onsite,Internal links IL-1 to IL-4 and IL-6,Done,Agent,Re-crawl to confirm orphan count after IL-6,link_injector.py · ONSITE_PLANS.md,Yes (now a core Onsite duty: orphan pages + link routing)
+2026-09-29,Onsite,Swap generated featured images on 412/474/487/492 for photo-style images,Waiting,User,Generate images in Junia (no text/logos) and save as *-photo.webp,knowledge/briefs/image-prompts.md,No
+2026-09-28,Onsite,Duplicate FAQ schema on /best-crm-for-law-firms/,Open,User,Remove one FAQ source in WP,wordpress/SEO-ADMIN-CHECKLIST.md §4,No
+2026-09-28,Onsite,Author identity + org profiles + Bing/IndexNow + llms.txt,Open,User,Work through admin checklist,wordpress/SEO-ADMIN-CHECKLIST.md,No
+2026-10-01,Onsite,Proactive technical SEO crawl (robots.txt + metadata + HTML structure audit),Not started,Agent,Run full read-only crawl and log findings,ONSITE_PLANS.md,Yes (new: proactive flagging + robots.txt)
+2026-09-29,SEO,Junia Week 1: photography client questionnaire,Published (post 558),Agent,Close out after image fix,knowledge/briefs/junia/photography-client-questionnaire.md,No
+2026-09-29,SEO,Junia Week 1: photography contract template,Waiting,User,Paste brief into Junia (drafts only),knowledge/briefs/junia/photography-contract-template.md,No
+2026-09-29,SEO,Junia Week 1: Pixieset Studio Manager review,Waiting,User,Paste brief into Junia (drafts only),knowledge/briefs/junia/pixieset-studio-manager-review.md,No
+2026-10-01,SEO,Junia Weeks 2-4 briefs (7 articles),Not started,Agent,Write briefs + facts sheets,knowledge/briefs/junia-month1-strategy.md,Yes (all keyword output must be Junia briefs)
+2026-10-01,SEO,Competitor keyword gap: 20 keywords competitors rank for that we don't,Not started,User then Agent,Drop a Semrush/GSC export in the vault,(new) data/ folder,Yes (new Koala DNA duty)
+2026-10-01,SEO,Backlink gap analysis vs competitors,Not started,User then Agent,Drop a Semrush backlink export in the vault,(new) data/ folder,Yes (new Koala DNA duty)
+2026-10-01,SEO,Google Trends audit + SERP/AI Overview citation analysis,Not started,Agent,Check which sites AI Overviews cite for our target queries,MEMORY.md,Yes (new Koala DNA duty)
+2026-09-29,Affiliate,Program research for Accounting + Coaches (10 tools),Done,User,Join programs and send back approved links,MEMORY.md → Affiliate Program Log,Yes (now tracks link strings + cookie terms for all vendors)
+2026-09-29,Marketing,Reddit/Quora framework + 2 response templates,Delivered in chat only,Agent,Save framework to a file and build a posting schedule,(to create) knowledge/briefs/community-framework.md,Yes (now build AND schedule)
+2026-09-29,QA,Content Writer drafts 554 (alternatives) and 556 (vs) in WP,Waiting,User,Review drafts; never publish 556 alongside old draft 217,INDEX.md,No
+2026-09-29,QA,Old pre-existing draft 217 (Dubsado vs HoneyBook) duplicates 556,Open,User,Trash 217 in WP admin (draft: no redirect needed),INDEX.md,No
+2026-10-01,PM,Google Sheets sync,Waiting,User,Click Connect on the Google Sheets connector,exports/pm-tracker-2026-10-01.csv,Yes (PM now outputs Sheets/CSV logs)
+2026-10-01,PM,Data ingestion inbox for GSC / Analytics / Semrush exports,Not started,Agent,Create data/ inbox + ingestion rules,(to create) data/README.md,Yes (new: process raw data dumps)

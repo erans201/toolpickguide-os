@@ -1,0 +1,9 @@
+# Competitors for the keyword-gap pull (dfs_pull.py --gap). One domain per line, no https:// or www.
+# Source: SERP competitors observed in MEMORY.md (Phase 1, 2026-09-27). Independent publishers first, since vendor blogs
+# mostly rank for their own brand terms. Each line = 1 paid request. Edit freely; lines starting with # are ignored.
+lawyerist.com
+softwarefinder.com
+theclose.com
+unscriptedphotographers.com
+bestcrmforcoaches.com
+plutio.com

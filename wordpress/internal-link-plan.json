@@ -1,0 +1,247 @@
+{
+  "_about": "Internal-link plan for link_injector.py. Each block is inserted once, just before the post's FAQ heading (or at the end), wrapped in <!-- tpg-links:ID --> markers so re-runs update it instead of duplicating it. Links already present in a post are skipped. Posts with a knowledge/upgrade-*.md source are refused (edit the Markdown instead).",
+  "blocks": [
+    {
+      "id": "IL-1",
+      "posts": [
+        372,
+        338,
+        358
+      ],
+      "heading": "Pick software built for your industry",
+      "intro": "Generic tools cover the basics. These guides rank tools by the workflow your industry actually runs on.",
+      "links": [
+        {
+          "href": "/best-crm-for-law-firms/",
+          "anchor": "Best CRM for law firms",
+          "note": "intake, conflict checks, retainers"
+        },
+        {
+          "href": "/best-practice-management-accountants/",
+          "anchor": "Practice management software for accountants",
+          "note": "document collection, e-sign, tax season"
+        },
+        {
+          "href": "/client-management-software-for-coaches/",
+          "anchor": "Client management software for coaches",
+          "note": "packages, scheduling, client portals"
+        },
+        {
+          "href": "/client-management-software-for-photographers/",
+          "anchor": "Client management software for photographers",
+          "note": "proposals, contracts, galleries"
+        },
+        {
+          "href": "/best-client-management-software-real-estate/",
+          "anchor": "Client management software for real estate agents",
+          "note": "speed-to-lead, transactions"
+        }
+      ]
+    },
+    {
+      "id": "IL-2",
+      "posts": [
+        404
+      ],
+      "heading": "More legal software guides",
+      "intro": "CRM handles the lead. These cover what happens after the client signs.",
+      "links": [
+        {
+          "href": "/best-legal-case-management-software/",
+          "anchor": "Best legal case management software",
+          "note": "matters, deadlines, billing"
+        },
+        {
+          "href": "/legal-practice-management-software/",
+          "anchor": "What is legal practice management software?",
+          "note": "the plain-English explainer"
+        }
+      ]
+    },
+    {
+      "id": "IL-2",
+      "posts": [
+        368
+      ],
+      "heading": "More legal software guides",
+      "intro": "Case management runs the matter. These cover winning the client and the category basics.",
+      "links": [
+        {
+          "href": "/best-crm-for-law-firms/",
+          "anchor": "Best CRM for law firms",
+          "note": "intake and consultations"
+        },
+        {
+          "href": "/legal-practice-management-software/",
+          "anchor": "What is legal practice management software?",
+          "note": "the plain-English explainer"
+        }
+      ]
+    },
+    {
+      "id": "IL-2",
+      "posts": [
+        397
+      ],
+      "heading": "Ready to compare tools?",
+      "intro": "Now that the category makes sense, here are the ranked picks.",
+      "links": [
+        {
+          "href": "/best-legal-case-management-software/",
+          "anchor": "Best legal case management software",
+          "note": "ranked for solo and small firms"
+        },
+        {
+          "href": "/best-crm-for-law-firms/",
+          "anchor": "Best CRM for law firms",
+          "note": "intake and follow-up"
+        }
+      ]
+    },
+    {
+      "id": "IL-4",
+      "posts": [
+        354
+      ],
+      "heading": "Pick a CRM by industry",
+      "intro": "A CRM is only as good as its fit. Start with the guide for your business.",
+      "links": [
+        {
+          "href": "/best-crm-for-law-firms/",
+          "anchor": "Law firms",
+          "note": "legal CRMs for intake and retainers"
+        },
+        {
+          "href": "/best-practice-management-accountants/",
+          "anchor": "Accountants and CPAs",
+          "note": "practice management and client portals"
+        },
+        {
+          "href": "/client-management-software-for-coaches/",
+          "anchor": "Coaches",
+          "note": "packages, scheduling, payments"
+        },
+        {
+          "href": "/client-management-software-for-photographers/",
+          "anchor": "Photographers",
+          "note": "bookings, contracts, galleries"
+        },
+        {
+          "href": "/best-client-management-software-real-estate/",
+          "anchor": "Real estate agents",
+          "note": "lead follow-up and transactions"
+        }
+      ]
+    },
+    {
+      "id": "IL-6",
+      "posts": [
+        78
+      ],
+      "heading": "Contracts are one step of onboarding",
+      "intro": "A signed contract is where a lead becomes a client. These guides cover the rest of the handoff.",
+      "links": [
+        {
+          "href": "/client-onboarding-software/",
+          "anchor": "What is client onboarding software?",
+          "note": "intake, documents, welcome sequences"
+        },
+        {
+          "href": "/best-customer-onboarding-software/",
+          "anchor": "Best customer onboarding software",
+          "note": "tools ranked by use case"
+        },
+        {
+          "href": "/client-management-software-for-photographers/",
+          "anchor": "Client management software for photographers",
+          "note": "contracts + retainers in one step"
+        }
+      ]
+    },
+    {
+      "id": "IL-6",
+      "posts": [
+        52
+      ],
+      "heading": "Where your leads go next",
+      "intro": "A form captures the lead. A CRM makes sure someone actually follows up.",
+      "links": [
+        {
+          "href": "/what-is-client-relationship-management-software/",
+          "anchor": "What is client relationship management software?",
+          "note": "the plain-English explainer"
+        },
+        {
+          "href": "/website-builders-for-service-businesses/",
+          "anchor": "Website builders for service businesses",
+          "note": "where your forms live"
+        },
+        {
+          "href": "/client-onboarding-software/",
+          "anchor": "Client onboarding software",
+          "note": "from form fill to signed client"
+        }
+      ]
+    },
+    {
+      "id": "IL-6",
+      "posts": [
+        384
+      ],
+      "heading": "Related guides",
+      "intro": "Onboarding doesn't end at the welcome email. These cover the steps on either side.",
+      "links": [
+        {
+          "href": "/help-desk-tools-for-tiny-teams-under-5/",
+          "anchor": "Help desk tools for tiny teams",
+          "note": "support after the handoff"
+        },
+        {
+          "href": "/best-doc-signing-tools/",
+          "anchor": "Best doc signing tools",
+          "note": "contracts without drama"
+        }
+      ]
+    },
+    {
+      "id": "IL-6",
+      "posts": [
+        65
+      ],
+      "heading": "Related guides",
+      "intro": "A help desk handles the ticket. A CRM remembers the whole relationship.",
+      "links": [
+        {
+          "href": "/what-is-client-relationship-management-software/",
+          "anchor": "What is client relationship management software?",
+          "note": "how CRM and support fit together"
+        },
+        {
+          "href": "/best-customer-onboarding-software/",
+          "anchor": "Best customer onboarding software",
+          "note": "fewer tickets start with better onboarding"
+        }
+      ]
+    },
+    {
+      "id": "IL-6",
+      "posts": [
+        32
+      ],
+      "heading": "Turn visitors into clients",
+      "intro": "A website gets the visit. These guides cover capturing and keeping the client.",
+      "links": [
+        {
+          "href": "/best-form-builders-for-lead-capture/",
+          "anchor": "Best form builders for lead capture",
+          "note": "turn visitors into leads"
+        },
+        {
+          "href": "/what-is-client-relationship-management-software/",
+          "anchor": "What is client relationship management software?",
+          "note": "where those leads should live"
+        }
+      ]
+    }
+  ]
+}

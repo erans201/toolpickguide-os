@@ -20,7 +20,7 @@ import csv
 import os
 import re
 import sys
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
 import requests
@@ -105,7 +105,9 @@ def main():
         print("⚠️  No PAGESPEED_API_KEY: using Google's shared quota (may stop after a few pages).")
     urls = a.url or top_urls(a.top)
     DATA.mkdir(exist_ok=True)
-    out = DATA / f"psi-{date.today().isoformat()}.csv"
+    # Spot checks (--url) get their own file so they never overwrite the day's top-20 baseline.
+    out = DATA / (f"psi-{date.today().isoformat()}-check-{datetime.now():%H%M}.csv" if a.url
+                  else f"psi-{date.today().isoformat()}.csv")
     rows = []
     for i, url in enumerate(urls, 1):
         row = measure(url, key)

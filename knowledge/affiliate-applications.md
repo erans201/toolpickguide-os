@@ -108,5 +108,5 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Sprout Studio | not started | signup with a password |
 | PandaDoc | not started | partner-portal signup with a password |
 | Close | **Submitted 2026-10-04** ("Application received… within 1-2 business days"); Affiliate type, partner terms accepted under the user's standing instruction | — |
-| Zoho | Long form fully filled (review site, 21 articles, monthly traffic left blank on purpose, no hands-on Zoho use stated honestly, agreement + "not a reseller" declaration ticked, marketing emails unticked) | the user types the **text captcha** and clicks **Submit**; submitting also creates the Zoho account |
+| Zoho | **Submitted 2026-10-04** (user did the captcha + Submit). Confirmation email from zohocorp.com: review in 7–10 business days; replies come from affiliates-support@zohocorp.com | — |
 

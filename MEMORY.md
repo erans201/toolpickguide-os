@@ -243,6 +243,41 @@ Verification: ✅ official page read in a browser/fetch · 🟡 third-party only
 
 **Takeaways:** (1) Impact now covers 8am + HubSpot + Wix + Squarespace with one account. (2) Real estate has exactly one publisher program (Lofty); the TM tools on 586 have none, so that page earns through Lofty/CRM cross-links, not TM affiliates. (3) Highest value per signup: Studio Ninja 40% monthly, Lofty 10% × 24 months, HubSpot/Jotform 30% × 12 months.
 
+### Sprint 4 · Every other tool featured on our live pages · 2026-10-04
+Source: H2/H3 tool names across all live pages. ✅ official page read · 🟡 third-party summary (3P), verify before applying · ⛔ none / not for publishers.
+
+| Tool | Our page(s) | Pays | Network | Verified |
+|---|---|---|---|---|
+| **Pipedrive** | law-firm CRM, CRM ops | 20% (30% at tier 2) of first 12 months; 90-day cookie; review in 1–2 weeks | **PartnerStack** | ✅ |
+| **Zoho (CRM, Desk, People)** | law-firm CRM, CRM ops, free CRM, help desk, onboarding | 15% (18/20% tiers) of first 12 months; 90-day cookie; $100 min; PayPal/wire | own (zoho.com/affiliate) | ✅ |
+| **Close** | CRM ops | 30% of first-year subscription ("lifetime available"); approval in 1–2 business days | own form | ✅ |
+| **Fillout** | form builders | 30% recurring up to 1 year; 1-minute signup (account) | in-app | ✅ |
+| monday.com (Sales CRM) | CRM ops | 3P: ~25% first year, 90-day cookie | PartnerStack (3P) | 🟡 |
+| Freshworks (Freshsales, Freshdesk) | CRM ops, free CRM, help desk | 3P: 15% MRR for 12 months (up to 25%) | PartnerStack (3P) | 🟡 |
+| Capsule CRM | free CRM | 3P: 20% lifetime (25/30% tiers); 30-day window; PayPal £50 min | own | 🟡 |
+| Insightly | CRM ops | 3P: 20% | ? | 🟡 |
+| Agile CRM | free CRM | 3P: 20–30% | own | 🟡 |
+| Help Scout | help desk | 3P: 30% of first year | ? | 🟡 |
+| Zendesk | help desk | 3P: 15% of first year; 30-day cookie; **no partners/resellers** | PartnerStack (3P) | 🟡 |
+| Typeform | form builders | 3P: $20 upfront + 15% monthly | ? | 🟡 |
+| Tally | form builders | 3P: 20% up to $150 per referral; 30-day cookie | own | 🟡 |
+| Formstack | form builders | 3P: 25% of first year; 30-day cookie; $100 min | (formstack.com/affiliates, Impact-tracked link seen) | 🟡 |
+| Gravity Forms | form builders | 3P: 20–30% per sale; $10 min | own | 🟡 |
+| WPForms | form builders | 3P: 20% per sale; 45-day cookie; $50 min | own | 🟡 |
+| SignWell | e-sign | 3P: 25% recurring up to 1 year; 30-day cookie | own | 🟡 |
+| Webflow | website builders | 3P: 50% of first year; 90-day cookie | ? | 🟡 |
+| Shopify | website builders | 3P: up to $150 bounty per merchant | own | 🟡 |
+| GoDaddy | website builders | 3P: $10–150 per sale; 45-day cookie | CJ (3P) | 🟡 |
+| Smokeball | legal case mgmt | $300 eGift card per signed-up referral; "anyone" can refer (lead form, not a tracking link) | own | 🟡 |
+| LEAP | law-firm CRM | Referral Partner: $80 per contracted user, max $2,000 per firm, after 90 days (for businesses that help law firms) | own | 🟡 |
+| Real Geeks | real estate CRM | affiliate **invite-only** | Impact | 🟡 |
+| Copilot (client portal) | onboarding | 3P: 20% of first 12 months via PartnerStack; copilot.com now resolves to Microsoft Copilot, so needs re-check | ? | 🟡 |
+| Rocketlane | onboarding | customer referral only ($350 voucher) | n/a | ⛔ |
+| Bitrix24 | free CRM | reseller program only | n/a | ⛔ |
+| Salesforce, Filevine, GuideCX, Appcues, Pendo, WalkMe, ChurnZero, ClientSuccess, Intercom, Front, Dropbox Sign, Adobe Sign, Proposify, OneSpan, SuiteCRM | various | no public publisher program found | — | ⛔/unknown |
+
+**Takeaways:** (1) A **PartnerStack** account would unlock Pipedrive + likely monday, Freshworks, Zendesk and Copilot in one place; Impact already covers HubSpot, Wix, Squarespace and 8am. (2) Highest-fit next applications: Zoho (5 pages), Pipedrive, Close, Fillout, Help Scout. (3) Everything marked 🟡 gets its official page read before applying.
+
 ## 📈 AGENT SELF-IMPROVEMENT & CAPABILITY LOG
 *(Every agent must independently log here one professional optimization or prompt skill discovered during execution to improve team knowledge)*
 

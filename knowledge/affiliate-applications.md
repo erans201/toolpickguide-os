@@ -111,3 +111,4 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Zoho | **Submitted 2026-10-04** (user did the captcha + Submit). Confirmation email from zohocorp.com: review in 7–10 business days; replies come from affiliates-support@zohocorp.com | — |
 
 | Pipedrive | **Submitted 2026-10-04** via PartnerStack ("Application received!"); agent filled everything, user added LinkedIn + submitted | optional: user creates the PartnerStack account (needed later for payouts) |
+| monday.com, Zendesk (+ Freshworks?) | **Deferred by user 2026-10-04**: all need a PartnerStack account first (user creates it, then the agent joins each program inside PartnerStack) | PartnerStack account |

@@ -90,7 +90,7 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | HoneyBook | 2026-10-04 | Submitted (Google Form: 'Your response has been recorded'). Custom link text requested: toolpickguide | | |
 | Paperbell | | | | |
 | Simply.Coach | | | | |
-| Pixieset | | | | |
+| Pixieset | 2026-10-04 | Submitted (Typeform, 13 answers; blog / uses none / honest early-traffic statement). Confirmation shown | | |
 | Dubsado Ambassador | | | | |
 | Clio | 2026-10-04 | Submitted: Channel Partner form (as a publisher, 'Other'; note asks for a trackable publisher link; '1-5 firms' chosen because the form has no 0 option, with user OK). Success page shown | | |
 | 8am / MyCase (Impact) | 2026-10-04 | **In Review**. User created the Impact account (eran@toolpickguide.com, individual). Agent: publisher / website / product & service reviews; website toolpickguide.com connected (email-domain verification); AI profile text replaced with our accurate description; legal/accounting tags | | |

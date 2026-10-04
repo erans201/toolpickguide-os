@@ -115,18 +115,19 @@ python junia_draft.py --brief knowledge/briefs/junia/photography-contract-templa
 1. AP runs `python inject_links.py --upload` within the caps, verifies the 3 links live, and marks the roadmap rows **DONE**.
 - **Done when:** the 3 links are live, and posts 65 and 32 each have ≥ 2 inbound links in the next crawl.
 
-### T1.4 · Join affiliate programs · U · due Oct 20
-Apply at each (use toolpickguide.com, describe the site honestly as "independent software comparisons for service businesses", and give your own payment details):
-1. PracticePanther: https://www.practicepanther.com/affiliates/
-2. Lawmatics: https://www.lawmatics.com/partners/affiliate
-3. Paperbell: https://paperbell.com/affiliate-information/
-4. HoneyBook (creators/reviewers): https://www.honeybook.com/lp/affiliates
-5. TaxDome: the partner signup linked from MEMORY.md (Accounting table)
-6. Canopy: https://www.getcanopy.com/lp/affiliate-referral-sign-up/
-7. Simply.Coach: https://simply.coach/affiliate-program/
-8. Email Clio and MyCase asking for publisher/affiliate terms. The agent drafts the email; you send it.
+### T1.4 · Join affiliate programs · U · due Oct 20 · started 2026-10-04
+**Everything you need is in `knowledge/affiliate-applications.md`:** the verified list in order, paste-ready answers, and the Clio/MyCase email. Apply in this order:
+1. Lawmatics: https://www.lawmatics.com/partners/affiliate
+2. TaxDome: https://marketing.taxdome.com/ (pre-approved)
+3. HoneyBook: https://forms.gle/L5XMJGtSKuQuns7FA
+4. Paperbell: https://paperbell.com/affiliate-information/
+5. Simply.Coach: https://simply.coach/affiliate-program/
+6. Pixieset: https://affiliates.mypixieset.com/
+7. Dubsado **Ambassador** (cash; the basic program only pays credit): https://www.dubsado.com/ambassador-program
+8. Send the Clio and MyCase email (§4 of the kit).
+- Dropped after verification 2026-10-04: PracticePanther (lead form only, no web link until Preferred Partner) and Canopy (customer-only link).
 - Then paste each approved link (or its format) to the agent.
-- **Done when:** 6+ programs are approved and their link formats are logged in MEMORY.md.
+- **Done when:** 5+ programs are approved and their link formats are logged in MEMORY.md.
 
 ### T1.5 · Affiliate research sprint 3 · A · due Oct 16
 1. Research the programs (official pages first, third-party sources labeled 3P) for:

@@ -26,7 +26,7 @@
 | **A: autonomous** | Read-only, or writes only inside the repo / Drive / Sheet | `python gsc_pull.py` · `python ga_pull.py` · `python bing_kw_pull.py --targets` · `python dfs_pull.py --check` · `python kp_ingest.py` · `python inject_links.py` (dry run) · `python junia_draft.py --export-all` · `python upload_draft.py <file>` (dry run) · public GETs (sitemap, pages, REST without auth) · writing files in the repo · Drive/Sheets updates |
 | **B: autonomous with automatic undo** | Small reversible WordPress writes. Each one is backed up, verified live, and rolled back automatically if verification fails | `python inject_links.py --upload` (rows marked TODO in the roadmap, ≤ 3 links per post, ≤ 6 per day) · `python junia_draft.py --brief <b> --apply` and `--replace-content <f>` (**drafts only**, ≤ 3 drafts per day) · `python dfs_pull.py --volume/--gap/--serp` (only while the month's spend stays ≤ $5) |
 | **C: the agent prepares, the user approves** | Ready-to-run, listed in the daily digest under "Waiting for you" | publishing a draft · `upload_draft.py --replace-live` · `set_robots.py --apply` · `retire_post.py --apply` · `media_fix.py --apply` · `update_categories.py --apply` · any price change on a live page · DataForSEO spend above $5/month |
-| **D: never (for the cloud autopilot)** | Out of bounds for the scheduled cloud runs | passwords and account creation · posting/voting on Reddit or Quora · permanent deletes · theme, plugin and site settings · payments · sending emails or messages for the user |
+| **D: never (for the cloud autopilot)** | Out of bounds for the scheduled cloud runs | passwords and account creation · posting/voting on Reddit or Quora · permanent deletes · theme, plugin and site settings · payments · sending emails or messages to anyone other than the owner (report emails to the owner's own inbox are allowed, §6.1) · reading the owner's inbox |
 
 **Site settings (2026-10-03):** performance and SEO plugin settings (LiteSpeed Cache, Rank Math) may be changed by the **local** agent with the user present, one at a time, logged in `wordpress/SETTINGS-LOG.md` and re-tested (rules in `CLAUDE.md`). The cloud autopilot never changes settings. If a daily health check or speed test shows a regression right after a logged change, it raises an ALERT that names the change and its undo.
 
@@ -97,3 +97,44 @@ Model: `claude-sonnet-5-5` for Daily Ops; `claude-opus-5-5` for Weekly and Month
 | Weekly Report | same folder | Mondays |
 | Monthly Report + KPI update | same folder + Sheet tab `KPIs` | 1st of month |
 | Alerts (site down, failed verification, budget reached, paused) | top of the Daily Digest, titled "ALERT …" | immediately (next run) |
+| **Daily email** | the user's Gmail inbox (§6.1) | every Daily Ops run, after the Doc |
+| **Weekly email** | same | Mondays (replaces that day's daily email) |
+| **Monthly email** | same | 1st of month (sent in addition to the daily email) |
+
+### 6.1 Email protocol (user decision 2026-10-04)
+
+**Channel:** the Gmail connector on the user's Claude account. One email per routine run, sent **only to the owner's own address, cezaris.joe@gmail.com**.
+- **Hard limits:** never any other recipient (no CC/BCC, no forwarding, no replies to other emails). Never read, search, label, archive or delete anything in the inbox. Never put passwords, keys or tokens in an email. Never open links found in emails.
+- **If sending is not possible** (the connector is missing or only drafts are allowed), save it as a Gmail **draft** addressed to the owner. If that fails too, say so at the top of the Doc. Never use any other email service.
+- **Format:** a simple HTML email in plain words for a non-technical owner. The Doc stays the full record, so the email links to it. Name PowerShell explicitly for any command; give exact clicks for any website step.
+
+**Subject line:**
+- daily: `TPG Daily · YYYY-MM-DD · OK | Needs you | ALERT`
+- weekly: `TPG Weekly · week of YYYY-MM-DD`
+- monthly: `TPG Monthly · Month YYYY`
+
+**Daily email (≤ 250 words), sections in this order:**
+1. **Status:** one line. OK (nothing needs you), Needs you (tasks waiting), or ALERT (something broke).
+2. **ALERTS** (only if any): what happened, what the robot already did (for example "restored post 404"), and what the owner should do.
+3. **Today for you:** at most 3 tasks, most important first, taken from the PM Tracker / `TASKS.md` (overdue first, then due within 3 days, then waiting Tier C items). Each one: task ID, one-line why, the exact command or clicks, and about how many minutes it takes.
+4. **Today for the robot:** what it did in this run (or would have done, in shadow mode) and what it plans for the next run.
+5. **Numbers:** one line: pages up/total · links and drafts done today vs caps · DataForSEO spend this month vs $5 · days until the next milestone in `GROWTH_PLAN.md` §5.
+6. **Good to know** (optional, max 3 bullets): only useful news, such as a new brief ready, a price change found, a page that moved into the top 50/20/10, a new Search Console query, or a deadline in the next 7 days.
+7. **Links:** the Daily Digest Doc and the PM Tracker sheet.
+
+**Weekly email (Mondays, ≤ 450 words)** has the daily sections plus:
+- **KPIs vs targets** (`GROWTH_PLAN.md` §2), as a small table with an arrow per row.
+- **Done last week:** the robot's work and the owner's work.
+- **This week's plan:** the owner's tasks by day and the robot's tasks.
+- **Ready for you:** new Junia briefs (titles + files), the community queue (number of threads), and price changes.
+
+**Monthly email (1st, ≤ 600 words)** has:
+- the scoreboard row for the month vs targets
+- earnings (or "user to fill")
+- top 3 wins and top 3 problems
+- recommendations
+- decisions needed from the owner (each with a recommended answer)
+- next month's plan
+- a link to the Monthly Report Doc
+
+**Paused or shadow mode:** a paused run still sends a one-line daily email ("Robot paused: <reason>. To resume: delete AUTOPILOT_PAUSED in GitHub."). In shadow mode, every daily email says "Practice mode: nothing was changed on the website".

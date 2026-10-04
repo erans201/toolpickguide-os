@@ -88,9 +88,9 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Lawmatics | 2026-10-04 | Submitted (web form; confirmation shown: team will reach out by email). Asked for a trackable web link | | |
 | TaxDome | — | Not usable: the publisher program is gone (customer referral only) | | |
 | HoneyBook | 2026-10-04 | Submitted (Google Form: 'Your response has been recorded'). Custom link text requested: toolpickguide | | |
-| Paperbell | | | | |
+| Paperbell | 2026-10-04 | FirstPromoter signup form pre-filled by the agent (profile, links, honest audience answer); the user sets the password, decides the email-consent box, and clicks Sign Up | | |
 | Simply.Coach | | | | |
 | Pixieset | 2026-10-04 | Submitted (Typeform, 13 answers; blog / uses none / honest early-traffic statement). Confirmation shown | | |
-| Dubsado Ambassador | | | | |
+| Dubsado Ambassador | — | **Skipped 2026-10-04 (agent recommendation):** the Notion application needs the email of an existing Dubsado account, a link to Dubsado-related content we created, and a video. It's a cohort waitlist for Dubsado power users. Revisit after the Pixieset/HoneyBook/Dubsado comparison is live and traffic exists | | |
 | Clio | 2026-10-04 | Submitted: Channel Partner form (as a publisher, 'Other'; note asks for a trackable publisher link; '1-5 firms' chosen because the form has no 0 option, with user OK). Success page shown | | |
 | 8am / MyCase (Impact) | 2026-10-04 | **In Review**. User created the Impact account (eran@toolpickguide.com, individual). Agent: publisher / website / product & service reviews; website toolpickguide.com connected (email-domain verification); AI profile text replaced with our accurate description; legal/accounting tags | | |

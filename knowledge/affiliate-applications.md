@@ -99,9 +99,9 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 
 | Program | Status | Blocker (user-only step) |
 |---|---|---|
-| HubSpot (Impact) | HubSpot offer + program terms accepted (user permission) | **Sign in to Impact** (login session expired; the agent never enters passwords or login codes) |
-| Wix (Impact) | not started | same Impact sign-in |
-| Squarespace (Impact) | not started | same Impact sign-in |
+| HubSpot (Impact) | **Deferred by user 2026-10-04** (wait for the 8am answer first). Terms were ticked once | next time: user signs in to Impact, then the agent applies from **inside the dashboard** (Brands → search → Apply). Never use the campaign-promo-signup link while logged in: it loops to Sign Up and logs the user out |
+| Wix (Impact) | Deferred by user 2026-10-04 | same as HubSpot |
+| Squarespace (Impact) | Deferred by user 2026-10-04 | same as HubSpot |
 | Lofty | **Email sent 2026-10-04** to support@lofty.com asking for a manual affiliate signup (the web form accepts US phone numbers only) | waiting for their reply |
 | Jotform | Form reviewed (form.jotform.com/203371587413051) | Needs a **Jotform username** (free account) and a **human-verification** question |
 | Studio Ninja (Ambassador) | All 12 fields filled honestly (not a photographer; new site; code TOOLPICKGUIDE) | Requires an **active Studio Ninja account (free trial)** on eran@toolpickguide.com before submitting |

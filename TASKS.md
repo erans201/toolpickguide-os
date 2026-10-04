@@ -33,7 +33,7 @@ The Sheet tab `Tasks` mirrors this list (ID in the Task column). Status changes 
 - **Why separate:** if anything goes wrong you can revoke the cloud's access alone, without breaking your local tools.
 - **Done when:** the password is pasted into the cloud environment (T0.6).
 
-### T0.5 · A separate Google key for the cloud (+ rotate the leaked one) · U · due Oct 5
+### T0.5 · A separate Google key for the cloud (+ rotate the leaked one) · U · due Oct 5 · ✅ DONE 2026-10-04 (leaked key deleted, user-confirmed; cloud Google key still postponed)
 1. https://console.cloud.google.com → project **saas-website-project-510316** → **IAM & Admin → Service Accounts** → `gsc-reader`.
 2. **Keys** tab: if key `6fe0ca43…` still exists (it was attached in chat on Oct 1), click its trash icon → **Delete**.
 3. **Add key → Create new key → JSON → Create.** A file downloads. Open it in Notepad (don't attach it anywhere), select all, and copy. You'll paste it in T0.6.
@@ -73,13 +73,13 @@ The Sheet tab `Tasks` mirrors this list (ID in the Task column). Status changes 
 3. **Run now** once and read the run log: env OK, health check OK, digest Doc created in Drive.
 - **Done when:** 3 consecutive daily runs succeed (Oct 7–9) and the user has read the digests.
 
-### T0.9 · Stop counting your own visits in GA4 · U · due Oct 6
+### T0.9 · Stop counting your own visits in GA4 · U · due Oct 6 · ✅ DONE 2026-10-04 (user-confirmed; check in the Nov 1 GA4 data)
 1. Google search "what is my IP" → copy it.
 2. GA4 → **Admin** → **Data streams** → your web stream → **Configure tag settings** → **Show more** → **Define internal traffic** → **Create** → Rule name `Me` → traffic_type value `internal` → **IP address · equals** → paste → **Create**.
 3. GA4 → **Admin** → **Data settings → Data filters** → **Internal Traffic** → filter state **Active** → **Save**.
 - **Done when:** the next monthly GA4 report no longer shows ~100 direct homepage sessions.
 
-### T0.10 · Remove plain-text password files · U · due Oct 5
+### T0.10 · Remove plain-text password files · U · due Oct 5 · ✅ DONE 2026-10-04 (files verified gone)
 1. In `C:\Users\User\Documents\saas`, delete **`New Application Password.txt`** and **`.env.txt`**. Your `.env` already holds what the tools need.
 2. If either file held a password you still use, revoke that WordPress application password (Users → Profile → Application Passwords → Revoke) and create a fresh one in `.env`.
 - **Done when:** both files are gone. (Git already ignores them, so they never reached GitHub.)
@@ -97,7 +97,7 @@ The Sheet tab `Tasks` mirrors this list (ID in the Task column). Status changes 
 
 ## PHASE 1: Foundation (Oct 12 – Nov 30)
 
-### T1.1 · Apply the two QA-corrected drafts · U · due Oct 12
+### T1.1 · Apply the two QA-corrected drafts · U · due Oct 12 · ✅ DONE (576 + 572 live with corrected text, verified 2026-10-04)
 Run in PowerShell in `saas`:
 ```
 python junia_draft.py --brief knowledge/briefs/junia/client-intake-form-template.md --post-id 576 --replace-content knowledge/junia-576-client-intake-form-template.md
@@ -105,7 +105,7 @@ python junia_draft.py --brief knowledge/briefs/junia/photography-contract-templa
 ```
 - **Done when:** both print "✅ Draft … updated (still a draft)".
 
-### T1.2 · Publish the 3 ready articles · U (Tier C) · due Oct 14 · needs T1.1
+### T1.2 · Publish the 3 ready articles · U (Tier C) · due Oct 14 · needs T1.1 · ✅ DONE 2026-10-04 (586, 576, 572 live, index/follow)
 1. WordPress → **Posts → Drafts** → open **586**, **576** and **572** one at a time.
 2. In each: read it through, check the featured image has no readable text or logos, click **Save Draft** (Rank Math rescores), then **Publish**.
 3. Search Console → **URL Inspection** → paste each new URL → **Request indexing**.

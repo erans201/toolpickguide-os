@@ -110,3 +110,4 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Close | **Submitted 2026-10-04** ("Application received… within 1-2 business days"); Affiliate type, partner terms accepted under the user's standing instruction | — |
 | Zoho | **Submitted 2026-10-04** (user did the captcha + Submit). Confirmation email from zohocorp.com: review in 7–10 business days; replies come from affiliates-support@zohocorp.com | — |
 
+| Pipedrive | **Submitted 2026-10-04** via PartnerStack ("Application received!"); agent filled everything, user added LinkedIn + submitted | optional: user creates the PartnerStack account (needed later for payouts) |

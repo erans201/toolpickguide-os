@@ -78,7 +78,7 @@ Applies to every in-house edit, every Junia brief, and every Junia draft QA. Sou
 - **Site settings (user decision 2026-10-03, replaces the old "never change site settings" rule):** the local agent may change **performance and SEO plugin settings** (LiteSpeed Cache; Rank Math; core WordPress Settings screens such as Reading and Permalinks are excluded unless the user names them). It works in the in-app browser after the user has logged in to WP admin themselves; the agent never types passwords. Process for every change:
   1. Note the current value in `wordpress/SETTINGS-LOG.md` first (the undo).
   2. Say in chat which setting changes to what, and wait for the user's OK.
-  3. Change **one setting at a time**, then purge the cache.
+  3. Change **one setting at a time**, then purge the cache: LiteSpeed (WP admin → LiteSpeed Cache → Toolbox → Purge All) **and** Hostinger's CDN, which keeps old copies for 15+ minutes. The user clears that one in hPanel → Websites → toolpickguide.com → Advanced → Cache Manager → **Purge All** (keep Automatic cache ON; Hostinger also clears it every 30 min). Then purge the LiteSpeed page cache once more, because LiteSpeed builds merged CSS in the background. Test only once `curl -I` shows `x-hcdn-cache-status: MISS` or a small `Age`.
   4. Re-test with `pagespeed_pull.py --url` / `autopilot/healthcheck.py` plus a visual check of one page.
   5. If anything breaks, switch it back at once and log it.
 

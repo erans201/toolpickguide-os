@@ -89,7 +89,7 @@ The Sheet tab `Tasks` mirrors this list (ID in the Task column). Status changes 
 2. A: run `python pagespeed_pull.py` → write the CWV baseline into `GROWTH_PLAN.md` §1 and a fix list into `ONSITE_PLANS.md`.
 - **Done when:** LCP/INP/CLS are recorded for the top 20 pages.
 
-### T0.12 · Move the Drive folder · U · due Oct 5
+### T0.12 · Move the Drive folder · U · due Oct 5 · ✅ DONE 2026-10-03 (agent access verified)
 1. Drive → **My Drive** → right-click **ToolPickGuide OS** → **Organize → Move** → choose your folder → **Move**.
 - **Done when:** ToolPickGuide OS sits inside your folder. The agent keeps access.
 

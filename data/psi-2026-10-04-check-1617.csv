@@ -1,0 +1,4 @@
+url,perf_score,lab_lcp_s,lab_cls,lab_tbt_ms,field_lcp_s,field_inp_ms,field_cls,field_category,verdict
+https://toolpickguide.com/client-onboarding-software/,98,2.25,0,23,,,,,pass
+https://toolpickguide.com/best-crm-for-law-firms/,93,3.19,0,47,,,,,fix LCP
+https://toolpickguide.com/help-desk-tools-for-tiny-teams-under-5/,93,3.14,0,32,,,,,fix LCP

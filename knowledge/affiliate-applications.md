@@ -102,7 +102,7 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | HubSpot (Impact) | HubSpot offer + program terms accepted (user permission) | **Sign in to Impact** (login session expired; the agent never enters passwords or login codes) |
 | Wix (Impact) | not started | same Impact sign-in |
 | Squarespace (Impact) | not started | same Impact sign-in |
-| Lofty | Web form filled, but it accepts **US phone numbers only** | Email to support@lofty.com drafted (`knowledge/emails/2026-10-04-lofty-affiliate.md`); waits for the user's **"send"** |
+| Lofty | **Email sent 2026-10-04** to support@lofty.com asking for a manual affiliate signup (the web form accepts US phone numbers only) | waiting for their reply |
 | Jotform | Form reviewed (form.jotform.com/203371587413051) | Needs a **Jotform username** (free account) and a **human-verification** question |
 | Studio Ninja (Ambassador) | All 12 fields filled honestly (not a photographer; new site; code TOOLPICKGUIDE) | Requires an **active Studio Ninja account (free trial)** on eran@toolpickguide.com before submitting |
 | Sprout Studio | not started | signup with a password |

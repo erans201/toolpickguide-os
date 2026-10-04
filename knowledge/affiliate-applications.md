@@ -86,7 +86,7 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 |---|---|---|---|---|
 | Lawmatics | 2026-10-04 | Submitted (web form; confirmation shown: team will reach out by email). Asked for a trackable web link | | |
 | TaxDome | — | Not usable: the publisher program is gone (customer referral only) | | |
-| HoneyBook | | | | |
+| HoneyBook | 2026-10-04 | Submitted (Google Form: 'Your response has been recorded'). Custom link text requested: toolpickguide | | |
 | Paperbell | | | | |
 | Simply.Coach | | | | |
 | Pixieset | | | | |

@@ -84,7 +84,7 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 
 | Program | Applied (date) | Status | Link format received | Logged in MEMORY.md |
 |---|---|---|---|---|
-| Lawmatics | | | | |
+| Lawmatics | 2026-10-04 | Submitted (web form; confirmation shown: team will reach out by email). Asked for a trackable web link | | |
 | TaxDome | | | | |
 | HoneyBook | | | | |
 | Paperbell | | | | |

@@ -107,3 +107,6 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Studio Ninja (Ambassador) | All 12 fields filled honestly (not a photographer; new site; code TOOLPICKGUIDE) | Requires an **active Studio Ninja account (free trial)** on eran@toolpickguide.com before submitting |
 | Sprout Studio | not started | signup with a password |
 | PandaDoc | not started | partner-portal signup with a password |
+| Close | **Submitted 2026-10-04** ("Application received… within 1-2 business days"); Affiliate type, partner terms accepted under the user's standing instruction | — |
+| Zoho | Long form fully filled (review site, 21 articles, monthly traffic left blank on purpose, no hands-on Zoho use stated honestly, agreement + "not a reseller" declaration ticked, marketing emails unticked) | the user types the **text captcha** and clicks **Submit**; submitting also creates the Zoho account |
+

@@ -221,6 +221,28 @@ Same method and key as Sprint 1. No signups.
 
 **QA sign-off (2026-10-02):** verification level on every row; third-party figure marked (3P); no signups; rankings unchanged; sources linked.
 
+### Sprint 3 (T1.5) · Real estate, photographers, forms/web, e-sign · 2026-10-04
+Verification: ✅ official page read in a browser/fetch · 🟡 third-party only (3P) · ⛔ no publisher program. "Mentions" = times the tool appears on our live pages.
+
+| Tool | Our pages (mentions) | Program | Pays | Network / apply | Verified |
+|---|---|---|---|---|---|
+| **Lofty** | real estate CRM (20) | Affiliate, "open to everyone" | **10% of monthly subscription for 24 months**; 20% if 10+ customers in a quarter | lofty.com/affiliate (signup via JS button) | ✅ |
+| Follow Up Boss | real estate CRM (20) | none ("considering") | n/a | n/a | ⛔ |
+| Wise Agent | real estate CRM (21), TM (15) | customer referral only (5 paying referrals = free base account); Brand Ambassador program (top agents) | n/a for publishers | n/a | ⛔ (3P summary) |
+| dotloop | TM (20) | customer referral only ($250 Visa gift card) | n/a | n/a | ⛔ |
+| SkySlope | TM (20) | no public program (3P) | n/a | n/a | ⛔ |
+| Open to Close, Paperless Pipeline, DocJacket | TM (OtC 17) | nothing public found | n/a | ask by email later | ⛔ |
+| **Sprout Studio** | photographers (18) | Affiliate (open invite) | **20% of subscription for the first 3 months** (+ limited $50 bonus); PayPal, $50 min | affiliates.trysproutstudio.com/signup?campaign=sprout-studio-ambassadors | ✅ |
+| **Studio Ninja** | photographers (16) | Ambassador (selective) | **40% commission monthly**; readers get 50% off for 12 months; renewal needs 5 referrals per year | studioninja.co/ambassador-registration/ | ✅ |
+| **Jotform** | form builders (11), intake template (3) | Affiliate (case-by-case; customer status not required) | **30% for the first 12 months**, paid monthly; 60-day paid-user rule; PayPal via Tremendous | jotform.com/partnership/affiliate/ (form; reviewed within 1 business day) | ✅ |
+| **HubSpot** | form builders (18), e-sign (3), onboarding (3) | Affiliate (SaaS reviewers and blogs eligible) | **30% recurring up to 1 year**; 180-day cookie; $10 min | **Impact** (reviewed in 2–3 days) | ✅ |
+| **Wix** | website builders (32) | Affiliate, "all types of creators" | per Premium conversion (amount shown after approval; 3P: $100 flat, 30-day cookie) | **Impact** (Wix.brand) | ✅ program / 🟡 amount |
+| **Squarespace** | website builders (31) | Affiliate (relevant websites) | per conversion (amount after approval; 3P: $100–200, 45-day cookie) | **Impact**; worldwide, USD | ✅ program / 🟡 amount |
+| **PandaDoc** | e-sign (13) | Affiliate partner track | **20–25% of year one** (tier) | eulerapp.com partner portal ("Apply as an affiliate") | ✅ |
+| DocuSign | e-sign (20) | Affiliate via CJ (3P) | 3P: $25–100 per paid signup, 30-day cookie | CJ Affiliate (needs a CJ account) | 🟡 |
+
+**Takeaways:** (1) Impact now covers 8am + HubSpot + Wix + Squarespace with one account. (2) Real estate has exactly one publisher program (Lofty); the TM tools on 586 have none, so that page earns through Lofty/CRM cross-links, not TM affiliates. (3) Highest value per signup: Studio Ninja 40% monthly, Lofty 10% × 24 months, HubSpot/Jotform 30% × 12 months.
+
 ## 📈 AGENT SELF-IMPROVEMENT & CAPABILITY LOG
 *(Every agent must independently log here one professional optimization or prompt skill discovered during execution to improve team knowledge)*
 

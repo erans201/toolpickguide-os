@@ -130,7 +130,7 @@ python junia_draft.py --brief knowledge/briefs/junia/photography-contract-templa
 - Then paste each approved link (or its format) to the agent.
 - **Done when:** 5+ programs are approved and their link formats are logged in MEMORY.md.
 
-### T1.5 · Affiliate research sprint 3 · A · due Oct 16
+### T1.5 · Affiliate research sprint 3 · A · due Oct 16 · ✅ DONE 2026-10-04 (MEMORY.md Sprint 3: 8 joinable: Lofty, Sprout Studio, Studio Ninja, Jotform, HubSpot, Wix, Squarespace, PandaDoc; DocuSign via CJ 3P)
 1. Research the programs (official pages first, third-party sources labeled 3P) for:
    - Dotloop, SkySlope, Open to Close, Paperless Pipeline, DocJacket, Wise Agent, Follow Up Boss, Lofty
    - Dubsado, Pixieset, Studio Ninja, Sprout Studio

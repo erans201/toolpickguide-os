@@ -1,0 +1,15 @@
+# Sender domains whose emails mail_tool.py may show to the agent (one per line; subdomains included).
+# Everything else in the mailbox stays private. Add a domain when we apply to a new program.
+lawmatics.com
+honeybook.com
+paperbell.com
+firstpromoter.com
+simply.coach
+pixieset.com
+mypixieset.com
+dubsado.com
+clio.com
+mycase.com
+8am.com
+impact.com
+partnerstack.com

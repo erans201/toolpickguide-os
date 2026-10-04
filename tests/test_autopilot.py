@@ -161,5 +161,32 @@ class TestCloudKey(unittest.TestCase):
         info.assert_called_once()
 
 
+class TestMailTool(unittest.TestCase):
+    def test_only_affiliate_senders_are_shown(self):
+        import mail_tool
+        doms = ["honeybook.com", "lawmatics.com"]
+        self.assertTrue(mail_tool.sender_allowed("HoneyBook <affiliates@honeybook.com>", doms))
+        self.assertTrue(mail_tool.sender_allowed("x@mail.lawmatics.com", doms))
+        self.assertFalse(mail_tool.sender_allowed("Bank <alerts@mybank.com>", doms))
+        self.assertFalse(mail_tool.sender_allowed("evil@honeybook.com.attacker.net", doms))
+
+    def test_draft_needs_exactly_one_recipient(self):
+        import mail_tool
+        tmp = Path(tempfile.mkdtemp())
+        ok = tmp / "ok.md"
+        ok.write_text("To: partners@clio.com\nSubject: Hello\n\nBody line.\n", encoding="utf-8")
+        self.assertEqual(mail_tool.parse_draft(ok)[0], "partners@clio.com")
+        two = tmp / "two.md"
+        two.write_text("To: a@x.com, b@y.com\nSubject: Hi\n\nBody\n", encoding="utf-8")
+        with self.assertRaises(SystemExit):
+            mail_tool.parse_draft(two)
+
+    def test_refuses_cloud_autopilot(self):
+        import mail_tool
+        with mock.patch.dict(os.environ, {"TPG_AUTOPILOT": "1"}), mock.patch.object(sys, "argv", ["mail_tool.py", "--inbox"]):
+            with self.assertRaises(SystemExit):
+                mail_tool.main()
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -138,6 +138,7 @@
 > - **TaxDome:** the publisher partner program is **gone** (verified 2026-10-04: marketing.taxdome.com does not resolve and taxdome.com/partner-program is a 404). taxdome.com/referral-program is customer-only: you need a TaxDome account; firm owners get a free seat-month and team members a $100 Amazon gift card per referral. Not usable for the site. Accounting has no usable program now (Karbon customer referral only; Canopy customer-only).
 > - **Dubsado:** the basic affiliate program pays **$35 in Dubsado credit** (60-day retention). The **Ambassador program** pays **$75 cash via PayPal** with 30% off for referrals: https://www.dubsado.com/ambassador-program
 > - **Pixieset (new):** $20 per paid signup, $20 off for the referred user, monthly PayPal (affiliates.mypixieset.com). Reviewed application for educators and brands.
+> - **MyCase → 8am Affiliate and Creator Program (new 2026-10-04):** linked from mycase.com/partners as 'MyCase Affiliate Program' → https://www.8am.com/affiliate-program/. Runs on **impact.com**. Covers MyCase, LawPay, CasePeer, DocketWise, CPACharge. Eligibility: 'practitioners, educators, content creators, and review sites'. Commission on every new paid subscription (rate not published). Rules: no PPC on the 8am brand, no deceptive tactics. One Impact account can also join other brands on Impact.
 > - **Follow Up Boss:** no affiliate program ("considering"). **SkySlope:** no public program (3P). Real estate needs sprint 3 (T1.5).
 
 ### Sprint 1: Accounting + Coaches Program Lookup · 2026-09-29 · QA: ✅ signed off (see bottom)

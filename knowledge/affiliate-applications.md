@@ -17,7 +17,8 @@
 | 5 | **Simply.Coach** | Coaches (20) | 1 month of the referred plan, up to $199 | https://simply.coach/affiliate-program/ | reviewed |
 | 6 | **Pixieset** | Photographers (34) | $20 per paid signup; readers get $20 off; monthly PayPal | https://affiliates.mypixieset.com/ → Apply Now | reviewed |
 | 7 | **Dubsado: Ambassador program** (not the basic one) | Photographers (23), coaches | $75 cash per paid signup via PayPal; readers get 30% off | https://www.dubsado.com/ambassador-program | reviewed (for educators and content creators) |
-| 8 | **Clio + MyCase** | Legal (Clio 34–40 mentions, MyCase 35) | unknown: no public publisher program | email below (§4) | ask |
+| 8 | **Clio** | Legal (34–40 mentions) | unknown | Channel Partner form (submitted 2026-10-04) | reviewed |
+| 9 | **8am (MyCase, LawPay, CasePeer, DocketWise, CPACharge)**: found 2026-10-04 | Legal (MyCase 35 mentions) + accounting (CPACharge) | commission per new paid subscription (rate shown after approval); unique tracking link; open to **review sites**; no PPC on brand | https://www.8am.com/affiliate-program/ → impact.com signup | reviewed via Impact |
 
 **Expect some rejections at first:** the site is new and traffic is still small, and selective programs (Paperbell, Pixieset, Dubsado Ambassador) may say "come back later". Apply anyway: approvals are free, and a rejection costs nothing. The robot re-lists rejected programs for a new try after 3 months.
 
@@ -92,4 +93,4 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Pixieset | | | | |
 | Dubsado Ambassador | | | | |
 | Clio | 2026-10-04 | Submitted: Channel Partner form (as a publisher, 'Other'; note asks for a trackable publisher link; '1-5 firms' chosen because the form has no 0 option, with user OK). Success page shown | | |
-| MyCase (email) | | | | |
+| 8am / MyCase (Impact) | | Signup page opened 2026-10-04: the user creates the Impact account | | |

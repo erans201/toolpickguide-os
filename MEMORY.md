@@ -252,13 +252,13 @@ Source: H2/H3 tool names across all live pages. ✅ official page read · 🟡 t
 | **Zoho (CRM, Desk, People)** | law-firm CRM, CRM ops, free CRM, help desk, onboarding | 15% (18/20% tiers) of first 12 months; 90-day cookie; $100 min; PayPal/wire | own (zoho.com/affiliate) | ✅ |
 | **Close** | CRM ops | 30% of first-year subscription ("lifetime available"); approval in 1–2 business days | own form | ✅ |
 | **Fillout** | form builders | 30% recurring up to 1 year; 1-minute signup (account) | in-app | ✅ |
-| monday.com (Sales CRM) | CRM ops | 3P: ~25% first year, 90-day cookie | PartnerStack (3P) | 🟡 |
+| monday.com (Sales CRM) | CRM ops | official PartnerStack page: online affiliates earn **CPL per sign-up**; partners up to 20% per closed deal; 90-day cookie; PayPal/Stripe. Join = mondaycom.partnerstack.com (needs a PartnerStack account) | PartnerStack | ✅ |
 | Freshworks (Freshsales, Freshdesk) | CRM ops, free CRM, help desk | 3P: 15% MRR for 12 months (up to 25%) | PartnerStack (3P) | 🟡 |
 | Capsule CRM | free CRM | 3P: 20% lifetime (25/30% tiers); 30-day window; PayPal £50 min | own | 🟡 |
 | Insightly | CRM ops | 3P: 20% | ? | 🟡 |
 | Agile CRM | free CRM | 3P: 20–30% | own | 🟡 |
 | Help Scout | help desk | 3P: 30% of first year | ? | 🟡 |
-| Zendesk | help desk | 3P: 15% of first year; 30-day cookie; **no partners/resellers** | PartnerStack (3P) | 🟡 |
+| Zendesk | help desk | **15% of first-year sales**, open to media/publishers/content creators; no Zendesk partners/resellers; join: zendesk.partnerstack.com/?group=externalrecruitment | PartnerStack | ✅ |
 | Typeform | form builders | 3P: $20 upfront + 15% monthly | ? | 🟡 |
 | Tally | form builders | 3P: 20% up to $150 per referral; 30-day cookie | own | 🟡 |
 | Formstack | form builders | 3P: 25% of first year; 30-day cookie; $100 min | (formstack.com/affiliates, Impact-tracked link seen) | 🟡 |

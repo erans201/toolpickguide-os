@@ -91,5 +91,5 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Simply.Coach | | | | |
 | Pixieset | | | | |
 | Dubsado Ambassador | | | | |
-| Clio (email) | | | | |
+| Clio | 2026-10-04 | Submitted: Channel Partner form (as a publisher, 'Other'; note asks for a trackable publisher link; '1-5 firms' chosen because the form has no 0 option, with user OK). Success page shown | | |
 | MyCase (email) | | | | |

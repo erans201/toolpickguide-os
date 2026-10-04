@@ -94,3 +94,16 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Dubsado Ambassador | — | **Skipped 2026-10-04 (agent recommendation):** the Notion application needs the email of an existing Dubsado account, a link to Dubsado-related content we created, and a video. It's a cohort waitlist for Dubsado power users. Revisit after the Pixieset/HoneyBook/Dubsado comparison is live and traffic exists | | |
 | Clio | 2026-10-04 | Submitted: Channel Partner form (as a publisher, 'Other'; note asks for a trackable publisher link; '1-5 firms' chosen because the form has no 0 option, with user OK). Success page shown | | |
 | 8am / MyCase (Impact) | 2026-10-04 | **In Review**. User created the Impact account (eran@toolpickguide.com, individual). Agent: publisher / website / product & service reviews; website toolpickguide.com connected (email-domain verification); AI profile text replaced with our accurate description; legal/accounting tags | | |
+
+## 6. Round 2 (Sprint 3 programs) · status 2026-10-04
+
+| Program | Status | Blocker (user-only step) |
+|---|---|---|
+| HubSpot (Impact) | HubSpot offer + program terms accepted (user permission) | **Sign in to Impact** (login session expired; the agent never enters passwords or login codes) |
+| Wix (Impact) | not started | same Impact sign-in |
+| Squarespace (Impact) | not started | same Impact sign-in |
+| Lofty | Web form filled, but it accepts **US phone numbers only** | Email to support@lofty.com drafted (`knowledge/emails/2026-10-04-lofty-affiliate.md`); waits for the user's **"send"** |
+| Jotform | Form reviewed (form.jotform.com/203371587413051) | Needs a **Jotform username** (free account) and a **human-verification** question |
+| Studio Ninja (Ambassador) | All 12 fields filled honestly (not a photographer; new site; code TOOLPICKGUIDE) | Requires an **active Studio Ninja account (free trial)** on eran@toolpickguide.com before submitting |
+| Sprout Studio | not started | signup with a password |
+| PandaDoc | not started | partner-portal signup with a password |

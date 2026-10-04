@@ -135,7 +135,7 @@
 > **Corrections 2026-10-04 (verified on official pages in a browser; application kit: `knowledge/affiliate-applications.md`):**
 > - **PracticePanther:** the open "Simple Referral" program is a lead-submission form, with no trackable web link. A trackable link comes only with Certified Preferred Partner status (needs 3 paying referrals per year). Not usable for the site yet.
 > - **Canopy:** "Log in to Canopy to get your referral link". It's a customer program, and the $50 goes to the referred person, not the referrer. Not usable.
-> - **TaxDome:** the old partner URL is dead. Current page: https://marketing.taxdome.com/. Basic partner level is pre-approved: $150 per referred company, 90-day cookie, PayPal monthly, $100 minimum (TaxDome blog + program page).
+> - **TaxDome:** the publisher partner program is **gone** (verified 2026-10-04: marketing.taxdome.com does not resolve and taxdome.com/partner-program is a 404). taxdome.com/referral-program is customer-only: you need a TaxDome account; firm owners get a free seat-month and team members a $100 Amazon gift card per referral. Not usable for the site. Accounting has no usable program now (Karbon customer referral only; Canopy customer-only).
 > - **Dubsado:** the basic affiliate program pays **$35 in Dubsado credit** (60-day retention). The **Ambassador program** pays **$75 cash via PayPal** with 30% off for referrals: https://www.dubsado.com/ambassador-program
 > - **Pixieset (new):** $20 per paid signup, $20 off for the referred user, monthly PayPal (affiliates.mypixieset.com). Reviewed application for educators and brands.
 > - **Follow Up Boss:** no affiliate program ("considering"). **SkySlope:** no public program (3P). Real estate needs sprint 3 (T1.5).

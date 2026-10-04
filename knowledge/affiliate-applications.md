@@ -11,7 +11,7 @@
 | # | Program | Vertical (our pages that feature it) | You earn | Apply here | Approval |
 |---|---|---|---|---|---|
 | 1 | **Lawmatics** | Legal: law-firm CRM (12 mentions), case mgmt (21), practice mgmt (5) | 10% of first-year contract, paid after 90 days as a customer | https://www.lawmatics.com/partners/affiliate | open to anyone |
-| 2 | **TaxDome** | Accounting: practice mgmt for accountants (24) | $150 per referred firm; 90-day cookie; PayPal, $100 minimum | https://marketing.taxdome.com/ | pre-approved |
+| 2 | ~~TaxDome~~ | Accounting | **Closed 2026-10-04:** marketing.taxdome.com no longer resolves and taxdome.com/partner-program is a 404. Only a customer referral program is left (needs a TaxDome account; rewards are seat-months or a $100 gift card for team members) | n/a | not usable |
 | 3 | **HoneyBook** | Photographers (24), coaches (19) | $50 per new subscriber, paid 100 days after signup; readers get 25% off year 1 | https://forms.gle/L5XMJGtSKuQuns7FA (Google Form) | reviewed |
 | 4 | **Paperbell** | Coaches (25) | $100 per signup, no cap; 365-day cookie; PayPal | https://paperbell.com/affiliate-information/ → apply button | selective ("quality over quantity") |
 | 5 | **Simply.Coach** | Coaches (20) | 1 month of the referred plan, up to $199 | https://simply.coach/affiliate-program/ | reviewed |
@@ -85,7 +85,7 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Program | Applied (date) | Status | Link format received | Logged in MEMORY.md |
 |---|---|---|---|---|
 | Lawmatics | 2026-10-04 | Submitted (web form; confirmation shown: team will reach out by email). Asked for a trackable web link | | |
-| TaxDome | | | | |
+| TaxDome | — | Not usable: the publisher program is gone (customer referral only) | | |
 | HoneyBook | | | | |
 | Paperbell | | | | |
 | Simply.Coach | | | | |

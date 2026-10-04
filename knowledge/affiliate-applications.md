@@ -112,3 +112,5 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 
 | Pipedrive | **Submitted 2026-10-04** via PartnerStack ("Application received!"); agent filled everything, user added LinkedIn + submitted | optional: user creates the PartnerStack account (needed later for payouts) |
 | monday.com, Zendesk (+ Freshworks?) | **Deferred by user 2026-10-04**: all need a PartnerStack account first (user creates it, then the agent joins each program inside PartnerStack) | PartnerStack account |
+| Capsule (+ Transpond) | **Submitted 2026-10-04** via PartnerStack application form (no account needed): "Application received!" Lifetime 20%–30% tiers | — |
+| Zendesk | Not applied: zendesk.partnerstack.com "Join now" starts PartnerStack account creation (blocked for the agent; the page also says "program page not found"); the direct application URL with company=zendesk does not exist | the user creates the PartnerStack account first |

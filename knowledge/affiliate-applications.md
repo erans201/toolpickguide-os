@@ -89,7 +89,7 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | TaxDome | — | Not usable: the publisher program is gone (customer referral only) | | |
 | HoneyBook | 2026-10-04 | Submitted (Google Form: 'Your response has been recorded'). Custom link text requested: toolpickguide | | |
 | Paperbell | 2026-10-04 | **Pending** (FirstPromoter dashboard: 'Your application is pending'). Agent filled the form + consent box (user OK); user set the password and signed up | | |
-| Simply.Coach | | | | |
+| Simply.Coach | 2026-10-04 | **Pending** (FirstPromoter dashboard). Agent filled the form; user set the password, consent and Sign Up; email confirmed | | |
 | Pixieset | 2026-10-04 | Submitted (Typeform, 13 answers; blog / uses none / honest early-traffic statement). Confirmation shown | | |
 | Dubsado Ambassador | — | **Skipped 2026-10-04 (agent recommendation):** the Notion application needs the email of an existing Dubsado account, a link to Dubsado-related content we created, and a video. It's a cohort waitlist for Dubsado power users. Revisit after the Pixieset/HoneyBook/Dubsado comparison is live and traffic exists | | |
 | Clio | 2026-10-04 | Submitted: Channel Partner form (as a publisher, 'Other'; note asks for a trackable publisher link; '1-5 firms' chosen because the form has no 0 option, with user OK). Success page shown | | |

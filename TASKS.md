@@ -116,6 +116,7 @@ python junia_draft.py --brief knowledge/briefs/junia/photography-contract-templa
 - **Done when:** the 3 links are live, and posts 65 and 32 each have ≥ 2 inbound links in the next crawl.
 
 ### T1.4 · Join affiliate programs · U · due Oct 20 · started 2026-10-04
+**Status 2026-10-04: all 7 fitting programs applied.** Lawmatics, HoneyBook, Clio, Pixieset submitted; 8am/MyCase (Impact) In Review; Paperbell + Simply.Coach Pending. Skipped: Dubsado Ambassador (needs a Dubsado account and content). Not usable: TaxDome, PracticePanther, Canopy. **Next:** the agent checks `python mail_tool.py --inbox` each session, logs approvals and link formats in MEMORY.md, then adds links to pages (T1.11). User: Impact payment + tax (W-8BEN, individual) when prompted.
 **Everything you need is in `knowledge/affiliate-applications.md`:** the verified list in order, paste-ready answers, and the Clio/MyCase email. Apply in this order:
 1. Lawmatics: https://www.lawmatics.com/partners/affiliate
 2. TaxDome: https://marketing.taxdome.com/ (pre-approved)

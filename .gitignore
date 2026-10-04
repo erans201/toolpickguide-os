@@ -28,3 +28,6 @@ upload_state.json
 
 # Personal notes that may hold passwords
 *robot*.txt
+
+# Private personal details for applications (never in git)
+*.local.md

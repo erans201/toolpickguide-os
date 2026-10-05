@@ -123,3 +123,4 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | monday.com | Waits for PartnerStack Network approval, then apply inside the marketplace (program page: dash.partnerstack.com/marketplace/all/details/mondaycom) | Network approval |
 | Zendesk | **Not on PartnerStack anymore** (marketplace search: no results; zendesk.partnerstack.com "program page not found"). Find its current affiliate program elsewhere | research |
 | Studio Ninja | **Skipped by the user 2026-10-05** (doesn't want a Studio Ninja free-trial account, which the ambassador form requires) | — |
+| Jotform | **Submitted 2026-10-05** via jotform.com/partnership/affiliate/application (official page prefills name + email from the user's free Jotform account ERAN_SHALEV; the direct form link left the email field locked and empty). Blog/Website Articles + Reviews; Search engine; agreement ticked by agent; user did reCAPTCHA + Submit. Review within 1 business day | — |

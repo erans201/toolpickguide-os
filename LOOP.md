@@ -169,3 +169,4 @@ Initialize the core knowledge base and build the Master Vertical Reference Matri
 * 2026-10-05 (local): Indexing step added to tpg-browser-ops (user yes): Search Console requests for new sitemap URLs, max 5/run; register knowledge/indexing-requests.md (37 URLs baselined); runbook Step 5.
 * 2026-10-05 (local): PartnerStack account created by user; Network application submitted by agent (monday waits for approval; Zendesk no longer on PartnerStack).
 * 2026-10-05 (local): Studio Ninja ambassador skipped (user).
+* 2026-10-05 (local): Jotform affiliate application submitted (user captcha + submit).

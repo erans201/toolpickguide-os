@@ -12,6 +12,9 @@ and verifies the status after writing.
 
 QA report: title year, banned words, "tested" claims, $ amounts not in the facts sheet, required links,
 keyword placement (title, first paragraph, subheadings, density), word count, long paragraphs.
+External links Junia added on its own are allowed when the site is legit and trusted (user rule 2026-10-05): the
+agent judges each new domain once and records it in knowledge/junia-link-domains.txt (trusted / blocked). The gate
+fails while a link points to a blocked domain or to a domain nobody has judged yet.
 
 --apply (after a full backup to backups/junia-*.json):
   - fixes a wrong year in the title, sets slug, excerpt, tags, category
@@ -48,6 +51,29 @@ LEFTOVERS = re.compile(r"images? to include|suggested wordpress image|image plac
                        r"if you tell me|i can point you|in one reply|\[insert|placeholder|in today's [a-z ]+ landscape|"
                        r"save this as a draft|save as draft|draft saved|as draft\b|come back to it|ptsd|"
                        r"i have seen the same", re.I)
+LINK_DOMAINS = Path("knowledge/junia-link-domains.txt")  # agent's trusted / blocked verdicts on Junia's own links
+
+
+def link_verdicts(path=LINK_DOMAINS):
+    """{domain: "trusted" | "blocked"} from lines like 'trusted ftc.gov' (comments start with #)."""
+    out = {}
+    if path.is_file():
+        for line in path.read_text(encoding="utf-8").splitlines():
+            parts = line.split("#", 1)[0].split()
+            if len(parts) >= 2 and parts[0].lower() in ("trusted", "blocked"):
+                out[parts[1].lower().removeprefix("www.")] = parts[0].lower()
+    return out
+
+
+def verdict(domain, verdicts):
+    d = domain.lower().removeprefix("www.")
+    while d:
+        if d in verdicts:
+            return verdicts[d]
+        d = d.partition(".")[2] if d.count(".") > 1 else ""
+    return None
+
+
 SOURCES = {  # verified official pricing pages (2026-09-29)
     "Pixieset": "https://pixieset.com/pricing-studio-manager/", "Studio Ninja": "https://www.studioninja.co/pricing/",
     "Sprout Studio": "https://getsproutstudio.com/pricing/", "Dubsado": "https://www.dubsado.com/pricing",
@@ -137,6 +163,7 @@ def analyze(post, brief):
         "offlist_external": sorted({h.split("/")[2] for h in external_have}
                                    - {u.split("/")[2] for u in brief["external"]} - {u.split("/")[2] for u in SOURCES.values()}),
         "missing_tools": [t for t in brief["required_tools"] if t.lower() not in lower],
+        **judge_offlist(external_have, brief),
         "excluded_present": [t for t in brief["excluded_tools"] if t.lower() in lower],
         "source_lines": len(re.findall(r"\bSource:", body)),
         "claimed_n": int(m.group(1)) if (m := re.search(r"(\d+)\s+(?:questions|clauses|tips|tools|ways|templates)", title, re.I)) else None,
@@ -159,7 +186,9 @@ def report(a, brief, post):
         print(f"       → starts: \"{lp}…\"  (split into 2 paragraphs)")
     print(f"  {ok(not a['leftovers'])} Junia notes / chatbot residue: {a['leftovers'] or 'none'}")
     print(f"  {ok(not a['hotlinked_images'])} Hotlinked images (must be hosted in the Media Library): {len(a['hotlinked_images'])}")
-    print(f"  {ok(not a['offlist_external'])} External links not in the brief: {a['offlist_external'] or 'none'}")
+    print(f"  ℹ️ External links Junia added (allowed if the site is legit): {a['offlist_external'] or 'none'}")
+    print(f"  {ok(not a['blocked_external'])} Links to untrusted sites (remove them): {a['blocked_external'] or 'none'}")
+    print(f"  {ok(not a['unjudged_external'])} New sites to judge in {LINK_DOMAINS}: {a['unjudged_external'] or 'none'}")
     print(f"  {ok(not a['missing_external'])} Required source links missing: {a['missing_external'] or 'none'}")
     if brief["required_tools"]:
         print(f"  {ok(not a['missing_tools'])} Required tools missing: {a['missing_tools'] or 'none'}")
@@ -282,11 +311,20 @@ def export_all(session):
     print("\nDone. Nothing was changed in WordPress. Tell the agent the exports are ready.")
 
 
+def judge_offlist(external_have, brief, verdicts=None):
+    """Splits Junia's own external links into trusted / blocked / not yet judged domains."""
+    verdicts = link_verdicts() if verdicts is None else verdicts
+    own = sorted({h.split("/")[2] for h in external_have}
+                 - {u.split("/")[2] for u in brief["external"]} - {u.split("/")[2] for u in SOURCES.values()})
+    return {"blocked_external": [d for d in own if verdict(d, verdicts) == "blocked"],
+            "unjudged_external": [d for d in own if verdict(d, verdicts) is None]}
+
+
 def gate_clean(a):
     """True when no QA GATE item needs a human edit (AUTOPILOT.md: Tier B may only --apply clean drafts)."""
     short_of_claim = a["claimed_n"] and "question" in a["title"].lower() and a["question_items"] < a["claimed_n"]
     return not (a["unknown_amounts"] or a["banned"] or a["tested"] or a["long_paragraphs"] or short_of_claim
-                or a["leftovers"] or a["hotlinked_images"] or a["offlist_external"] or a["missing_tools"]
+                or a["leftovers"] or a["hotlinked_images"] or a["blocked_external"] or a["unjudged_external"] or a["missing_tools"]
                 or a["excluded_present"] or a["missing_external"])
 
 

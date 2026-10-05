@@ -1,0 +1,9 @@
+# Verdicts on external sites that Junia links to on its own (user rule 2026-10-05).
+# Trusted, legit sites are fine (official vendor pages, government, standards bodies, established trade press,
+# well-known publications). Block anything spammy, scraped, AI-farm, link-selling, expired/parked, unsafe, or a
+# fake/affiliate-only "review" site. One line per domain: "trusted <domain>" or "blocked <domain>" (subdomains included).
+# junia_draft.py fails the QA gate while a draft links to a blocked domain or to one not listed here yet.
+# The agent (local or robot) judges each new domain once, adds the line, and notes the reason after a #.
+trusted ftc.gov            # US Federal Trade Commission
+trusted americanbar.org    # American Bar Association
+trusted irs.gov            # US tax authority

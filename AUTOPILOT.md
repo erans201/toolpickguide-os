@@ -30,7 +30,7 @@
 
 **Site settings (2026-10-03):** performance and SEO plugin settings (LiteSpeed Cache, Rank Math) may be changed by the **local** agent with the user present, one at a time, logged in `wordpress/SETTINGS-LOG.md` and re-tested (rules in `CLAUDE.md`). The cloud autopilot never changes settings. If a daily health check or speed test shows a regression right after a logged change, it raises an ALERT that names the change and its undo.
 
-**Draft QA standard for Tier B (`junia_draft.py`):** the agent may only `--apply` when the QA gate shows no unknown $ amounts, no excluded tools, no off-brief links and no leftovers. Otherwise it prepares a corrected version and lists it as Tier C.
+**Draft QA standard for Tier B (`junia_draft.py`):** the agent may only `--apply` when the QA gate shows no unknown $ amounts, no excluded tools, no links to blocked or not-yet-judged sites, and no leftovers. Junia's own links to trusted sites are fine (user rule 2026-10-05): before applying, the robot judges each new domain the gate lists and records it in `knowledge/junia-link-domains.txt` with a reason; a blocked link means a corrected version without it (Tier C). Otherwise it prepares a corrected version and lists it as Tier C.
 
 ---
 

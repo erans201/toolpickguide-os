@@ -14,7 +14,7 @@
 | Category / Tags | Reviews · Invoicing & Contracts (existing categories only; pick the closest live ones) · honeybook, crm for photographers, client management software, invoicing |
 | Sitemap check | 2026-10-05: all 3 child sitemaps checked (21 posts, 8 pages). **No HoneyBook page is live.** 487 (photographers) and 492 (coaches) rank HoneyBook inside "best … software" lists; this page owns **price** intent only. WP drafts 554 (`/honeybook-alternatives/`) and 556 (`/honeybook-vs-dubsado/`) own "alternatives" and "vs" intent, so this page must **not** use those phrases in its title, H1, H2s or meta. |
 | Topic gate | Q1 ICP: yes (photographers, coaches, creative service businesses) · Q2 approved cluster: yes (Photographers, Expand) · Q3 links: up to 487 and 492, down from both · Q4 intent free: yes (above) · Q5 earns: yes (HoneyBook affiliate application submitted 2026-10-04) |
-| Junia settings | **Save as draft** · US English · no auto-publish · no automatic external/internal links · no stock images |
+| Junia settings | **Save as draft** · US English · no auto-publish · no automatic internal links · no stock images · automatic external links OK (trusted sites only; checked in QA) |
 
 ---
 

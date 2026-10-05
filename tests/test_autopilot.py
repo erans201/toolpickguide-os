@@ -97,13 +97,25 @@ class TestInjectLinks(unittest.TestCase):
 class TestJuniaGate(unittest.TestCase):
     CLEAN = {"claimed_n": 0, "title": "Client Intake Form Template", "question_items": 0, "unknown_amounts": [],
              "banned": [], "tested": [], "long_paragraphs": [], "leftovers": [], "hotlinked_images": [],
-             "offlist_external": [], "missing_tools": [], "excluded_present": [], "missing_external": []}
+             "offlist_external": [], "blocked_external": [], "unjudged_external": [], "missing_tools": [],
+             "excluded_present": [], "missing_external": []}
 
     def test_gate(self):
         import junia_draft
         self.assertTrue(junia_draft.gate_clean(self.CLEAN))
         self.assertFalse(junia_draft.gate_clean({**self.CLEAN, "unknown_amounts": ["$99"]}))
         self.assertFalse(junia_draft.gate_clean({**self.CLEAN, "claimed_n": 60, "title": "60 questions", "question_items": 40}))
+        self.assertTrue(junia_draft.gate_clean({**self.CLEAN, "offlist_external": ["www.ftc.gov"]}))
+        self.assertFalse(junia_draft.gate_clean({**self.CLEAN, "blocked_external": ["spam.example"]}))
+        self.assertFalse(junia_draft.gate_clean({**self.CLEAN, "unjudged_external": ["new.example"]}))
+
+    def test_junia_own_links_are_judged_per_domain(self):
+        import junia_draft
+        brief = {"external": ["https://www.honeybook.com/pricing"]}
+        links = ["https://www.honeybook.com/pricing", "https://www.ftc.gov/x", "https://blog.spam.example/y",
+                 "https://new-site.example/z"]
+        got = junia_draft.judge_offlist(links, brief, {"ftc.gov": "trusted", "spam.example": "blocked"})
+        self.assertEqual(got, {"blocked_external": ["blog.spam.example"], "unjudged_external": ["new-site.example"]})
 
 
 class TestHealthcheck(unittest.TestCase):

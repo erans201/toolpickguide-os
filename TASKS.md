@@ -220,9 +220,9 @@ python junia_draft.py --brief knowledge/briefs/junia/photography-contract-templa
 - **Done when:** the top 20 pages pass mobile CWV, or the remaining failures are listed with a cause.
 
 ### T1.17 · Junia settings · U · due Oct 12
-1. Junia article settings: turn **off** automatic external links, automatic internal links and images/stock photos. (Stock photos stay off because Junia hotlinks them from Unsplash, which fails the Media Library rule. Text or logos in images are no longer a reason: allowed on Junia articles since 2026-10-05.)
+1. Junia article settings: turn **off** automatic internal links and images/stock photos. Automatic **external** links may stay **on** (user rule 2026-10-05: links to trusted sites are fine; the agent checks each new site). (Stock photos stay off because Junia hotlinks them from Unsplash, which fails the Media Library rule. Text or logos in images are no longer a reason: allowed on Junia articles since 2026-10-05.)
 2. Keep "Save as draft" on.
-- **Done when:** the next Junia draft has no Unsplash images and no unlisted links (the QA gate confirms).
+- **Done when:** the next Junia draft has no Unsplash images and no links to untrusted sites (the QA gate confirms).
 
 ---
 

@@ -170,3 +170,4 @@ Initialize the core knowledge base and build the Master Vertical Reference Matri
 * 2026-10-05 (local): PartnerStack account created by user; Network application submitted by agent (monday waits for approval; Zendesk no longer on PartnerStack).
 * 2026-10-05 (local): Studio Ninja ambassador skipped (user).
 * 2026-10-05 (local): Jotform affiliate application submitted (user captcha + submit).
+* 2026-10-05 (local): SignWell partner form submitted. Affiliate round: PartnerStack account + Network application, Jotform, SignWell done; Studio Ninja skipped (user); Hostinger mail API token skipped (user).

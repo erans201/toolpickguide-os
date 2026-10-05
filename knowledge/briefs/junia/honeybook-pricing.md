@@ -125,4 +125,4 @@ All fetched from official vendor pages on **2026-10-05**.
 - [ ] FTC disclosure present · 4 internal + 7 external links exact · `**Source:**` line under the plans
 - [ ] Focus keyword in title, first line, one H2, slug, meta
 - [ ] After publishing: add a link from 487's HoneyBook section and 492's HoneyBook section to this page (roadmap row)
-- [ ] Featured image: photo-style, no text, no logos
+- [ ] Featured image: photo-style (readable text and logos allowed on Junia articles, rule 2026-10-05)

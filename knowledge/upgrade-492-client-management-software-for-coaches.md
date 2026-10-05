@@ -15,7 +15,7 @@
 | Tags | best client management software for coaches, client management software for coaches, coaching client management software, coaching crm, coaching software, consultant crm software, paperbell, simply.coach, delenta, honeybook, gohighlevel |
 | Category | Reviews, CRM & Pipelines |
 | Featured image alt | Best client management software for coaches 2026: Paperbell, Simply.Coach, Delenta, HoneyBook and GoHighLevel ranked |
-| Pricing verified | 2026-09-27 from vendor pricing pages (Paperbell, Simply.Coach, Delenta, HoneyBook, HighLevel). Practice.do shutdown details from [Paperbell's write-up](https://paperbell.com/blog/practice-shut-down/) (a competitor, so cross-check). **Re-verify all prices before publishing.** |
+| Pricing verified | 2026-10-05 from vendor pricing pages (Paperbell and Simply.Coach re-checked 2026-10-05; Delenta, HoneyBook, HighLevel matched in the 2026-10-05 price watch). Practice.do shutdown details from [Paperbell's write-up](https://paperbell.com/blog/practice-shut-down/) (a competitor, so cross-check). **Re-verify all prices before publishing.** |
 | Internal links | Live: `/client-onboarding-software/` · `/free-client-management-software/` · Planned: `/best-crm-for-photographers/` · `/practice-do-alternatives/` · `/paperbell-vs-dubsado/` |
 | Open items | Affiliate links + `rel="sponsored"` · Author byline · Hands-on testing notes (do **not** claim "tested" until done) |
 
@@ -39,8 +39,8 @@ So this list is ranked by one question: **which tool makes your client's first w
 
 ## QUICK RANKING (IF YOU JUST WANT THE LIST)
 
-1. **Paperbell.** Best overall for solo coaches who want one login and zero tiers. $57/month or $570/year.
-2. **Simply.Coach.** Best for the coaching work itself: goals, action plans, session notes. From $9/month.
+1. **Paperbell.** Best overall for solo coaches who want one login and zero tiers. $97/month or $970/year.
+2. **Simply.Coach.** Best for the coaching work itself: goals, action plans, session notes. From $9/month billed annually ($19 month to month).
 3. **Delenta.** Best budget pick with courses and group coaching. From $229/year.
 4. **HoneyBook.** Best if you coach *and* sell other services. From $29/month billed annually.
 5. **GoHighLevel.** Best for marketing-heavy coaching businesses. From $97/month.
@@ -103,14 +103,14 @@ It's one front door instead of five side entrances. And there's one plan with ev
 Solo coaches who want everything in one login and never want to compare tiers again.
 
 ### Pricing at a glance
-- **Standard (monthly):** $57/month
-- **Standard (annual):** $570/year (2 months free)
+- **Standard (monthly):** $97/month
+- **Standard (annual):** $970/year (2 months free)
 - No additional transaction fees from Paperbell. Your payment processor still charges its usual fees
 - 30-day money-back guarantee
-- **Source:** [Paperbell's official pricing page](https://paperbell.com/pricing/) (checked September 2026)
+- **Source:** [Paperbell's official pricing page](https://paperbell.com/pricing/) (checked October 2026)
 
 ### One honest downside
-**You pay before you play.** It's a money-back guarantee, not a free trial. And at $57/month, it's not the cheapest option for a coach with three clients.
+**You pay before you play.** It's a money-back guarantee, not a free trial. And at $97/month, it's not the cheapest option for a coach with three clients.
 
 ### Bottom line
 The closest thing to "it just works" for a solo coach. Pay once, stop duct-taping.
@@ -134,15 +134,15 @@ Session notes, action plans, and goal planning sit at the center. It's closer to
 Coaches whose clients judge them on tracked progress, especially executive and leadership coaches.
 
 ### Pricing at a glance (monthly)
-- **Starter:** $9/month. 3 clients, 1 contract, 1 program
-- **Essentials:** $29/month. 7 clients, adds file sharing and stakeholder management
-- **Growth:** $49/month. 30 clients, adds recurring sessions, custom logo, onboarding help
-- **Leap:** $69/month. Unlimited clients, white-label, custom domain
-- 14-day free trial, no credit card. Annual billing advertises savings of "up to 52%" (exact annual prices not listed publicly)
-- **Source:** [Simply.Coach's official pricing page](https://simply.coach/pricing/) (checked September 2026)
+- **Starter:** $9/month billed annually ($19 monthly). 3 clients, 1 contract, 1 program
+- **Essentials:** $29/month billed annually ($39 monthly). 7 clients, adds file sharing and stakeholder management
+- **Growth:** $49/month billed annually ($59 monthly). 30 clients, adds recurring sessions, custom logo, onboarding help
+- **Leap:** $69/month billed annually ($89 monthly). Unlimited clients, white-label, custom domain
+- 14-day free trial, no credit card. Prices above are billed annually (Simply.Coach advertises savings of "up to 52%"); month to month is $19 / $39 / $59 / $89
+- **Source:** [Simply.Coach's official pricing page](https://simply.coach/pricing/) (checked October 2026)
 
 ### One honest downside
-**The client caps bite.** Three clients on Starter, seven on Essentials. A working coach lands on Growth ($49) or Leap ($69), so budget for that, not the $9 headline.
+**The client caps bite.** Three clients on Starter, seven on Essentials. A working coach lands on Growth ($49 annual, $59 monthly) or Leap ($69 annual, $89 monthly), so budget for that, not the $9 headline.
 
 ### Bottom line
 If your clients measure you by progress, this is the tool built to show it.
@@ -266,9 +266,9 @@ Count how many separate emails your client got. Fewer wins.
 | Tool and plan | Year-one software cost |
 |---|---|
 | Delenta Pro (annual) | $469 |
-| Paperbell Standard (annual) | $570 |
-| Simply.Coach Growth (monthly) | $588 |
+| Simply.Coach Growth (annual) | $588 |
 | HoneyBook Essentials (annual) | $588 + card fees |
+| Paperbell Standard (annual) | $970 |
 | GoHighLevel Starter (annual) | $970 |
 
 That's the sticker. The real bill adds payment fees (a 1% difference on $60k of revenue is $600) and your setup hours.
@@ -327,10 +327,10 @@ Whatever you pick, run your export drill in week one. The Practice.do coaches wi
 ## FAQs (Frequently Asked Questions)
 
 ### What is the best client management software for coaches?
-For most solo coaches, Paperbell. It bundles packages, scheduling, payments, contracts, and a client portal in one plan at $57/month or $570/year. If goal and progress tracking matter most, choose Simply.Coach.
+For most solo coaches, Paperbell. It bundles packages, scheduling, payments, contracts, and a client portal in one plan at $97/month or $970/year. If goal and progress tracking matter most, choose Simply.Coach.
 
 ### Is there a cheap CRM for life coaches?
-Yes. Simply.Coach starts at $9/month for 3 clients, and Delenta's Starter plan is $229/year for 10 client portals. Watch the client caps, because both push you up a tier as you grow.
+Yes. Simply.Coach starts at $9/month (billed annually) for 3 clients, and Delenta's Starter plan is $229/year for 10 client portals. Watch the client caps, because both push you up a tier as you grow.
 
 ### What happened to Practice.do?
 Practice.do shut down permanently on November 3, 2025. Users lost access to portals, scheduling links, and contracts, and unexported data was not recoverable. Paperbell, Simply.Coach, and Delenta are common replacements.

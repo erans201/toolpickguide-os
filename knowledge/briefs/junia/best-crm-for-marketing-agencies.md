@@ -150,4 +150,4 @@ All fetched from official vendor pages on **2026-10-05** (US prices).
 - [ ] FTC disclosure · 5 internal + 7 external links exact · one `**Source:**` line per tool
 - [ ] Focus keyword in title, first line, one H2, slug, meta
 - [ ] After publishing: roadmap rows for links from `/crm-operations-best-client-management-software/` and `/client-onboarding-software/` to this page
-- [ ] Featured image: photo-style, no text, no logos
+- [ ] Featured image: photo-style (readable text and logos allowed on Junia articles, rule 2026-10-05)

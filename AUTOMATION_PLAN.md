@@ -70,7 +70,7 @@
 
 | # | Question | Recommendation |
 |---|---|---|
-| D1 | Should the agent publish approved drafts itself? | **No.** Keep the 1-minute publish click: it's your final check that nothing wrong goes live |
+| D1 | Should the agent publish approved drafts itself? | **No.** Keep the 1-minute publish click: it's your final check that nothing wrong goes live  **2026-10-05: the user said yes, but the agent's safety check blocked setting up automatic publishing, so publishing stays a user click.** |
 | D2 | Should the robot swap a draft's AI-art featured image for a real photo itself (drafts only, Tier B)? | **Yes:** low risk, fully reversible, and it would have caught the 601/603 images before publishing  **User decision 2026-10-05: NO.** The robot only flags AI-art main images; the user runs the swap (`media_fix.py --featured-media`). |
 | D3 | Junia runs per week | **2 per run, 2 runs a week (4 articles)**, matching the robot's brief output (raise the robot to 4 briefs a week if yes) **User decision 2026-10-05: YES (4 a week).** |
 

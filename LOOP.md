@@ -171,3 +171,4 @@ Initialize the core knowledge base and build the Master Vertical Reference Matri
 * 2026-10-05 (local): Studio Ninja ambassador skipped (user).
 * 2026-10-05 (local): Jotform affiliate application submitted (user captcha + submit).
 * 2026-10-05 (local): SignWell partner form submitted. Affiliate round: PartnerStack account + Network application, Jotform, SignWell done; Studio Ninja skipped (user); Hostinger mail API token skipped (user).
+* 2026-10-05 (local): Decision D1 = yes (user), but the agent's safety check blocked building automatic publishing ('Production Deploy'). Unfinished changes (publish tool, cap) were removed; publishing stays a user click.

@@ -253,7 +253,7 @@ Source: H2/H3 tool names across all live pages. ✅ official page read · 🟡 t
 | **Close** | CRM ops | 30% of first-year subscription ("lifetime available"); approval in 1–2 business days | own form | ✅ |
 | **Fillout** | form builders | 30% recurring up to 1 year; 1-minute signup (account) | in-app | ✅ |
 | monday.com (Sales CRM) | CRM ops | official PartnerStack page: online affiliates earn **CPL per sign-up**; partners up to 20% per closed deal; 90-day cookie; PayPal/Stripe. Join = mondaycom.partnerstack.com (needs a PartnerStack account) | PartnerStack | ✅ |
-| Freshworks (Freshsales, Freshdesk) | CRM ops, free CRM, help desk | 3P: 15% MRR for 12 months (up to 25%) | PartnerStack (3P) | 🟡 |
+| Freshworks (Freshsales, Freshdesk) | CRM ops, free CRM, help desk | official application page: "up to 30% in recurring commissions" (support docs: tiers 20–30% of first-year revenue, up to 12 months); no brand-keyword bidding | PartnerStack form (company=freshworks4391) | ✅ |
 | Capsule CRM | free CRM | 3P: 20% lifetime (25/30% tiers); 30-day window; PayPal £50 min | own | 🟡 |
 | Insightly | CRM ops | 3P: 20% | ? | 🟡 |
 | Agile CRM | free CRM | 3P: 20–30% | own | 🟡 |

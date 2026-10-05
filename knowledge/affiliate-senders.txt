@@ -25,3 +25,5 @@ pipedrive.com
 webflow.com
 helpscout.com
 capsulecrm.com
+freshworks.com
+signwell.com

@@ -19,7 +19,7 @@
 | D | QA and correction | Cloud robot (daily, Tier B) | Export, QA gate, judge new link sites, corrected body from the facts sheet, `--replace-content`, copy stock photos to the Media Library | ✅ live since 2026-10-05 |
 | E | Image check | none needed for Junia images | Junia's images are generally safe (user 2026-10-05); only broken images (not loading, offensive, unrelated) are flagged | ✅ decided |
 | F | **Publish** | **You** (1 minute per article) | Open the draft, Save Draft, read, Publish | Stays with you (decision D1) |
-| G | Request indexing | Browser agent | Search Console URL inspection → Request indexing for each newly published URL | 🆕 add to §2 run |
+| G | Request indexing | Browser agent | Search Console URL inspection → Request indexing for each newly published URL (register: `knowledge/indexing-requests.md`) | ✅ added to tpg-browser-ops 2026-10-05 (user yes) |
 | H | Internal links | Cloud robot (Tier B) + you | `inject_links.py --upload` for normal posts (robot); upgrade-file posts need `--replace-live` (you) | ✅ live / Tier C |
 | I | Price watch and page upgrades | Cloud robot finds · you run | Weekly price check → exact edits → `--replace-live` | Tier C |
 | J | **Quora answers** | Cloud robot drafts · **browser agent posts after your OK** | Robot finds threads and drafts answers (weekly). Browser agent opens each thread, checks it's still open and not already answered well, adapts the draft, pastes it into the answer box, shows you, and clicks Post only after you say "post" for that answer | 🆕 to build (§3) |

@@ -51,3 +51,11 @@ Used by the browser agent (`AUTOMATION_PLAN.md` §2) in the user's Chrome, where
 ## Known differences from the brief to expect (QA fixes these)
 - Junia may add "Opening" and "Affiliate disclosure" as H2 headings.
 - Junia's outline may skip the last few brief sections: always check for "vs …", "Who should use it", "Don't mess this up" and "FAQs".
+
+## Step 5 · Request indexing for newly published pages (user decision 2026-10-05)
+1. Fetch every child sitemap of https://toolpickguide.com/sitemap_index.xml. New = a URL that is not in `knowledge/indexing-requests.md` (neither the "Requested" table nor the baseline list). Max 5 per run.
+2. Open `https://search.google.com/search-console?resource_id=sc-domain%3Atoolpickguide.com` in Chrome (the user is signed in; the UI is in Hebrew).
+3. Click the **magnifier** button at the top (accessible name "חיפוש"), type the full URL, press Enter, wait about 10 seconds for the inspection.
+4. Click **הגש בקשה ליצירת אינדקס** (Request indexing). Wait up to 2 minutes for the test. Success reads **התקבלה בקשה ליצירת אינדקס**; close the dialog (סגור).
+5. If Google says the daily quota is used up, stop and leave the rest for the next run.
+6. Add each requested URL with the date to the "Requested by the agent" table, then commit and push.

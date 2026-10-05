@@ -222,6 +222,7 @@ python junia_draft.py --brief knowledge/briefs/junia/photography-contract-templa
 ### T1.17 · Junia settings · U · due Oct 12
 1. Junia article settings: turn **off** automatic internal links. Automatic **external** links and **images/stock photos** may stay **on** (user rules 2026-10-05: links to trusted sites are fine, the agent checks each new site; stock photos are copied into the Media Library by `junia_draft.py --apply`). (Stock photos stay off because Junia hotlinks them from Unsplash, which fails the Media Library rule. Text or logos in images are no longer a reason: allowed on Junia articles since 2026-10-05.)
 2. Keep "Save as draft" on.
+3. For each brief, fill Junia **field by field** from its "Junia fields" Doc in Drive › Plans & Briefs (keyword, headline, outline, Background/Context, Writing style). Never paste the whole brief into one box: drafts 601 and 603 ignored it (2026-10-05).
 - **Done when:** the next Junia draft has no links to untrusted sites and its stock photos are copied into the Media Library (the QA gate and `--apply` confirm).
 
 ---

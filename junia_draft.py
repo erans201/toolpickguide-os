@@ -97,7 +97,8 @@ def parse_brief(path):
     cat_tags = row("Category / Tags")
     category, _, tags = cat_tags.partition(" · ")
     facts = text.split("FACTS SHEET", 1)[1] if "FACTS SHEET" in text else ""
-    prompt = (re.search(r"```text\n(.+?)```", text, re.S) or [None, ""])[1]
+    boxes = re.findall(r"```text\n(.+?)```", text, re.S)
+    prompt = next((b for b in boxes if "INTERNAL LINKS" in b), boxes[0] if boxes else "")  # the box with the link lists
     internal = re.findall(r"^- (/[a-z0-9-]+/) with anchor \"([^\"]+)\"", prompt, re.M)
     external = re.findall(r"^- (https://\S+)", prompt, re.M)
     brief = {

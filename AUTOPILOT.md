@@ -74,7 +74,7 @@ Model: `claude-sonnet-5-5` for Daily Ops; `claude-opus-5-5` for Weekly and Month
 
 ### 5.2 Weekly Review (Monday)
 1. Everything in Daily Ops, plus:
-2. **Content queue:** write the next 2 Junia briefs from `TASKS.md` §Content queue (sitemap check + topic gate + facts verified on official pages that week).
+2. **Content queue:** write the next 2 Junia briefs from `TASKS.md` §Content queue (sitemap check + topic gate + facts verified on official pages that week). Every brief has the "JUNIA FIELD BY FIELD" section (keyword, headline, exact outline, Background/Context box with the facts sheet, Writing style box, settings) and the Required tools / Excluded tools / Price-heavy rows, like `knowledge/briefs/junia/honeybook-pricing.md`: Junia ignores one big paste (drafts 601/603).
 3. **Price watch:** re-check the pricing pages behind every live BOFU page's facts. Any change becomes a Tier C item with the exact edit.
 4. **Community queue:** find 5–6 candidate threads per `COMMUNITY_MARKETING.md` §5 and write them into its §8 queue (no posting).
 5. **Copies for the owner's phone:** every new brief and the week's community queue + full draft answers go to Drive › Plans & Briefs as Google Docs (§6.2).
@@ -138,7 +138,7 @@ Model: `claude-sonnet-5-5` for Daily Ops; `claude-opus-5-5` for Weekly and Month
 ### 6.2 Copies of briefs and community drafts (user decision 2026-10-05)
 
 - **Where:** Drive › ToolPickGuide OS › Plans & Briefs (`1uBQANu4CHTtmQfDL9ttHZdSbTMF5zGuw`), as Google Docs (upload HTML).
-- **What, every Monday:** one Doc per new Junia brief (`Junia Brief: <topic> (YYYY-MM-DD)`) and one Doc with the week's §8 queue rows plus the full draft answers (`Quora queue + draft answers (week N, YYYY-MM-DD)`).
+- **What, every Monday:** one Doc per new Junia brief with only its "JUNIA FIELD BY FIELD" section (`Junia fields: <topic> (YYYY-MM-DD)`) and one Doc with the week's §8 queue rows plus the full draft answers (`Quora queue + draft answers (week N, YYYY-MM-DD)`).
 - **Format:** the "PASTE INTO JUNIA" box stays one block so it copies cleanly. Each Doc starts with "Snapshot from the toolpickguide-os repo, <date>. The repo file stays the working source."
 - **Links:** the weekly message links each task that uses a brief or draft to its Doc.
 - **Never uploaded:** secrets, `.env` values, backups, scripts.

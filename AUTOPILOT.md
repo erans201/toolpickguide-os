@@ -110,7 +110,9 @@ Model: `claude-sonnet-5-5` for Daily Ops; `claude-opus-5-5` for Weekly and Month
 1. **The first section of its Google Doc**, under the heading "Message for you". The Doc title carries the status, so the owner can see it in the Drive file list without opening anything: `Daily Digest YYYY-MM-DD · OK | Needs you | ALERT`, `Weekly Report YYYY-MM-DD · …`, `Monthly Report YYYY-MM · …`.
 2. **The run's final answer**, the same message word for word, which the owner can read at claude.ai/code → Routines.
 
-**Hard limits:** no email, chat or other outside messages, and never any passwords, keys or tokens in a message. Write in plain words for a non-technical owner. Name PowerShell explicitly for any command, and give exact clicks for any website step.
+**Email copy (user decision 2026-10-05, replaces "no email"):** after creating the Doc, the run emails the same message to the owner only: write it to a text file and run `python3 -m autopilot.notify_owner --subject "<Doc title>" --file <file> --doc <Doc URL>` (recipient fixed to cezaris.joe@gmail.com; sender eran@toolpickguide.com). If it fails, say so in the Doc and carry on.
+
+**Hard limits:** no other email, chat or outside messages, and never any passwords, keys or tokens in a message. Write in plain words for a non-technical owner. Name PowerShell explicitly for any command, and give exact clicks for any website step.
 
 **Daily message (≤ 250 words), sections in this order:**
 1. **Status:** one line. OK (nothing needs you), Needs you (tasks waiting), or ALERT (something broke).

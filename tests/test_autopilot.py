@@ -86,6 +86,24 @@ class TestGuard(GuardCase):
         self.assertIn("first; second", (self.tmp / "AUTOPILOT_PAUSED").read_text())
 
 
+class TestNotifyOwner(unittest.TestCase):
+    def test_recipient_is_fixed_and_password_never_printed(self):
+        from autopilot import notify_owner
+        msg = notify_owner.build("eran@toolpickguide.com", "Daily Digest · OK", "Status: OK", doc="https://docs.google.com/x")
+        self.assertEqual(msg["To"], "cezaris.joe@gmail.com")
+        self.assertIn("Full report: https://docs.google.com/x", msg.get_content())
+        tmp = Path(tempfile.mkdtemp()) / "m.txt"
+        tmp.write_text("Status: OK", encoding="utf-8")
+        smtp = mock.MagicMock()
+        smtp.__enter__.return_value.login.side_effect = Exception("bad login for secret123")
+        env = {"BIZ_MAIL_ADDRESS": "eran@toolpickguide.com", "BIZ_MAIL_PASSWORD": "secret123"}
+        with mock.patch.dict(os.environ, env), mock.patch.object(notify_owner.smtplib, "SMTP_SSL", return_value=smtp),                 mock.patch.object(sys, "argv", ["x", "--subject", "s", "--file", str(tmp)]):
+            with self.assertRaises(SystemExit) as cm:
+                notify_owner.main()
+        self.assertNotIn("secret123", str(cm.exception))
+        self.assertIn("[REDACTED]", str(cm.exception))
+
+
 class TestInjectLinks(unittest.TestCase):
     def test_affiliate_row_gets_sponsored_rel(self):
         import inject_links

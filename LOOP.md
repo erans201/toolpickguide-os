@@ -145,3 +145,4 @@ Initialize the core knowledge base and build the Master Vertical Reference Matri
 * 2026-10-05: Help Scout affiliate application submitted (PartnerStack form, no account).
 * 2026-10-05: Freshworks affiliate application submitted (PartnerStack form; Freshdesk + Freshsales).
 * 2026-10-05: SignWell partner form needs a reCAPTCHA, so left for the user. Round total: Close, Zoho, Pipedrive, Capsule, Webflow, Help Scout, Freshworks submitted.
+* 2026-10-05 (local): Drive › Plans & Briefs now holds Docs of the 2 new Junia briefs (HoneyBook pricing 1TF6lgZaIYtYeJ_ZLxZUXDMOxqrjyBIY2NoZyjc4Rgow, CRM for marketing agencies 1vm6tPNkRnH7OIVp-oTjHRFO5UzNBl0u1kxAPBvsMRsA) and the Quora week 1 queue + drafts (1Xkhbu7CNxadDESONZFfnM59WKe9aMkguICQAXh22QeM). Weekly routine step 5 + AUTOPILOT.md 6.2: the robot makes these copies every Monday. Undo: trash the Docs in Drive; revert the AUTOPILOT.md commit.

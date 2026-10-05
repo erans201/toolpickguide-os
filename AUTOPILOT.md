@@ -77,7 +77,8 @@ Model: `claude-sonnet-5-5` for Daily Ops; `claude-opus-5-5` for Weekly and Month
 2. **Content queue:** write the next 2 Junia briefs from `TASKS.md` §Content queue (sitemap check + topic gate + facts verified on official pages that week).
 3. **Price watch:** re-check the pricing pages behind every live BOFU page's facts. Any change becomes a Tier C item with the exact edit.
 4. **Community queue:** find 5–6 candidate threads per `COMMUNITY_MARKETING.md` §5 and write them into its §8 queue (no posting).
-5. **Weekly report** Google Doc in Drive › Reports: KPIs vs `GROWTH_PLAN.md` targets, wins, problems, next week.
+5. **Copies for the owner's phone:** every new brief and the week's community queue + full draft answers go to Drive › Plans & Briefs as Google Docs (§6.2).
+6. **Weekly report** Google Doc in Drive › Reports: KPIs vs `GROWTH_PLAN.md` targets, wins, problems, next week. Links to the §6.2 Docs.
 
 ### 5.3 Monthly Report (1st of month)
 1. `python gsc_pull.py`, `python ga_pull.py --property 551985779`, `python bing_kw_pull.py --targets`.
@@ -133,3 +134,12 @@ Model: `claude-sonnet-5-5` for Daily Ops; `claude-opus-5-5` for Weekly and Month
 - next month's plan
 
 **Paused or shadow mode:** a paused run still leaves a one-line daily message ("Robot paused: <reason>. To resume: delete AUTOPILOT_PAUSED in GitHub."). In shadow mode, every daily message says "Practice mode: nothing was changed on the website".
+
+### 6.2 Copies of briefs and community drafts (user decision 2026-10-05)
+
+- **Where:** Drive › ToolPickGuide OS › Plans & Briefs (`1uBQANu4CHTtmQfDL9ttHZdSbTMF5zGuw`), as Google Docs (upload HTML).
+- **What, every Monday:** one Doc per new Junia brief (`Junia Brief: <topic> (YYYY-MM-DD)`) and one Doc with the week's §8 queue rows plus the full draft answers (`Quora queue + draft answers (week N, YYYY-MM-DD)`).
+- **Format:** the "PASTE INTO JUNIA" box stays one block so it copies cleanly. Each Doc starts with "Snapshot from the toolpickguide-os repo, <date>. The repo file stays the working source."
+- **Links:** the weekly message links each task that uses a brief or draft to its Doc.
+- **Never uploaded:** secrets, `.env` values, backups, scripts.
+- **First copies (local agent, 2026-10-05):** HoneyBook pricing brief, Best CRM for marketing agencies brief, Quora week 1 queue + drafts.

@@ -227,7 +227,7 @@ python junia_draft.py --brief knowledge/briefs/junia/photography-contract-templa
 
 ---
 
-## CONTENT QUEUE (Phase 1–2, two briefs per week, written by the Weekly Review)
+## CONTENT QUEUE (Phase 1–2, four briefs per week since 2026-10-05 (D3), written by the Weekly Review)
 
 Every item: sitemap check + topic gate (`CONTENT_STRATEGY.md`) + facts verified the same week. Price-heavy items get a full facts sheet inside the paste box.
 

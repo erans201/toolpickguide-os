@@ -14,10 +14,10 @@
 | # | Step | Who | How | Status |
 |---|---|---|---|---|
 | A | Keyword and topic research | Cloud robot (monthly) | GSC, GA4, Bing, DataForSEO ≤ $5/month → re-ranked content queue in `TASKS.md` | ✅ running |
-| B | Briefs with verified facts | Cloud robot (weekly, Mondays) | 2 field-by-field briefs per week; facts from official pricing pages | ✅ running |
+| B | Briefs with verified facts | Cloud robot (weekly, Mondays) | **4** field-by-field briefs per week (decision D3, 2026-10-05); facts from official pricing pages | ✅ running |
 | C | **Article generation in Junia** | **Browser agent** | Opens Junia in your Chrome, fills each field from the brief (keyword, headline, outline, Background/Context, Writing style, settings), generates, saves to WordPress **as a draft** | ✅ built 2026-10-05 (first run: draft 618; local task "tpg-browser-ops", Tue + Fri 10:00) |
 | D | QA and correction | Cloud robot (daily, Tier B) | Export, QA gate, judge new link sites, corrected body from the facts sheet, `--replace-content`, copy stock photos to the Media Library | ✅ live since 2026-10-05 |
-| E | Image check | Cloud robot flags · you run the fix | Rejects AI art and overlaid text; `media_fix.py --featured-media` swaps in a real photo | ⚠️ Tier C (decision D2) |
+| E | Image check | none needed for Junia images | Junia's images are generally safe (user 2026-10-05); only broken images (not loading, offensive, unrelated) are flagged | ✅ decided |
 | F | **Publish** | **You** (1 minute per article) | Open the draft, Save Draft, read, Publish | Stays with you (decision D1) |
 | G | Request indexing | Browser agent | Search Console URL inspection → Request indexing for each newly published URL | 🆕 add to §2 run |
 | H | Internal links | Cloud robot (Tier B) + you | `inject_links.py --upload` for normal posts (robot); upgrade-file posts need `--replace-live` (you) | ✅ live / Tier C |
@@ -72,7 +72,7 @@
 |---|---|---|
 | D1 | Should the agent publish approved drafts itself? | **No.** Keep the 1-minute publish click: it's your final check that nothing wrong goes live |
 | D2 | Should the robot swap a draft's AI-art featured image for a real photo itself (drafts only, Tier B)? | **Yes:** low risk, fully reversible, and it would have caught the 601/603 images before publishing  **User decision 2026-10-05: NO.** The robot only flags AI-art main images; the user runs the swap (`media_fix.py --featured-media`). |
-| D3 | Junia runs per week | **2 per run, 2 runs a week (4 articles)**, matching the robot's brief output (raise the robot to 4 briefs a week if yes) |
+| D3 | Junia runs per week | **2 per run, 2 runs a week (4 articles)**, matching the robot's brief output (raise the robot to 4 briefs a week if yes) **User decision 2026-10-05: YES (4 a week).** |
 
 ---
 

@@ -23,7 +23,7 @@ Used by the browser agent (`AUTOMATION_PLAN.md` §2) in the user's Chrome, where
 3. **Advanced Settings** (opens a dialog):
    - **Background/Context:** the brief's Background box (the whole thing, including the facts sheet). `form_input` works for this textarea.
    - **Writing Style:** the brief's Writing style box. `form_input` works.
-   - **Include Feature Image: OFF** (Junia's generated images were AI art).
+   - **Include Feature Image: ON** (user decision 2026-10-05: Junia's images are generally safe; this gives every draft a main image).
    - **Include In-Article Images: ON** (real stock photos; QA copies them into the Media Library and uses the first as the featured image).
    - **Include Meta Title & Description:** leave ON (QA overwrites it).
    - **Include FAQ: OFF** (the outline has our FAQ; this caused duplicate FAQs).

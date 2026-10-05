@@ -165,3 +165,4 @@ Initialize the core knowledge base and build the Master Vertical Reference Matri
 * 2026-10-05 (local): Quora W1-5 posted (verified 'You've written an answer'): week 1 queue 5/5 done. Weekly routine step 1 changed by the user to live Tier B link uploads (verified via API); its practice block was already gone.
 * 2026-10-05 (browser ops): nothing to do (all briefs with JUNIA FIELD BY FIELD are already in junia-runs.md)
 * 2026-10-05 (local): Decision D2 = NO (user): robot flags AI-art featured images on drafts but does not swap them.
+* 2026-10-05 (local): Decision D3 = YES: 4 Junia articles/week (weekly robot writes 4 briefs; browser ops 2 per run Tue + Fri). Junia's images declared generally safe (user): not flagged or swapped; Junia Feature Image ON again (runbook + tpg-browser-ops prompt). Weekly routine prompt still says 'next 2 items': user changes it to 4 (agent edits to that routine are blocked).

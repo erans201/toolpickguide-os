@@ -304,7 +304,25 @@ def make_session():
 
 
 def wp(session, method, url, fail_msg, **kwargs):
-    resp = session.request(method, url, timeout=kwargs.pop("timeout", 60), **kwargs)
+    import time
+    import requests
+    timeout = kwargs.pop("timeout", 60)
+    # Reads are retried when Hostinger drops the connection mid-response; writes never are (no double writes).
+    tries = 3 if method.upper() == "GET" else 1
+    for attempt in range(1, tries + 1):
+        try:
+            resp = session.request(method, url, timeout=timeout, **kwargs)
+            break
+        except (requests.exceptions.ConnectionError, requests.exceptions.ChunkedEncodingError,
+                requests.exceptions.Timeout) as e:
+            if attempt == tries:
+                if tries > 1:
+                    sys.exit(f"ERROR: {fail_msg}\nThe connection to the site dropped {tries} times ({type(e).__name__}) "
+                             "while reading. Nothing was changed. Wait a minute and run the same command again.")
+                sys.exit(f"ERROR: {fail_msg}\nThe connection dropped during a write ({type(e).__name__}), so it may or may "
+                         "not have been saved. Do not re-run yet: tell the agent, who checks the post first.")
+            print(f"   (connection dropped, retrying {attempt}/{tries - 1}…)")
+            time.sleep(5 * attempt)
     if resp.status_code >= 400:
         sys.exit(f"ERROR: {fail_msg}\n" + explain_error(resp))
     return resp.json()

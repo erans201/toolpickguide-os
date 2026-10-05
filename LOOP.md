@@ -144,3 +144,4 @@ Initialize the core knowledge base and build the Master Vertical Reference Matri
 * 2026-10-05: Webflow affiliate application submitted (50% for 12 mo; review 1-2 weeks; may decline low-traffic sites).
 * 2026-10-05: Help Scout affiliate application submitted (PartnerStack form, no account).
 * 2026-10-05: Freshworks affiliate application submitted (PartnerStack form; Freshdesk + Freshsales).
+* 2026-10-05: SignWell partner form needs a reCAPTCHA, so left for the user. Round total: Close, Zoho, Pipedrive, Capsule, Webflow, Help Scout, Freshworks submitted.

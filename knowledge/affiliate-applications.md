@@ -117,3 +117,4 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Webflow | **Submitted 2026-10-05** (multi-step form; blogger/affiliate site, SMBs, honest early-traffic note; commission + terms agreed, marketing emails unticked). Reply in 1–2 weeks by email/PartnerStack. Note: Webflow excludes low-traffic sites, so a decline is possible | — |
 | Help Scout | **Submitted 2026-10-05** via PartnerStack application form ("Application received!"); help desk page features it | — |
 | Freshworks (Freshdesk + Freshsales) | **Submitted 2026-10-05** via PartnerStack form (Review Website/Blog; no brand bidding; terms accepted) | — |
+| SignWell | Not submitted: partner contact form (signwell.com/partner-with-signwell-contact/) is behind a reCAPTCHA checkbox | the user ticks the reCAPTCHA; the agent can fill the rest |

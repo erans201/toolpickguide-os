@@ -168,3 +168,4 @@ Initialize the core knowledge base and build the Master Vertical Reference Matri
 * 2026-10-05 (local): Decision D3 = YES: 4 Junia articles/week (weekly robot writes 4 briefs; browser ops 2 per run Tue + Fri). Junia's images declared generally safe (user): not flagged or swapped; Junia Feature Image ON again (runbook + tpg-browser-ops prompt). Weekly routine prompt still says 'next 2 items': user changes it to 4 (agent edits to that routine are blocked).
 * 2026-10-05 (local): Indexing step added to tpg-browser-ops (user yes): Search Console requests for new sitemap URLs, max 5/run; register knowledge/indexing-requests.md (37 URLs baselined); runbook Step 5.
 * 2026-10-05 (local): PartnerStack account created by user; Network application submitted by agent (monday waits for approval; Zendesk no longer on PartnerStack).
+* 2026-10-05 (local): Studio Ninja ambassador skipped (user).

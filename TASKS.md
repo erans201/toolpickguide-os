@@ -232,8 +232,8 @@ Every item: sitemap check + topic gate (`CONTENT_STRATEGY.md`) + facts verified 
 
 | # | Article | Google demand/mo | Type | Week |
 |---|---|---|---|---|
-| C1 | HoneyBook pricing (plans, fees, alternatives) | 1,600 | price-heavy BOFU | Oct 19 |
-| C2 | Best CRM for marketing agencies | 1,390 | price-heavy BOFU | Oct 19 |
+| C1 | HoneyBook pricing (plans, fees, alternatives) | 1,600 | price-heavy BOFU (**brief ready 2026-10-05**: `knowledge/briefs/junia/honeybook-pricing.md`) | Oct 19 |
+| C2 | Best CRM for marketing agencies | 1,390 | price-heavy BOFU (**brief ready 2026-10-05**: `knowledge/briefs/junia/best-crm-for-marketing-agencies.md`; Pipedrive left out, prices unverifiable) | Oct 19 |
 | C3 | Service contract template (service businesses) | 2,400 | TOFU template | Oct 26 |
 | C4 | Clio vs MyCase | 260 (CPC $107) | price-heavy MOFU | Oct 26 |
 | C5 | Pixieset Studio Manager review | 320 | MOFU (brief ready) | Nov 2 |

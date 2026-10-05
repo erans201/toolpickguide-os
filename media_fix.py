@@ -11,6 +11,7 @@ media_fix.py: fix images in a WordPress post, and purge stale LiteSpeed cache by
                          the post at the local copy (Unsplash license: free to use, no credit required)
   --alt TEXT             alt text for the remaining content images and the featured image
   --featured-from-content  make the first remaining content image the featured image
+  --featured-media ID    make this Media Library item the featured image (e.g. a re-hosted photo already in the post)
   --touch IDS            re-save these posts without changing content (LiteSpeed purges a post's cache on save)
 
 Safety: dry run by default; full backup of the post before writing; never changes status, slug, or title text;
@@ -80,6 +81,7 @@ def main():
     ap.add_argument("--rehost", action="store_true")
     ap.add_argument("--alt")
     ap.add_argument("--featured-from-content", action="store_true")
+    ap.add_argument("--featured-media", type=int, metavar="ID")
     ap.add_argument("--touch", type=int, nargs="*", default=[])
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--restore", metavar="BACKUP.json")
@@ -105,6 +107,11 @@ def main():
             print(f"  {'↻ re-host' if a.rehost and is_external(src) else '= keep   '} image: {src[:95]}")
         if a.featured_from_content:
             print(f"  ★ featured image ← first kept image{' (after re-hosting)' if a.rehost else ''}")
+        if a.featured_media:
+            m = requests.get(f"{API}/media/{a.featured_media}", params={"_fields": "id,source_url"}, timeout=30)
+            if m.status_code != 200:
+                sys.exit(f"ABORT: media {a.featured_media} not found in the Media Library.")
+            print(f"  ★ featured image: media {pub['featured_media']} → {a.featured_media} ({m.json()['source_url']})")
         if a.alt:
             print(f"  ✎ alt text: {a.alt}")
         if not keep and a.featured_from_content:
@@ -158,6 +165,8 @@ def main():
         payload = {"content": content}
         if a.featured_from_content and first_media:
             payload["featured_media"] = first_media
+        if a.featured_media:
+            payload["featured_media"] = a.featured_media
         result = wp(session, "POST", f"{API}/posts/{a.post_id}", "WordPress rejected the update.", json=payload)
         if result.get("status") != post["status"] or result.get("slug") != post["slug"]:
             sys.exit(f"SAFETY ERROR: status/slug changed. Restore: python media_fix.py --restore {backup}")

@@ -204,6 +204,7 @@ Multi-service coaches, meaning consultants, workshop leaders, and creatives who 
 - **Payment fees:** Cards from 2.7% + 10¢. ACH at 1.5%
 - 30-day free trial, no credit card. 60-day money-back guarantee
 - **Source:** [HoneyBook's official pricing page](https://www.honeybook.com/pricing) (checked September 2026)
+- **Every plan, fee and limit explained:** [HoneyBook pricing](/honeybook-pricing/)
 
 ### One honest downside
 **The fees and the gaps.** Card fees start at 2.7% + 10¢, so on $60,000 of card payments, that's $1,620 a year before the subscription. And there are no goals, action plans, or session frameworks. Automations don't start until Essentials.

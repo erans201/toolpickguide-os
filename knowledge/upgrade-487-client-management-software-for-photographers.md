@@ -63,7 +63,7 @@ A generic CRM tracks sales deals. It won't hold a wedding date, split a retainer
 
 - **Book fast:** inquiry → proposal → contract → retainer, on the client's phone, in minutes.
 - **Tie contract and retainer together:** a signed contract with no retainer is just a very polite maybe.
-- **Schedule questionnaires off the shoot date,** not whenever you remember on a Sunday night.
+- **Schedule questionnaires off the shoot date,** not whenever you remember on a Sunday night. Here's a ready [photography client questionnaire](/photography-client-questionnaire/) to start from.
 - **Deliver galleries,** or link cleanly to the gallery tool you already use.
 - **Split payments backward from the event date,** and chase late ones politely.
 - **Stay calm in peak season.** If it needs daily babysitting in October, it's the wrong tool.
@@ -96,6 +96,7 @@ Solo portrait, family, and wedding photographers who want to look professional t
 - **Premium:** $109/month billed annually ($129 monthly). Unlimited lead forms and team members
 - **Payment fees:** cards from 2.7% + 10¢, ACH 1.5%
 - **Source:** [HoneyBook's official pricing page](https://www.honeybook.com/pricing) (checked September 2026)
+- **Every plan, fee and limit explained:** [HoneyBook pricing](/honeybook-pricing/)
 
 ### One honest downside
 **No galleries, and the fees add up.** On $80,000 of card payments, 2.7% alone is $2,160 a year. Push big wedding balances toward ACH.

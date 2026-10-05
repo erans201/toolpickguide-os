@@ -1,13 +1,13 @@
 # 🖼️ FEATURED IMAGE PROMPTS (for Junia or any AI image tool)
 
-**User direction (2026-09-29):** photo-style AI images replace the generated illustrations. The no-text rule still applies.
+**User direction (2026-09-29, updated 2026-10-05):** every image must look realistic, photography style. No text laid over the picture; text that appears naturally on items in the scene (screens, notebooks, signs, packaging) is allowed. No logos or brand names on our own images.
 
 ## Rules for every image
 - **Format:** landscape 16:9 (ideally 1200×630). Square images get cropped in social previews.
 - **Paste this at the end of every prompt:**
   > no text, no letters, no numbers, no words on screens, no logos, no brand names, no watermarks, unbranded camera and devices
 - **Scope:** images we generate ourselves. Junia's own images on Junia articles may show readable text and logos (user rule 2026-10-05).
-- **Reject and regenerate** if any readable text, logo, or misspelled brand name appears (e.g., "Canon", "Cangle"). AI tools often invent fake brand names on cameras and laptops.
+- **Reject and regenerate** if the image looks illustrated or artificial, has overlaid text (titles, captions, watermarks), or shows a logo or misspelled brand name (e.g., "Canon", "Cangle"). AI tools often invent fake brand names on cameras and laptops.
 - **Save as:** `knowledge/images/<article-file-stem>-photo.webp` (or `.jpg` / `.png`). The uploader automatically prefers a `-photo` file over the generated illustration.
 
 ---

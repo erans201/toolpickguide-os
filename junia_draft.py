@@ -53,7 +53,8 @@ MONEY = r"\$\d+(?:,\d{3})*(?:\.\d+)?"  # "$1,188" yes; "$140," → "$140" (no tr
 LEFTOVERS = re.compile(r"images? to include|suggested wordpress image|image placements|draft for toolpickguide|"
                        r"if you tell me|i can point you|in one reply|\[insert|placeholder|in today's [a-z ]+ landscape|"
                        r"save this as a draft|save as draft|draft saved|as draft\b|come back to it|ptsd|"
-                       r"i have seen the same", re.I)
+                       r"i have seen the same|draft note|images you can add|images and screenshots you should add|"
+                       r"recommended placements|tell me your|i will suggest|if you want, tell me", re.I)
 LINK_DOMAINS = Path("knowledge/junia-link-domains.txt")  # agent's trusted / blocked verdicts on Junia's own links
 
 
@@ -100,7 +101,7 @@ def parse_brief(path):
     internal = re.findall(r"^- (/[a-z0-9-]+/) with anchor \"([^\"]+)\"", prompt, re.M)
     external = re.findall(r"^- (https://\S+)", prompt, re.M)
     brief = {
-        "slug": row("Slug").strip("`/ "), "focus": row("Focus keyword").lower(),
+        "slug": (re.search(r"[a-z0-9]+(?:-[a-z0-9]+)*", row("Slug")) or [""])[0], "focus": row("Focus keyword").lower(),
         "secondary": [s.strip() for s in row("Secondary keywords").split("·") if s.strip()],
         "seo_title": row("SEO title"), "meta_description": row("Meta description"), "h1": row("H1"),
         "category": [c.strip() for c in category.split(",") if c.strip()],
@@ -166,6 +167,8 @@ def analyze(post, brief):
         "offlist_external": sorted({h.split("/")[2] for h in external_have}
                                    - {u.split("/")[2] for u in brief["external"]} - {u.split("/")[2] for u in SOURCES.values()}),
         "missing_tools": [t for t in brief["required_tools"] if t.lower() not in lower],
+        "no_disclosure": not any("ftc.gov" in h for h in hrefs),
+        "faq_sections": len(re.findall(r"<h2[^>]*>[^<]*\bFAQs?\b", raw, re.I)),
         **judge_offlist(external_have, brief),
         "excluded_present": [t for t in brief["excluded_tools"] if t.lower() in lower],
         "source_lines": len(re.findall(r"\bSource:", body)),
@@ -188,6 +191,8 @@ def report(a, brief, post):
     for lp in a["long_paragraphs"]:
         print(f"       → starts: \"{lp}…\"  (split into 2 paragraphs)")
     print(f"  {ok(not a['leftovers'])} Junia notes / chatbot residue: {a['leftovers'] or 'none'}")
+    print(f"  {ok(not a['no_disclosure'])} Affiliate disclosure with the FTC link: {'missing' if a['no_disclosure'] else 'OK'}")
+    print(f"  {ok(a['faq_sections'] <= 1)} FAQ sections: {a['faq_sections']} (exactly one allowed)")
     print(f"  ℹ️ Stock photos loaded from another site: {len(a['hotlinked_images'])}"
           f"{' (copied into the Media Library by --apply)' if a['hotlinked_images'] else ''}")
     print(f"  ℹ️ External links Junia added (allowed if the site is legit): {a['offlist_external'] or 'none'}")
@@ -361,7 +366,7 @@ def gate_clean(a):
     """True when no QA GATE item needs a human edit (AUTOPILOT.md: Tier B may only --apply clean drafts)."""
     short_of_claim = a["claimed_n"] and "question" in a["title"].lower() and a["question_items"] < a["claimed_n"]
     return not (a["unknown_amounts"] or a["banned"] or a["tested"] or a["long_paragraphs"] or short_of_claim
-                or a["leftovers"] or a["blocked_external"] or a["unjudged_external"] or a["missing_tools"]
+                or a["leftovers"] or a["no_disclosure"] or a["faq_sections"] > 1 or a["blocked_external"] or a["unjudged_external"] or a["missing_tools"]
                 or a["excluded_present"] or a["missing_external"])
 
 

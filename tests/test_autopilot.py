@@ -97,7 +97,7 @@ class TestInjectLinks(unittest.TestCase):
 class TestJuniaGate(unittest.TestCase):
     CLEAN = {"claimed_n": 0, "title": "Client Intake Form Template", "question_items": 0, "unknown_amounts": [],
              "banned": [], "tested": [], "long_paragraphs": [], "leftovers": [], "hotlinked_images": [],
-             "offlist_external": [], "blocked_external": [], "unjudged_external": [], "missing_tools": [],
+             "no_disclosure": False, "faq_sections": 1, "offlist_external": [], "blocked_external": [], "unjudged_external": [], "missing_tools": [],
              "excluded_present": [], "missing_external": []}
 
     def test_gate(self):

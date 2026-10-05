@@ -11,7 +11,9 @@
 | SEO title | HoneyBook Pricing (%currentyear%): Plans, Fees & What You Really Pay |
 | Meta description | HoneyBook pricing for 2026: Starter, Essentials and Premium plans, monthly vs annual cost, payment processing fees, the free trial, and when a cheaper tool makes more sense. |
 | H1 | HoneyBook Pricing (2026): Every Plan, Fee and Limit Explained |
-| Category / Tags | Reviews · Invoicing & Contracts (existing categories only; pick the closest live ones) · honeybook, crm for photographers, client management software, invoicing |
+| Category / Tags | Reviews, Invoicing & Contracts · honeybook, crm for photographers, client management software, invoicing |
+| Required tools | Pixieset, Studio Ninja, Dubsado, Bonsai, 17hats |
+| Price-heavy | yes |
 | Sitemap check | 2026-10-05: all 3 child sitemaps checked (21 posts, 8 pages). **No HoneyBook page is live.** 487 (photographers) and 492 (coaches) rank HoneyBook inside "best … software" lists; this page owns **price** intent only. WP drafts 554 (`/honeybook-alternatives/`) and 556 (`/honeybook-vs-dubsado/`) own "alternatives" and "vs" intent, so this page must **not** use those phrases in its title, H1, H2s or meta. |
 | Topic gate | Q1 ICP: yes (photographers, coaches, creative service businesses) · Q2 approved cluster: yes (Photographers, Expand) · Q3 links: up to 487 and 492, down from both · Q4 intent free: yes (above) · Q5 earns: yes (HoneyBook affiliate application submitted 2026-10-04) |
 | Junia settings | **Save as draft** · US English · no auto-publish · no automatic internal links · stock photos OK (copied to the Media Library in QA) · automatic external links OK (trusted sites only; checked in QA) |

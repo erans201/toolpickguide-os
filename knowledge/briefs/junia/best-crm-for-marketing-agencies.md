@@ -12,6 +12,9 @@
 | Meta description | The best CRM for marketing agencies in 2026: HubSpot, monday CRM, Zoho, Copper, Close, ActiveCampaign and Productive compared on per-seat price, seat minimums and what agencies actually need. |
 | H1 | Best CRM for Marketing Agencies (2026): 7 Options Compared |
 | Category / Tags | CRM & Pipelines · crm for agencies, agency crm, hubspot, zoho crm, monday crm |
+| Required tools | HubSpot, monday, Zoho, Copper, Close, ActiveCampaign, Productive |
+| Excluded tools | Pipedrive, Accelo |
+| Price-heavy | yes |
 | Sitemap check | 2026-10-05: all 3 child sitemaps checked (21 posts, 8 pages). No agency page is live. `/crm-operations-best-client-management-software/` targets general "best client management software" (not agencies) → this page links **up** to it and must not use "client management software" as its focus. |
 | Topic gate | Q1 ICP: yes (agency owners/partners) · Q2 approved cluster: yes (CRM core: Agencies, `CONTENT_STRATEGY.md` §5) · Q3 links: to `/crm-operations-best-client-management-software/` and `/client-onboarding-software/`, and receives links from both · Q4 intent free: yes · Q5 earns: yes (HubSpot via Impact, Zoho and Close applications submitted 2026-10-04) |
 | Junia settings | **Save as draft** · US English · no auto-publish · no automatic internal links · stock photos OK (copied to the Media Library in QA) · automatic external links OK (trusted sites only; checked in QA) |

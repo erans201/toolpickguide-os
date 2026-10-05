@@ -265,7 +265,7 @@ Source: H2/H3 tool names across all live pages. ✅ official page read · 🟡 t
 | Gravity Forms | form builders | 3P: 20–30% per sale; $10 min | own | 🟡 |
 | WPForms | form builders | 3P: 20% per sale; 45-day cookie; $50 min | own | 🟡 |
 | SignWell | e-sign | 3P: 25% recurring up to 1 year; 30-day cookie | own | 🟡 |
-| Webflow | website builders | 3P: 50% of first year; 90-day cookie | ? | 🟡 |
+| Webflow | website builders | **50% of first subscription for up to 12 months** (+10/15% for 12 more months at higher tiers); 90-day cookie; excludes low-traffic sites and 1:1 client referrals | own form (webflow.com/solutions/affiliates), payouts via PartnerStack | ✅ |
 | Shopify | website builders | 3P: up to $150 bounty per merchant | own | 🟡 |
 | GoDaddy | website builders | 3P: $10–150 per sale; 45-day cookie | CJ (3P) | 🟡 |
 | Smokeball | legal case mgmt | $300 eGift card per signed-up referral; "anyone" can refer (lead form, not a tracking link) | own | 🟡 |

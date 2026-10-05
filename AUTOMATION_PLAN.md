@@ -48,6 +48,7 @@
 - **Not automated, ever:** clicking **Post** without your OK. Posting publishes under your name, so it needs your "post" for each answer, every time. A session looks like this: you say "Quora time", I prepare up to 5 answers in tabs, you reply "post 1, 3, 4", I post those three.
 - **Account safety:** Quora watches for automated and promotional activity. Keep it to 3–5 answers a week, no links in a first answer, and a disclosure whenever ToolPickGuide is mentioned (`COMMUNITY_MARKETING.md`). Heavy automation risks a ban of your account.
 - **Reddit:** same flow, but you pick the threads (Reddit blocks the cloud robot).
+- **Tested 2026-10-05:** opening threads and checking them works in Chrome, but Quora's answer editor freezes the page when the agent types a long answer (twice, even with Chrome's occlusion fix). So the agent checks the threads and prepares the text; **the user pastes and posts** from the Quora Doc (about 2 minutes per answer). Answer W1-2 was posted (credential shows "Former Founder" until the user fixes the end date).
 
 ---
 

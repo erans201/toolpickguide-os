@@ -3,6 +3,8 @@
 Used by the browser agent (`AUTOMATION_PLAN.md` §2) in the user's Chrome, where Junia is logged in. One article per brief. Never publish.
 
 ## Before you start
+- Chrome is started with `--disable-features=CalculateNativeWinOcclusion --disable-backgrounding-occluded-windows --disable-renderer-backgrounding` on the taskbar shortcut (user, 2026-10-05), so it keeps drawing pages while hidden. Tested: typing into Google works while the user is in the Claude app.
+- Don't close tabs mid-run: closing a tab can drop the agent's tab group. Close them at the very end.
 - Chrome must stay **visible** (not minimized, not fully covered). Windows Chrome stops drawing hidden windows, and screenshots then time out. If that happens, ask the user to put Chrome side by side with the Claude app (Windows key + Left arrow).
 - If a tab freezes ("Script injection timed out" for minutes), open a **new tab** on the same workflow URL. Junia keeps the workflow state in the URL `…/workflows/seo-blog-post/<id>`.
 - Source of every value: the brief's "JUNIA FIELD BY FIELD" section (`knowledge/briefs/junia/<slug>.md`).

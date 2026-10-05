@@ -16,6 +16,7 @@
 | 4 | Reports go to Google Drive (Docs) and the Google Sheet tracker |
 | 5 | Runtime: cloud agent on a private GitHub repo |
 | 6 | Reddit/Quora runs in a separate, dedicated chat session (never posted by the agent) |
+| 7 | **Live mode from 2026-10-05** (user: "it can start making changes on its own"): the practice week is over and the cloud robot runs Tier B itself. Daily and monthly routine prompts updated 2026-10-05; the weekly routine's prompt still carries the old practice block until the user removes it at claude.ai/code/routines (the agent's update was blocked), which is harmless because Monday's Daily Ops run makes the writes |
 
 ---
 
@@ -65,7 +66,8 @@ Model: `claude-sonnet-5-5` for Daily Ops; `claude-opus-5-5` for Weekly and Month
 2. **Health check:** `python -m autopilot.healthcheck` (exit 1 = ALERT). HTTP 200 for `/`, `sitemap_index.xml` and every URL in the sitemap. Robots tag unchanged versus `autopilot/baseline-robots.json`. Sitemap URL count unchanged versus yesterday (± explained by publishes). After a planned publish or noindex, the agent refreshes the baseline with `--init-baseline` and says so in the digest.
 3. **Verify yesterday:** every Tier B action in `autopilot/ledger.json` from the last 24 h is still live and correct. `python -m autopilot.guard` prints today's counts, the month's DataForSEO spend and strikes for the digest's Numbers section.
 4. **Drafts:** `python junia_draft.py --export-all`. Apply Tier B fixes to drafts that pass the gate; prepare corrected versions for the rest (listed as Tier C).
-   - A draft that already has a QA-corrected body (`knowledge/junia-<ID>-*.md`) is never `--apply`'d alone: it waits for the user's `--replace-content` command in `TASKS.md` (T1.1). Repeat that command under "Waiting for you".
+   - A draft that fails the gate gets a QA-corrected body (`knowledge/junia-<ID>-<slug>.md`) that keeps Junia's writing and fixes every gate item from the brief's facts sheet. Once that file passes the gate offline, the robot runs `--replace-content` on it itself (Tier B, counts toward the 3-draft cap). It never `--apply`s a failing draft without a corrected body.
+   - A draft that passes is a "Waiting for you" item: open it, Save Draft, read, Publish (publishing stays Tier C).
    - A brief with no draft is **not** a "Waiting for you" item when its slug is already live in the sitemap, or when the `TASKS.md` Content queue schedules it later. Mention it only once its week arrives.
 5. **Links:** `python inject_links.py`. If the dry run is clean, `--upload` within the caps, then verify live.
 6. **Ledger + log:** update `autopilot/ledger.json`; append one line per action to `LOOP.md` with its undo command.
@@ -114,7 +116,7 @@ Model: `claude-sonnet-5-5` for Daily Ops; `claude-opus-5-5` for Weekly and Month
 1. **Status:** one line. OK (nothing needs you), Needs you (tasks waiting), or ALERT (something broke).
 2. **ALERTS** (only if any): what happened, what the robot already did (for example "restored post 404"), and what the owner should do.
 3. **Today for you:** at most 3 tasks, most important first, taken from the PM Tracker / `TASKS.md` (overdue first, then due within 3 days, then waiting Tier C items). Each one: task ID, one-line why, the exact command or clicks, and about how many minutes it takes.
-4. **Today for the robot:** what it did in this run (or would have done, in shadow mode) and what it plans for the next run.
+4. **Today for the robot:** what it did in this run (each write with its undo command) and what it plans for the next run.
 5. **Numbers:** one line: pages up/total · links and drafts done today vs caps · DataForSEO spend this month vs $5 · days until the next milestone in `GROWTH_PLAN.md` §5.
 6. **Good to know** (optional, max 3 bullets): only useful news, such as a new brief ready, a price change found, a page that moved into the top 50/20/10, a new Search Console query, or a deadline in the next 7 days.
 7. **Links:** the PM Tracker sheet, and the previous Daily Digest Doc if anything in it is still open.
@@ -133,7 +135,7 @@ Model: `claude-sonnet-5-5` for Daily Ops; `claude-opus-5-5` for Weekly and Month
 - decisions needed from the owner (each with a recommended answer)
 - next month's plan
 
-**Paused or shadow mode:** a paused run still leaves a one-line daily message ("Robot paused: <reason>. To resume: delete AUTOPILOT_PAUSED in GitHub."). In shadow mode, every daily message says "Practice mode: nothing was changed on the website".
+**Paused or shadow mode:** a paused run still leaves a one-line daily message ("Robot paused: <reason>. To resume: delete AUTOPILOT_PAUSED in GitHub."). Shadow (practice) mode ended on 2026-10-05; if it is ever switched back on, every daily message says "Practice mode: nothing was changed on the website".
 
 ### 6.2 Copies of briefs and community drafts (user decision 2026-10-05)
 

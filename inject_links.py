@@ -21,6 +21,8 @@ Safety:
   - Refuses posts that have a knowledge/upgrade-<ID>-*.md source file (edit the Markdown, then --replace-live),
     so this tool and the upgrade files can never overwrite each other. Block-style links stay with link_injector.py.
   - Never runs from the scheduler.
+  - Affiliate rows (2026-10-05): a Target that is a full https:// URL is an approved affiliate link; it gets
+    rel="sponsored nofollow noopener" and must resolve to HTTP 200.
   - Autopilot (TPG_AUTOPILOT=1, AUTOPILOT.md): kill switch, max 6 links per day across runs, and every write is
     re-read; if a link is missing or status/slug changed, the post is restored at once and a strike is recorded.
 """
@@ -68,7 +70,8 @@ def load_roadmap(only=None):
             continue
         rid, source, anchor, target, status = cells[:5]
         rows.append({"id": rid, "source": int(re.sub(r"\D", "", source)), "anchor": anchor.strip('"“”'),
-                     "target": "/" + target.strip("`/ ") + "/", "status": status.upper()})
+                     "target": target.strip("` ") if target.strip("` ").startswith("http") else "/" + target.strip("`/ ") + "/",
+                     "status": status.upper()})
     if only:
         rows = [r for r in rows if r["id"] == only]
     return rows
@@ -100,7 +103,8 @@ def insert_link(content, anchor, target):
             hit = phrase.search(part)
             if not hit:
                 continue
-            linked = part[: hit.start()] + f'<a href="{target}">{hit.group(1)}</a>' + part[hit.end():]
+            attrs = ' rel="sponsored nofollow noopener" target="_blank"' if target.startswith("http") else ""  # affiliate row
+            linked = part[: hit.start()] + f'<a href="{target}"{attrs}>{hit.group(1)}</a>' + part[hit.end():]
             new_inner = "".join(parts[:i] + [linked] + parts[i + 1:])
             s, e = m.start(2), m.end(2)
             new_content = content[:s] + new_inner + content[e:]
@@ -114,6 +118,8 @@ def insert_link(content, anchor, target):
 
 def target_live(target):
     try:
+        if target.startswith("http"):  # affiliate link: must resolve to a working page
+            return requests.get(target, timeout=30, allow_redirects=True).status_code == 200
         r = requests.get(SITE + target, timeout=30, allow_redirects=False)
         return r.status_code == 200
     except requests.RequestException:

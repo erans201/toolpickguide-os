@@ -87,6 +87,14 @@ class TestGuard(GuardCase):
 
 
 class TestInjectLinks(unittest.TestCase):
+    def test_affiliate_row_gets_sponsored_rel(self):
+        import inject_links
+        html = '<!-- wp:paragraph --><p>If outbound is your channel, look at Close.</p><!-- /wp:paragraph -->'
+        new, _ = inject_links.insert_link(html, "Close", "https://refer.close.com/abc")
+        self.assertIn('<a href="https://refer.close.com/abc" rel="sponsored nofollow noopener" target="_blank">Close</a>', new)
+        new2, _ = inject_links.insert_link(html, "outbound", "/crm/")
+        self.assertIn('<a href="/crm/">outbound</a>', new2)
+
     def test_link_present(self):
         import inject_links
         self.assertTrue(inject_links.link_present('<a href="/crm/">x</a>', "/crm/"))

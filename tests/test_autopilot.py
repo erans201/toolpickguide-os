@@ -97,11 +97,26 @@ class TestNotifyOwner(unittest.TestCase):
         smtp = mock.MagicMock()
         smtp.__enter__.return_value.login.side_effect = Exception("bad login for secret123")
         env = {"BIZ_MAIL_ADDRESS": "eran@toolpickguide.com", "BIZ_MAIL_PASSWORD": "secret123"}
-        with mock.patch.dict(os.environ, env), mock.patch.object(notify_owner.smtplib, "SMTP_SSL", return_value=smtp),                 mock.patch.object(sys, "argv", ["x", "--subject", "s", "--file", str(tmp)]):
+        with mock.patch.dict(os.environ, env), mock.patch.object(notify_owner.smtplib, "SMTP_SSL", return_value=smtp),                 mock.patch.object(sys, "argv", ["x", "--subject", "s", "--file", str(tmp), "--via", "smtp"]):
             with self.assertRaises(SystemExit) as cm:
                 notify_owner.main()
         self.assertNotIn("secret123", str(cm.exception))
         self.assertIn("[REDACTED]", str(cm.exception))
+
+    def test_website_fallback_when_mail_server_blocked(self):
+        from autopilot import notify_owner
+        tmp = Path(tempfile.mkdtemp()) / "m.txt"
+        tmp.write_text("Status: OK", encoding="utf-8")
+        env = {"BIZ_MAIL_ADDRESS": "eran@toolpickguide.com", "BIZ_MAIL_PASSWORD": "secret123",
+               "WP_SITE_URL": "https://example.com", "WP_USERNAME": "u", "WP_APPLICATION_PASSWORD": "apppw"}
+        resp = mock.MagicMock(status_code=200)
+        with mock.patch.dict(os.environ, env), \
+                mock.patch.object(notify_owner.smtplib, "SMTP_SSL", side_effect=OSError(97, "Address family not supported")), \
+                mock.patch("requests.post", return_value=resp) as post, \
+                mock.patch.object(sys, "argv", ["x", "--subject", "s", "--file", str(tmp)]):
+            notify_owner.main()
+        self.assertEqual(post.call_args.args[0], "https://example.com/wp-json/tpg/v1/notify-owner")
+        self.assertNotIn("to", post.call_args.kwargs["json"])  # the recipient is fixed in the plugin
 
 
 class TestInjectLinks(unittest.TestCase):

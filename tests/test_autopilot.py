@@ -109,6 +109,28 @@ class TestJuniaGate(unittest.TestCase):
         self.assertFalse(junia_draft.gate_clean({**self.CLEAN, "blocked_external": ["spam.example"]}))
         self.assertFalse(junia_draft.gate_clean({**self.CLEAN, "unjudged_external": ["new.example"]}))
 
+    def test_stock_photos_no_longer_block_the_gate(self):
+        import junia_draft
+        self.assertTrue(junia_draft.gate_clean({**self.CLEAN, "hotlinked_images": ["https://images.unsplash.com/p"]}))
+
+    def test_rehost_swaps_urls_and_skips_non_images(self):
+        import junia_draft
+        src = "https://images.unsplash.com/photo-1?w=1200&amp;q=80"
+        raw = f'<img src="{src}"/><img src="https://evil.example/x.html"/><img src="http://plain.example/a.jpg"/>'
+        def fake_get(url, timeout):
+            ctype = "image/jpeg" if "unsplash" in url else "text/html"
+            return mock.Mock(content=b"x", headers={"Content-Type": ctype}, raise_for_status=lambda: None)
+        upload = mock.Mock(return_value=77)
+        wp = mock.Mock(return_value={"source_url": "https://toolpickguide.com/wp-content/uploads/a.jpg"})
+        with mock.patch("requests.get", side_effect=fake_get),                 mock.patch.object(junia_draft, "BACKUP_DIR", Path(tempfile.mkdtemp())):
+            out, ids = junia_draft.rehost_images(None, raw, [src, "https://evil.example/x.html", "http://plain.example/a.jpg"],
+                                                 "alt", "slug", upload, wp)
+        self.assertEqual(ids, [77])
+        self.assertIn('src="https://toolpickguide.com/wp-content/uploads/a.jpg"', out)
+        self.assertNotIn("unsplash", out)
+        self.assertIn("evil.example", out)  # not an image: left alone
+        upload.assert_called_once()
+
     def test_junia_own_links_are_judged_per_domain(self):
         import junia_draft
         brief = {"external": ["https://www.honeybook.com/pricing"]}

@@ -19,7 +19,10 @@ fails while a link points to a blocked domain or to a domain nobody has judged y
 --apply (after a full backup to backups/junia-*.json):
   - fixes a wrong year in the title, sets slug, excerpt, tags, category
   - Rank Math: SEO title, meta description, focus + secondary keywords, social title/description
-  - uploads the text-free featured image (knowledge/images/junia-<slug>.png) with keyword alt text
+  - copies Junia's stock photos (e.g. images.unsplash.com) into the Media Library and points the draft at the copies
+    (faster, can't break if the source moves; Unsplash license: free to use); with no featured image, the first
+    copy becomes the featured image
+  - uploads our featured image (knowledge/images/junia-<slug>.png) only when the draft has none
   - Rank Math score fixes: puts the featured image in the content (keyword alt), adds the focus keyword to the
     FAQ heading if no subheading has it, adds missing required internal links, adds official-source links for
     tools mentioned without one
@@ -185,7 +188,8 @@ def report(a, brief, post):
     for lp in a["long_paragraphs"]:
         print(f"       → starts: \"{lp}…\"  (split into 2 paragraphs)")
     print(f"  {ok(not a['leftovers'])} Junia notes / chatbot residue: {a['leftovers'] or 'none'}")
-    print(f"  {ok(not a['hotlinked_images'])} Hotlinked images (must be hosted in the Media Library): {len(a['hotlinked_images'])}")
+    print(f"  ℹ️ Stock photos loaded from another site: {len(a['hotlinked_images'])}"
+          f"{' (copied into the Media Library by --apply)' if a['hotlinked_images'] else ''}")
     print(f"  ℹ️ External links Junia added (allowed if the site is legit): {a['offlist_external'] or 'none'}")
     print(f"  {ok(not a['blocked_external'])} Links to untrusted sites (remove them): {a['blocked_external'] or 'none'}")
     print(f"  {ok(not a['unjudged_external'])} New sites to judge in {LINK_DOMAINS}: {a['unjudged_external'] or 'none'}")
@@ -246,6 +250,39 @@ def fix_content(raw, a, brief, media):
         raw = insert_before_faq(raw, f"<!-- wp:paragraph -->\n<p><strong>Sources (checked September 2026):</strong> {links}</p>\n<!-- /wp:paragraph -->\n\n")
         changes.append(f"official source links added: {', '.join(a['tools_unlinked'])}")
     return raw, changes
+
+
+IMAGE_TYPES = {"image/jpeg": ".jpg", "image/png": ".png", "image/webp": ".webp"}
+MAX_IMAGE_BYTES = 15 * 1024 * 1024
+
+
+def rehost_images(session, raw, srcs, alt, slug, upload_image, wp):
+    """Copies each external image into the Media Library and swaps the URL in the content. Returns (raw, media ids)."""
+    import requests
+    ids = []
+    for i, src in enumerate(dict.fromkeys(srcs), 1):
+        url = html_lib.unescape(src)
+        if not url.startswith("https://"):
+            print(f"   ! skipped (not https): {url[:80]}")
+            continue
+        r = requests.get(url, timeout=60)
+        r.raise_for_status()
+        ext = IMAGE_TYPES.get(r.headers.get("Content-Type", "").split(";")[0].strip())
+        if not ext or len(r.content) > MAX_IMAGE_BYTES:
+            print(f"   ! skipped (not an image or too large): {url[:80]}")
+            continue
+        BACKUP_DIR.mkdir(parents=True, exist_ok=True)
+        tmp = BACKUP_DIR / f"rehost-{slug}-{i}{ext}"
+        tmp.write_bytes(r.content)
+        try:
+            mid = upload_image(session, API, tmp, alt, f"{slug}-photo-{i}")
+        finally:
+            tmp.unlink(missing_ok=True)
+        new = wp(session, "GET", f"{API}/media/{mid}", "Could not read uploaded image.")["source_url"]
+        raw = raw.replace(src, new).replace(url, new).replace(html_lib.escape(url, quote=True), new)
+        ids.append(mid)
+        print(f"   ↻ stock photo copied into the Media Library → media {mid}")
+    return raw, ids
 
 
 def fix_title(title):
@@ -324,7 +361,7 @@ def gate_clean(a):
     """True when no QA GATE item needs a human edit (AUTOPILOT.md: Tier B may only --apply clean drafts)."""
     short_of_claim = a["claimed_n"] and "question" in a["title"].lower() and a["question_items"] < a["claimed_n"]
     return not (a["unknown_amounts"] or a["banned"] or a["tested"] or a["long_paragraphs"] or short_of_claim
-                or a["leftovers"] or a["hotlinked_images"] or a["blocked_external"] or a["unjudged_external"] or a["missing_tools"]
+                or a["leftovers"] or a["blocked_external"] or a["unjudged_external"] or a["missing_tools"]
                 or a["excluded_present"] or a["missing_external"])
 
 
@@ -351,7 +388,7 @@ def main():
     parser.add_argument("--post-id", type=int)
     parser.add_argument("--apply", action="store_true")
     parser.add_argument("--replace-image", action="store_true",
-                        help="Replace Junia's featured image with our text-free one (in-content images are left alone)")
+                        help="Replace Junia's featured image with our own one (in-content images are left alone)")
     parser.add_argument("--restore", metavar="BACKUP.json")
     parser.add_argument("--export", action="store_true",
                         help="Read-only: save the draft as Markdown in knowledge/_preview/ so the agent can review it")
@@ -409,8 +446,16 @@ def main():
                                   "excerpt": post["excerpt"]["raw"]}, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\n💾 Backup: {backup}")
 
+    rehosted = []
+    if a["hotlinked_images"]:
+        post["content"]["raw"], rehosted = rehost_images(session, post["content"]["raw"], a["hotlinked_images"],
+                                                         brief["image_alt"], brief["slug"], upload_image, wp)
     media = None
-    if brief["image"].is_file() and (not post.get("featured_media") or args.replace_image):
+    if rehosted and not post.get("featured_media") and not args.replace_image:
+        m = wp(session, "GET", f"{API}/media/{rehosted[0]}", "Could not read the copied image.")
+        media = {"id": rehosted[0], "url": m["source_url"]}
+        print(f"   ★ featured image ← first copied stock photo (media {rehosted[0]})")
+    elif brief["image"].is_file() and (not post.get("featured_media") or args.replace_image):
         mid = upload_image(session, API, brief["image"], brief["image_alt"], brief["slug"])
         m = wp(session, "GET", f"{API}/media/{mid}", "Could not read uploaded image.")
         media = {"id": mid, "url": m["source_url"]}
@@ -448,6 +493,8 @@ def main():
         "rank_math_facebook_description": brief["meta_description"], "rank_math_twitter_use_facebook": "on"}})
 
     print(f"\n✅ Draft {post['id']} updated (still a draft): \"{payload['title']}\" · /{brief['slug']}/")
+    if rehosted:
+        changes.insert(0, f"{len(rehosted)} stock photo(s) copied into the Media Library")
     for c in changes:
         print(f"   • {c}")
     print("   • Rank Math meta " + ("saved" if rm.status_code < 400 else "NOT saved:\n" + explain_error(rm)))

@@ -14,7 +14,7 @@
 | Category / Tags | CRM & Pipelines · crm for agencies, agency crm, hubspot, zoho crm, monday crm |
 | Sitemap check | 2026-10-05: all 3 child sitemaps checked (21 posts, 8 pages). No agency page is live. `/crm-operations-best-client-management-software/` targets general "best client management software" (not agencies) → this page links **up** to it and must not use "client management software" as its focus. |
 | Topic gate | Q1 ICP: yes (agency owners/partners) · Q2 approved cluster: yes (CRM core: Agencies, `CONTENT_STRATEGY.md` §5) · Q3 links: to `/crm-operations-best-client-management-software/` and `/client-onboarding-software/`, and receives links from both · Q4 intent free: yes · Q5 earns: yes (HubSpot via Impact, Zoho and Close applications submitted 2026-10-04) |
-| Junia settings | **Save as draft** · US English · no auto-publish · no automatic internal links · no stock images · automatic external links OK (trusted sites only; checked in QA) |
+| Junia settings | **Save as draft** · US English · no auto-publish · no automatic internal links · stock photos OK (copied to the Media Library in QA) · automatic external links OK (trusted sites only; checked in QA) |
 
 **Lineup note:** Pipedrive (affiliate application submitted) is **not** in this brief: its pricing page blocks automated readers, so no price could be verified on 2026-10-05. Accelo is left out because it publishes no prices (custom quote only). The local agent can add Pipedrive after checking https://www.pipedrive.com/en/pricing in a browser and adding a dated row to the facts sheet.
 

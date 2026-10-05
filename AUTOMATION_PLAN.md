@@ -15,7 +15,7 @@
 |---|---|---|---|---|
 | A | Keyword and topic research | Cloud robot (monthly) | GSC, GA4, Bing, DataForSEO ≤ $5/month → re-ranked content queue in `TASKS.md` | ✅ running |
 | B | Briefs with verified facts | Cloud robot (weekly, Mondays) | 2 field-by-field briefs per week; facts from official pricing pages | ✅ running |
-| C | **Article generation in Junia** | **Browser agent** | Opens Junia in your Chrome, fills each field from the brief (keyword, headline, outline, Background/Context, Writing style, settings), generates, saves to WordPress **as a draft** | 🆕 to build (§2) |
+| C | **Article generation in Junia** | **Browser agent** | Opens Junia in your Chrome, fills each field from the brief (keyword, headline, outline, Background/Context, Writing style, settings), generates, saves to WordPress **as a draft** | ✅ built 2026-10-05 (first run: draft 618; local task "tpg-browser-ops", Tue + Fri 10:00) |
 | D | QA and correction | Cloud robot (daily, Tier B) | Export, QA gate, judge new link sites, corrected body from the facts sheet, `--replace-content`, copy stock photos to the Media Library | ✅ live since 2026-10-05 |
 | E | Image check | Cloud robot flags · you run the fix | Rejects AI art and overlaid text; `media_fix.py --featured-media` swaps in a real photo | ⚠️ Tier C (decision D2) |
 | F | **Publish** | **You** (1 minute per article) | Open the draft, Save Draft, read, Publish | Stays with you (decision D1) |
@@ -79,7 +79,7 @@
 
 1. ✅ Cloud robot live (daily and monthly routines updated 2026-10-05). Weekly routine: you remove the old practice block at claude.ai/code/routines (§7).
 2. Connect Chrome: open Chrome with the Claude extension signed in (same Claude account).
-3. First Junia run together (§2), then create the "TPG Browser Ops" scheduled task.
+3. ✅ First Junia run together (draft 618, 2026-10-05); local scheduled task `tpg-browser-ops` created (Tue + Fri 10:00, runs while the Claude app is open). Steps: `knowledge/junia-runbook.md`; done list: `knowledge/junia-runs.md`.
 4. First Quora session together (§3).
 5. If you say yes to D2, add the featured-image swap on drafts to Tier B (code + `AUTOPILOT.md`).
 

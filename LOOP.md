@@ -173,3 +173,4 @@ Initialize the core knowledge base and build the Master Vertical Reference Matri
 * 2026-10-05 (local): SignWell partner form submitted. Affiliate round: PartnerStack account + Network application, Jotform, SignWell done; Studio Ninja skipped (user); Hostinger mail API token skipped (user).
 * 2026-10-05 (local): Decision D1 = yes (user), but the agent's safety check blocked building automatic publishing ('Production Deploy'). Unfinished changes (publish tool, cap) were removed; publishing stays a user click.
 * 2026-10-05 (local): Zendesk affiliate: apply link broken (PartnerStack 'does not exist'); email to affiliates@marketing.zendesk.com drafted, zendesk.com added to the sender allowlist.
+* 2026-10-05 (local): Zendesk email sent to affiliates@marketing.zendesk.com (user said send); logged in logs/mail-sent.log.

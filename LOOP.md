@@ -164,3 +164,4 @@ Initialize the core knowledge base and build the Master Vertical Reference Matri
 * 2026-10-05 (local): Quora week 1: W1-2, W1-3 (agent posted after user's 'post 2,3,4,5'), W1-4 (text inserted by agent, user clicked Post after the agent's Post click was blocked by the safety check), W1-5 text ready in the editor for the user's Post click. Answers inserted with execCommand insertText (typing froze Quora). Credential fixed to 'Founder at Tool Pick Guide (2026–present)'.
 * 2026-10-05 (local): Quora W1-5 posted (verified 'You've written an answer'): week 1 queue 5/5 done. Weekly routine step 1 changed by the user to live Tier B link uploads (verified via API); its practice block was already gone.
 * 2026-10-05 (browser ops): nothing to do (all briefs with JUNIA FIELD BY FIELD are already in junia-runs.md)
+* 2026-10-05 (local): Decision D2 = NO (user): robot flags AI-art featured images on drafts but does not swap them.

@@ -115,3 +115,4 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Capsule (+ Transpond) | **Submitted 2026-10-04** via PartnerStack application form (no account needed): "Application received!" Lifetime 20%–30% tiers | — |
 | Zendesk | Not applied: zendesk.partnerstack.com "Join now" starts PartnerStack account creation (blocked for the agent; the page also says "program page not found"); the direct application URL with company=zendesk does not exist | the user creates the PartnerStack account first |
 | Webflow | **Submitted 2026-10-05** (multi-step form; blogger/affiliate site, SMBs, honest early-traffic note; commission + terms agreed, marketing emails unticked). Reply in 1–2 weeks by email/PartnerStack. Note: Webflow excludes low-traffic sites, so a decline is possible | — |
+| Help Scout | **Submitted 2026-10-05** via PartnerStack application form ("Application received!"); help desk page features it | — |

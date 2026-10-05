@@ -174,3 +174,4 @@ Initialize the core knowledge base and build the Master Vertical Reference Matri
 * 2026-10-05 (local): Decision D1 = yes (user), but the agent's safety check blocked building automatic publishing ('Production Deploy'). Unfinished changes (publish tool, cap) were removed; publishing stays a user click.
 * 2026-10-05 (local): Zendesk affiliate: apply link broken (PartnerStack 'does not exist'); email to affiliates@marketing.zendesk.com drafted, zendesk.com added to the sender allowlist.
 * 2026-10-05 (local): Zendesk email sent to affiliates@marketing.zendesk.com (user said send); logged in logs/mail-sent.log.
+* 2026-10-05 (local): Mailbox check: Paperbell + Simply.Coach approved (links logged in knowledge/affiliate-applications.md §7), Close active in PartnerStack (terms to accept), Jotform received, Lofty closed (US phone only), Zoho/8am pending. Next: add affiliate links to 492 (coaches) via its upgrade file (user runs --replace-live).

@@ -126,3 +126,15 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Jotform | **Submitted 2026-10-05** via jotform.com/partnership/affiliate/application (official page prefills name + email from the user's free Jotform account ERAN_SHALEV; the direct form link left the email field locked and empty). Blog/Website Articles + Reviews; Search engine; agreement ticked by agent; user did reCAPTCHA + Submit. Review within 1 business day | — |
 | SignWell | **Submitted 2026-10-05** via the partner contact form (Referral Affiliate; Google Search; details: promote in /best-doc-signing-tools/ (19 SignWell mentions) + contract/onboarding guides, asking for a trackable link). Invisible reCAPTCHA (no user step). Confirmation: 'Our team will review your submission and get back to you shortly.' | — |
 | Zendesk | **Program still exists** (15% of first-year revenue, zendesk.com/programs/affiliate-program) but its apply link zendesk.partnerstack.com/?group=externalrecruitment shows 'program page not found' and PartnerStack says 'zendesk does not exist' (checked 2026-10-05). Email drafted to affiliates@marketing.zendesk.com asking for the current link: knowledge/emails/2026-10-05-zendesk-affiliate.md — **sent 2026-10-05** (user said send) | waiting for reply |
+
+## 7. Approvals and replies (mailbox check 2026-10-05)
+
+| Program | Result | Link / next step |
+|---|---|---|
+| **Paperbell** | **APPROVED 2026-10-05** ($100 per paying customer after 3 months, 365-day cookie; FirstPromoter) | `https://paperbell.com?via=eran-f38bed` · dashboard paperbell.firstpromoter.com · Paperbell asks affiliates to open a free Paperbell account (optional) |
+| **Simply.Coach** | **APPROVED 2026-10-05** (FirstPromoter) | `https://simply.coach?via=eran-9cc783` · dashboard simplycoach.firstpromoter.com |
+| **Close** | **APPROVED / Active 2026-10-05** (PartnerStack; welcome email from Close's partner manager) | Accept Close's program terms in PartnerStack (Home → "View programs"), then copy the referral link |
+| Jotform | Application received ("reviewed within 1–3 business days"); Jotform also asks to verify the account email | user clicks "Verify now" in Jotform's email |
+| Lofty | **Closed:** support says the program only accepts US phone numbers | none (unless a US number) |
+| Zoho | Received; review 7–10 business days | wait |
+| 8am / MyCase (Impact) | Still in review (daily digests only) | wait |

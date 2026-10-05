@@ -94,11 +94,11 @@ Rows were chosen only where the anchor phrase already appears naturally in the s
 | IL-7a | 354 | support tickets | /help-desk-tools-for-tiny-teams-under-5/ | DONE |
 | IL-7b | 372 | customer onboarding | /best-customer-onboarding-software/ | DONE |
 | IL-7c | 358 | your website | /website-builders-for-service-businesses/ | DONE |
-| IL-7d | 487 | questionnaire | /photography-client-questionnaire/ | MANUAL |
-| IL-8a | 487 | HoneyBook pricing | /honeybook-pricing/ | MANUAL |
-| IL-8b | 492 | HoneyBook pricing | /honeybook-pricing/ | MANUAL |
-| IL-8c | 338 | agencies | /best-crm-for-marketing-agencies/ | TODO |
-| IL-8d | 372 | marketing agencies | /best-crm-for-marketing-agencies/ | TODO |
+| IL-7d | 487 | questionnaire | /photography-client-questionnaire/ | DONE |
+| IL-8a | 487 | HoneyBook pricing | /honeybook-pricing/ | DONE |
+| IL-8b | 492 | HoneyBook pricing | /honeybook-pricing/ | DONE |
+| IL-8c | 338 | agencies | /best-crm-for-marketing-agencies/ | DONE |
+| IL-8d | 372 | marketing agencies | /best-crm-for-marketing-agencies/ | DONE |
 | IL-7e | 474 | transaction management | /best-real-estate-transaction-management-software/ | WAITING |
 
 - **IL-7d (fixes the only orphan):** add the link in `knowledge/upgrade-487-…md`, then the user runs `python upload_draft.py knowledge/upgrade-487-client-management-software-for-photographers.md --upload --replace-live 487 --force-replace`. The intake-form article (draft 576) also links to 558 once published.

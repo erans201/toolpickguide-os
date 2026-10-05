@@ -123,7 +123,7 @@ Accounting and coaching are maintain-only this quarter: answer when a great thre
 | 1 | Quora (real estate) | https://www.quora.com/What-is-the-best-CRM-for-real-estate-agents-to-track-their-deal-stages-and-contacts | Pre-contract stages = CRM; post-contract = checklist keyed off the contract date | W1-2 | No | Posted 2026-10-05 |
 | 1 | Quora (legal intake) | https://www.quora.com/What-are-some-of-the-questions-that-legal-intake-professionals-should-ask-potential-clients | Conflict check first, then matter, dates, goals, fees; keep the form short | W1-3 | No | Posted 2026-10-05 |
 | 1 | Quora (photographers) | https://www.quora.com/How-do-I-make-photography-contracts-for-clients | Clause checklist + one lawyer review; contract, retainer, questionnaire together | W1-4 | No | Posted 2026-10-05 |
-| 1 | Quora (RE brokers) | https://www.quora.com/What-is-the-best-CRM-to-use-for-real-estate-broker-owners-who-want-to-see-what-their-agents-are-doing | Pipeline visibility, not surveillance; roles + transaction system for compliance | W1-5 | No | Ready in Quora's answer box 2026-10-05; user clicks Post |
+| 1 | Quora (RE brokers) | https://www.quora.com/What-is-the-best-CRM-to-use-for-real-estate-broker-owners-who-want-to-see-what-their-agents-are-doing | Pipeline visibility, not surveillance; roles + transaction system for compliance | W1-5 | No | Posted 2026-10-05 (user clicked Post) |
 | 1 | Reddit (§4 subs) | *(user picks 1–2 recent threads by hand: Reddit blocks the cloud robot)* | — | agent drafts on request | No | Not started |
 
 ---

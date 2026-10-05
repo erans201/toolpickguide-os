@@ -133,8 +133,10 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 |---|---|---|
 | **Paperbell** | **APPROVED 2026-10-05** ($100 per paying customer after 3 months, 365-day cookie; FirstPromoter) | `https://paperbell.com?via=eran-f38bed` · dashboard paperbell.firstpromoter.com · Paperbell asks affiliates to open a free Paperbell account (optional) |
 | **Simply.Coach** | **APPROVED 2026-10-05** (FirstPromoter) | `https://simply.coach?via=eran-9cc783` · dashboard simplycoach.firstpromoter.com |
-| **Close** | **APPROVED / Active 2026-10-05** (PartnerStack; welcome email from Close's partner manager) | Accept Close's program terms in PartnerStack (Home → "View programs"), then copy the referral link |
+| **Close** | **APPROVED / Active 2026-10-05** (PartnerStack; terms accepted by the agent 2026-10-05) | `https://refer.close.com/f1y5ubxmzeo4` (resolves to app.close.com/signup with PartnerStack tracking) · to place: /best-crm-for-marketing-agencies/ (Close section) |
 | Jotform | Application received ("reviewed within 1–3 business days"); Jotform also asks to verify the account email | user clicks "Verify now" in Jotform's email |
 | Lofty | **Closed:** support says the program only accepts US phone numbers | none (unless a US number) |
 | Zoho | Received; review 7–10 business days | wait |
 | 8am / MyCase (Impact) | Still in review (daily digests only) | wait |
+
+**Links placed:** 2026-10-05: Paperbell + Simply.Coach links added to `knowledge/upgrade-492-client-management-software-for-coaches.md` (quick ranking + a 'Try …' line under each Bottom line); the uploader marks `?via=` links `sponsored nofollow`, Source/pricing links stay followed. Live after the user runs `--replace-live 492`.

@@ -39,8 +39,8 @@ So this list is ranked by one question: **which tool makes your client's first w
 
 ## QUICK RANKING (IF YOU JUST WANT THE LIST)
 
-1. **Paperbell.** Best overall for solo coaches who want one login and zero tiers. $97/month or $970/year.
-2. **Simply.Coach.** Best for the coaching work itself: goals, action plans, session notes. From $9/month billed annually ($19 month to month).
+1. **[Paperbell](https://paperbell.com?via=eran-f38bed).** Best overall for solo coaches who want one login and zero tiers. $97/month or $970/year.
+2. **[Simply.Coach](https://simply.coach?via=eran-9cc783).** Best for the coaching work itself: goals, action plans, session notes. From $9/month billed annually ($19 month to month).
 3. **Delenta.** Best budget pick with courses and group coaching. From $229/year.
 4. **HoneyBook.** Best if you coach *and* sell other services. From $29/month billed annually.
 5. **GoHighLevel.** Best for marketing-heavy coaching businesses. From $97/month.
@@ -115,6 +115,8 @@ Solo coaches who want everything in one login and never want to compare tiers ag
 ### Bottom line
 The closest thing to "it just works" for a solo coach. Pay once, stop duct-taping.
 
+**[Try Paperbell](https://paperbell.com?via=eran-f38bed)** (30-day money-back guarantee)
+
 ---
 
 ## 2. Simply.Coach (Best for the coaching work itself)
@@ -146,6 +148,8 @@ Coaches whose clients judge them on tracked progress, especially executive and l
 
 ### Bottom line
 If your clients measure you by progress, this is the tool built to show it.
+
+**[Try Simply.Coach free for 14 days](https://simply.coach?via=eran-9cc783)** (no credit card)
 
 ---
 

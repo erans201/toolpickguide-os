@@ -117,6 +117,8 @@ Accounting and coaching are maintain-only this quarter: answer when a great thre
 
 ## 8. Weekly queue (agent fills; user posts)
 
+**IDs and statuses (2026-10-06):** Quora items are `W<week>-<n>`, Reddit items `R<week>-<n>`. Status is one of **Ready** (draft done, waiting for the user) · **Posted YYYY-MM-DD** · **Skipped (reason)**. The daily email shows only **Ready** rows (at most 2 a day, oldest first, with the full answer text and exact clicks, `AUTOPILOT.md` §6.1 "Community today"). Each Ready row also has a PM Tracker row `Community <ID> (<platform>): <thread title>`; when the user sets it to Done, the robot changes the row here to "Posted <date>".
+
 | Week | Platform / community | Thread URL | Angle | Draft (file or inline) | Link? | Status |
 |---|---|---|---|---|---|---|
 | 1 | Quora (legal) | https://www.quora.com/Are-there-any-specific-case-management-software-solutions-that-cater-well-to-small-or-solo-law-practices | Pick by what breaks first; demo your real trust workflow; trust rules come from the bar | `knowledge/community-week1-drafts.md` W1-1 | No | Posted 2026-10-05 (user) |
@@ -124,7 +126,7 @@ Accounting and coaching are maintain-only this quarter: answer when a great thre
 | 1 | Quora (legal intake) | https://www.quora.com/What-are-some-of-the-questions-that-legal-intake-professionals-should-ask-potential-clients | Conflict check first, then matter, dates, goals, fees; keep the form short | W1-3 | No | Posted 2026-10-05 |
 | 1 | Quora (photographers) | https://www.quora.com/How-do-I-make-photography-contracts-for-clients | Clause checklist + one lawyer review; contract, retainer, questionnaire together | W1-4 | No | Posted 2026-10-05 |
 | 1 | Quora (RE brokers) | https://www.quora.com/What-is-the-best-CRM-to-use-for-real-estate-broker-owners-who-want-to-see-what-their-agents-are-doing | Pipeline visibility, not surveillance; roles + transaction system for compliance | W1-5 | No | Posted 2026-10-05 (user clicked Post) |
-| 1 | Reddit (§4 subs) | *(user picks 1–2 recent threads by hand: Reddit blocks the cloud robot)* | — | agent drafts on request | No | Not started |
+| 1 | Reddit (§4 subs) | replaced by the Reddit plan in §10 (browser agent finds threads from week 2) | — | — | — | Skipped (plan changed 2026-10-06) |
 
 ---
 
@@ -133,3 +135,34 @@ Accounting and coaching are maintain-only this quarter: answer when a great thre
 - **Monthly:** GA4 sessions + engaged sessions from `reddit.com` and `quora.com` (`ga_pull.py` sources report), and which bridged page received them.
 - **Leading signals:** replies and upvotes on our answers; mentions of ToolPickGuide by others.
 - **Review on Nov 1:** keep the angles that earned replies, drop the rest, and set November's targets.
+
+---
+
+## 10. Reddit plan (organized 2026-10-06)
+
+**Why a separate plan:** Reddit blocks the cloud robot, so it can't find or check threads. The **browser agent** can, because it works in the user's own Chrome where Reddit loads normally. Reddit is also stricter than Quora: many subreddits remove posts from new or low-karma accounts and ban self-promotion.
+
+**Who does what**
+
+| Step | Who | When |
+|---|---|---|
+| 1. Account ready: your own Reddit account, signed in in Chrome, with a short bio (no link) | User, once | before week 2 |
+| 2. Read each subreddit's rules once and fill in the table below (self-promo allowed? minimum karma or account age? flair needed?) | Browser agent, in Chrome | first Tuesday run, then once a month |
+| 3. Find 2 fresh threads (under 30 days, a real question, no complete answer yet) in the priority subs, write drafts R`<week>`-1/2 into `knowledge/community-week<N>-drafts.md`, add Ready rows to §8 and the PM Tracker | Browser agent | every Tuesday run |
+| 4. The daily email shows each Ready item with the full answer and exact clicks | Cloud robot | daily |
+| 5. Post it yourself, or say "Reddit time" and the agent fills in the comment box for your Post click | User | when the email shows it |
+
+**Pace:** weeks 2–3: 2 comments a week, **no links**, start in r/smallbusiness (largest, friendliest to helpful answers). From week 4: 2–3 a week across the vertical subs; at most 1 in 5 with a link, and **never** a link where the rules ban self-promotion. Skip any sub whose karma or age minimum the account doesn't meet yet.
+
+**Subreddits (the browser agent fills the rule columns from each sub's own rules page; nothing here is guessed)**
+
+| Priority | Subreddit | For | Self-promo / links | Karma or age minimum | Rules checked |
+|---|---|---|---|---|---|
+| 1 | r/smallbusiness | all verticals, intake/CRM/onboarding | to check | to check | — |
+| 2 | r/LawFirm | legal (practice management, intake) | to check | to check | — |
+| 3 | r/realtors | real estate CRM, transaction management | to check | to check | — |
+| 4 | r/RealEstateTechnology | real estate tools | to check | to check | — |
+| 5 | r/WeddingPhotography · r/photobusiness | photographer CRM, contracts | to check | to check | — |
+| 6 | r/Entrepreneur | general service-business tools | to check | to check | — |
+
+**How to post a Reddit comment (exact clicks):** open the thread link (signed in) → scroll to the box **"Join the conversation"** / **"Add a comment"** under the post → click it → paste the answer → click **Comment**. Then set its PM Tracker row to **Done**.

@@ -226,19 +226,17 @@ def render(stem, title, out_path, theme=None):
 
 
 def build_for_article(article_path, title, tools):
-    """Called by upload_draft.py. Returns the image path.
+    """Called by upload_draft.py. Returns the photo path, or None.
 
-    A user-supplied photo wins: knowledge/images/<stem>-photo.(webp|jpg|jpeg|png). Otherwise the generated
-    illustration (<stem>.png) is reused or created."""
+    Only a realistic photo counts: knowledge/images/<stem>-photo.(webp|jpg|jpeg|png) (Junia-style AI photo or
+    stock photo). Generated illustrations are never used any more (user rule 2026-10-06: "do not create those
+    kind of pictures, use Junia's style"). With no photo, the uploader keeps the post's current image."""
     article_path = Path(article_path)
     for ext in (".webp", ".jpg", ".jpeg", ".png"):
         photo = article_path.parent / "images" / f"{article_path.stem}-photo{ext}"
         if photo.is_file():
             return photo
-    out = article_path.parent / "images" / f"{article_path.stem}.png"
-    if out.is_file():
-        return out
-    return render(article_path.stem, title, out)
+    return None
 
 
 if __name__ == "__main__":

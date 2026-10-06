@@ -117,7 +117,9 @@ def parse_brief(path):
     missing = [k for k in ("slug", "focus", "seo_title", "meta_description") if not brief[k]]
     if missing:
         sys.exit(f"ERROR: brief is missing {missing}")
-    brief["image"] = Path("knowledge/images") / f"junia-{brief['slug']}.png"
+    # Only real photos (user rule 2026-10-06: never our generated illustrations): knowledge/images/junia-<slug>-photo.*
+    photos = [Path("knowledge/images") / f"junia-{brief['slug']}-photo{e}" for e in (".webp", ".jpg", ".jpeg", ".png")]
+    brief["image"] = next((p for p in photos if p.is_file()), photos[1])
     brief["image_alt"] = re.sub(r"\s*\(\d{4}\)", "", brief["h1"] or brief["seo_title"])
     return brief
 
@@ -354,6 +356,21 @@ def export_all(session):
     print("\nDone. Nothing was changed in WordPress. Tell the agent the exports are ready.")
 
 
+def carry_images(original, new):
+    """Keep Junia's images when the body is replaced by a QA-corrected text (user rule 2026-10-06: Junia's
+    style, not ours). If the corrected body has no images, put Junia's images back, one before each H2 in order."""
+    if "<img" in new:
+        return new
+    figs = re.findall(r"(?:<!-- wp:image.*?<!-- /wp:image -->|<figure[^>]*>.*?</figure>|<img[^>]+>)", original, flags=re.S)
+    if not figs:
+        return new
+    parts = re.split(r"(?=<h2)", new)
+    out = [parts[0]]
+    for i, part in enumerate(parts[1:]):
+        out.append((figs[i] + "\n\n" if i < len(figs) else "") + part)
+    return "".join(out)
+
+
 def judge_offlist(external_have, brief, verdicts=None):
     """Splits Junia's own external links into trusted / blocked / not yet judged domains."""
     verdicts = link_verdicts() if verdicts is None else verdicts
@@ -429,7 +446,7 @@ def main():
     if args.replace_content:
         import markdown
         md = Path(args.replace_content).read_text(encoding="utf-8")
-        post["content"]["raw"] = markdown.markdown(md, extensions=["tables", "sane_lists"])
+        post["content"]["raw"] = carry_images(original_raw, markdown.markdown(md, extensions=["tables", "sane_lists"]))
         args.apply = True
         print(f"Body replaced with QA-corrected version: {args.replace_content}\n")
     a = analyze(post, brief)
@@ -469,6 +486,15 @@ def main():
     elif post.get("featured_media"):
         m = wp(session, "GET", f"{API}/media/{post['featured_media']}", "Could not read featured image.")
         media = {"id": post["featured_media"], "url": m["source_url"]}
+    else:
+        own = re.search(r'wp-image-(\d+)', post["content"]["raw"])  # Junia's own image already in the Media Library
+        if own:
+            m = wp(session, "GET", f"{API}/media/{own.group(1)}", "Could not read Junia's image.")
+            media = {"id": int(own.group(1)), "url": m["source_url"]}
+            print(f"   ★ featured image ← Junia's first image in the article (media {own.group(1)})")
+        else:
+            print("   ⚠️ No featured image: the draft has no Junia image. Generate one in Junia (Feature Image ON); "
+                  "never use an illustration.")
 
     content, changes = fix_content(post["content"]["raw"], a, brief, media)
     payload = {"title": fix_title(post["title"]["raw"]), "slug": brief["slug"], "content": content,

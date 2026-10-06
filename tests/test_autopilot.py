@@ -148,7 +148,16 @@ class TestJuniaGate(unittest.TestCase):
         self.assertFalse(junia_draft.gate_clean({**self.CLEAN, "claimed_n": 60, "title": "60 questions", "question_items": 40}))
         self.assertTrue(junia_draft.gate_clean({**self.CLEAN, "offlist_external": ["www.ftc.gov"]}))
         self.assertFalse(junia_draft.gate_clean({**self.CLEAN, "blocked_external": ["spam.example"]}))
-        self.assertFalse(junia_draft.gate_clean({**self.CLEAN, "unjudged_external": ["new.example"]}))
+        # user rule 2026-10-06: Junia's external links are usually fine; only blocked sites fail the gate
+        self.assertTrue(junia_draft.gate_clean({**self.CLEAN, "unjudged_external": ["new.example"]}))
+
+    def test_bad_internal_links_are_unlinked(self):
+        import junia_draft
+        a = {"bad_internal": ["/no-such/"], "has_image": True, "kw_in_heading": True, "missing_internal": [], "tools_unlinked": []}
+        raw, changes = junia_draft.fix_content('<p>see <a href="/no-such/">this page</a> and <a href="/ok/">that</a></p>',
+                                               a, {"focus": "x", "image_alt": ""}, None)
+        self.assertEqual(raw, '<p>see this page and <a href="/ok/">that</a></p>')
+        self.assertTrue(changes)
 
     def test_stock_photos_no_longer_block_the_gate(self):
         import junia_draft

@@ -82,6 +82,7 @@ def main():
     ap.add_argument("--alt")
     ap.add_argument("--featured-from-content", action="store_true")
     ap.add_argument("--featured-media", type=int, metavar="ID")
+    ap.add_argument("--featured-file", metavar="PHOTO", help="upload a local photo (e.g. knowledge/images/<stem>-photo.jpg) and make it the featured image")
     ap.add_argument("--touch", type=int, nargs="*", default=[])
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--restore", metavar="BACKUP.json")
@@ -112,6 +113,10 @@ def main():
             if m.status_code != 200:
                 sys.exit(f"ABORT: media {a.featured_media} not found in the Media Library.")
             print(f"  ★ featured image: media {pub['featured_media']} → {a.featured_media} ({m.json()['source_url']})")
+        if a.featured_file:
+            if not Path(a.featured_file).is_file():
+                sys.exit(f"ABORT: {a.featured_file} not found.")
+            print(f"  ★ featured image: media {pub['featured_media']} → upload {a.featured_file}")
         if a.alt:
             print(f"  ✎ alt text: {a.alt}")
         if not keep and a.featured_from_content:
@@ -167,6 +172,10 @@ def main():
             payload["featured_media"] = first_media
         if a.featured_media:
             payload["featured_media"] = a.featured_media
+        if a.featured_file:
+            mid = upload_image(session, API, Path(a.featured_file), a.alt or "", f"{post['slug']}-photo")
+            payload["featured_media"] = first_media = mid
+            print(f"   + uploaded {a.featured_file} → media {mid}")
         result = wp(session, "POST", f"{API}/posts/{a.post_id}", "WordPress rejected the update.", json=payload)
         if result.get("status") != post["status"] or result.get("slug") != post["slug"]:
             sys.exit(f"SAFETY ERROR: status/slug changed. Restore: python media_fix.py --restore {backup}")

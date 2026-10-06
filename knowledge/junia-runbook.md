@@ -23,11 +23,12 @@ Used by the browser agent (`AUTOMATION_PLAN.md` §2) in the user's Chrome, where
 3. **Advanced Settings** (opens a dialog):
    - **Background/Context:** the brief's Background box (the whole thing, including the facts sheet). `form_input` works for this textarea.
    - **Writing Style:** the brief's Writing style box. `form_input` works.
-   - **Include Feature Image: ON** (user decision 2026-10-05: Junia's images are generally safe; this gives every draft a main image).
+   - **Include Feature Image: ON** (every draft needs a main image; a draft without one ends up with no photo).
    - **Include In-Article Images: ON** (real stock photos; QA copies them into the Media Library and uses the first as the featured image).
    - **Include Meta Title & Description:** leave ON (QA overwrites it).
    - **Include FAQ: OFF** (the outline has our FAQ; this caused duplicate FAQs).
    - **Auto External Linking & References: ON** (user rule 2026-10-05; QA judges each site).
+   - **Internal linking: ON** if the dialog offers it (user rule 2026-10-06; QA fixes internal links that don't point to live pages).
    - ⚠️ The switches only change with real **clicks**, not `form_input`. Click one switch at a time and zoom in to confirm, because the dialog scrolls between clicks.
    - Click **Close**.
 4. Click **Generate Outline** (takes 1–3 minutes).

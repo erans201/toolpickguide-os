@@ -132,6 +132,38 @@ def text_of(html):
     return html_lib.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html))).strip()
 
 
+_LIVE_PATHS = None
+
+
+def live_paths():
+    """Paths of every live URL in the sitemap ("/slug/"), cached. Empty set if the sitemap can't be read."""
+    global _LIVE_PATHS
+    if _LIVE_PATHS is None:
+        import requests
+        try:
+            idx = requests.get(f"{SITE}/sitemap_index.xml", timeout=60).text
+            urls = [u for sm in re.findall(r"<loc>(.*?)</loc>", idx) for u in re.findall(r"<loc>(.*?)</loc>", requests.get(sm, timeout=60).text)]
+            _LIVE_PATHS = {"/" + u.replace(SITE, "").strip("/") + "/" for u in urls} | {"/"}
+        except Exception:
+            _LIVE_PATHS = set()
+    return _LIVE_PATHS
+
+
+def bad_internal_links(hrefs, own_slug):
+    """Junia's internal links that don't point to a live page (user rule 2026-10-06: the agent fixes internal links)."""
+    live = live_paths()
+    if not live:
+        return []
+    bad = []
+    for h in hrefs:
+        if not (h.startswith("/") or SITE in h) or "/wp-content/" in h or h.startswith("#"):
+            continue
+        path = "/" + h.replace(SITE, "").split("#")[0].split("?")[0].strip("/") + "/"
+        if path.replace("//", "/") not in live and path != f"/{own_slug}/":
+            bad.append(h)
+    return sorted(set(bad))
+
+
 def analyze(post, brief):
     raw = post["content"]["raw"]
     title = post["title"]["raw"]
@@ -161,6 +193,7 @@ def analyze(post, brief):
         "unknown_amounts": sorted(a for a in amounts if a not in brief["fact_amounts"]),
         "amounts": sorted(amounts),
         "missing_internal": [p for p, _ in brief["internal"] if p not in internal_have and p.rstrip("/") not in internal_have],
+        "bad_internal": bad_internal_links(hrefs, brief["slug"]),
         "missing_external": [u for u in brief["external"] if u not in hrefs],
         "external_count": len(external_have), "internal_count": len(internal_have),
         "long_paragraphs": [p[:90] for p in paras if len(re.findall(r"[.!?](\s|$)", p)) > 3],
@@ -200,7 +233,9 @@ def report(a, brief, post):
           f"{' (copied into the Media Library by --apply)' if a['hotlinked_images'] else ''}")
     print(f"  ℹ️ External links Junia added (allowed if the site is legit): {a['offlist_external'] or 'none'}")
     print(f"  {ok(not a['blocked_external'])} Links to untrusted sites (remove them): {a['blocked_external'] or 'none'}")
-    print(f"  {ok(not a['unjudged_external'])} New sites to judge in {LINK_DOMAINS}: {a['unjudged_external'] or 'none'}")
+    print(f"  ℹ️ New external sites (usually fine; judge once in {LINK_DOMAINS}): {a['unjudged_external'] or 'none'}")
+    print(f"  {ok(not a['bad_internal'])} Internal links to pages that aren't live: {a['bad_internal'] or 'none'}"
+          f"{' (unlinked by --apply; text kept)' if a['bad_internal'] else ''}")
     print(f"  {ok(not a['missing_external'])} Required source links missing: {a['missing_external'] or 'none'}")
     if brief["required_tools"]:
         print(f"  {ok(not a['missing_tools'])} Required tools missing: {a['missing_tools'] or 'none'}")
@@ -248,6 +283,10 @@ def fix_content(raw, a, brief, media):
                          lambda m: f"{m.group(1)}FAQs About the {focus_title}{m.group(3)}", raw, count=1, flags=re.I | re.S)
         if n:
             raw = new; changes.append(f'FAQ heading → "FAQs About the {focus_title}"')
+    for h in a.get("bad_internal", []):
+        raw, n = re.subn(rf'<a\b[^>]*href="{re.escape(h)}"[^>]*>(.*?)</a>', r"\1", raw, flags=re.S)
+        if n:
+            changes.append(f"broken internal link removed (text kept): {h}")
     if a["missing_internal"]:
         anchors = dict(brief["internal"])
         links = " · ".join(f'<a href="{p}">{html_lib.escape(anchors[p])}</a>' for p in a["missing_internal"])
@@ -384,7 +423,7 @@ def gate_clean(a):
     """True when no QA GATE item needs a human edit (AUTOPILOT.md: Tier B may only --apply clean drafts)."""
     short_of_claim = a["claimed_n"] and "question" in a["title"].lower() and a["question_items"] < a["claimed_n"]
     return not (a["unknown_amounts"] or a["banned"] or a["tested"] or a["long_paragraphs"] or short_of_claim
-                or a["leftovers"] or a["no_disclosure"] or a["faq_sections"] > 1 or a["blocked_external"] or a["unjudged_external"] or a["missing_tools"]
+                or a["leftovers"] or a["no_disclosure"] or a["faq_sections"] > 1 or a["blocked_external"] or a["missing_tools"]
                 or a["excluded_present"] or a["missing_external"])
 
 

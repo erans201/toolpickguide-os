@@ -20,6 +20,7 @@ Used by the browser agent (`AUTOMATION_PLAN.md` §2) in the user's Chrome, where
 ## Step 2 · Settings
 1. **Article Length → Custom**, then click the slider knob and press the Right arrow until it reads **2700 words** (each press = 10 words; from 1500, press 120 times).
 2. Tick **Review & edit outline before generating**.
+2a. **Auto linking → Add Links** (on the same Settings page, above Article Length; per article, there is no global setting): add the brief's internal link URLs (its "Internal links" row, full https://toolpickguide.com/... addresses). Junia then places internal links itself (user rule 2026-10-06); QA unlinks any that point to pages that aren't live. The first time, look at what the Add Links box asks for and note it here.
 3. **Advanced Settings** (opens a dialog):
    - **Background/Context:** the brief's Background box (the whole thing, including the facts sheet). `form_input` works for this textarea.
    - **Writing Style:** the brief's Writing style box. `form_input` works.
@@ -28,7 +29,7 @@ Used by the browser agent (`AUTOMATION_PLAN.md` §2) in the user's Chrome, where
    - **Include Meta Title & Description:** leave ON (QA overwrites it).
    - **Include FAQ: OFF** (the outline has our FAQ; this caused duplicate FAQs).
    - **Auto External Linking & References: ON** (user rule 2026-10-05; QA judges each site).
-   - **Internal linking: ON** if the dialog offers it (user rule 2026-10-06; QA fixes internal links that don't point to live pages).
+   - (Internal links are not in this dialog. See step 2a.)
    - ⚠️ The switches only change with real **clicks**, not `form_input`. Click one switch at a time and zoom in to confirm, because the dialog scrolls between clicks.
    - Click **Close**.
 4. Click **Generate Outline** (takes 1–3 minutes).

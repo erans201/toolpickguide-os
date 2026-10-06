@@ -7,3 +7,11 @@
 trusted ftc.gov            # US Federal Trade Commission
 trusted americanbar.org    # American Bar Association
 trusted irs.gov            # US tax authority
+trusted cio.com            # established IT trade press (2026-10-06)
+blocked docs.gravityforms.com   # irrelevant: WordPress form-plugin docs, off-topic for the anchor (2026-10-06)
+blocked help.acuityscheduling.com   # competitor help article, not about Pixieset booking (2026-10-06)
+blocked learn.g2.com        # generic form-builder listicle, unrelated to the anchor (2026-10-06)
+blocked squareup.com        # Square help article, unrelated to Pixieset contracts (2026-10-06)
+blocked cognitoforms.com    # vendor blog on sales tracking, unrelated to Dubsado anchor (2026-10-06)
+blocked melissajill.com     # unknown personal site, low-quality/irrelevant (2026-10-06)
+blocked reddit.com          # anchor pointed to an unrelated self-hosted AI thread (2026-10-06)

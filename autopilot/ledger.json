@@ -1,0 +1,19 @@
+{
+  "days": {
+    "2026-10-06": {
+      "drafts": 1
+    }
+  },
+  "months": {},
+  "actions": [
+    {
+      "at": "2026-10-06T05:07:55+00:00",
+      "kind": "drafts",
+      "n": 1,
+      "target": "draft 618",
+      "detail": "pixieset-studio-manager-review",
+      "undo": "python junia_draft.py --restore backups/junia-618-20261006-050748.json"
+    }
+  ],
+  "strikes": []
+}

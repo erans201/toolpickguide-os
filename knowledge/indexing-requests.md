@@ -8,6 +8,7 @@ The browser agent ("TPG Browser Ops") requests indexing in Search Console for ev
 |---|---|
 | 2026-10-05 | https://toolpickguide.com/honeybook-pricing/ |
 | 2026-10-05 | https://toolpickguide.com/best-crm-for-marketing-agencies/ |
+| 2026-10-06 | https://toolpickguide.com/pixieset-studio-manager-review/ |
 
 ## Baseline (live on 2026-10-05; indexing handled earlier or not needed)
 

@@ -44,7 +44,7 @@ Used by the browser agent (`AUTOMATION_PLAN.md` §2) in the user's Chrome, where
 1. On "Article generated", click **here** (opens the editor in a new tab).
 2. Top right: **Publish** → in "Publish to", click **WordPress** (integration https://toolpickguide.com is already connected).
 3. In the dialog: leave Post ID empty · category from the brief (e.g. Reviews) · Publish to: Posts.
-4. ⚠️ **Mode defaults to "public". Change it to "draft"** and zoom in to confirm before clicking. Leave Publish Date empty and "Enable submit to indexer" OFF.
+4. ⚠️ **Mode defaults to "public". Change it to "draft"** and zoom in to confirm before clicking. Leave Publish Date empty. **Tick "Enable submit to indexer"** (user rule 2026-10-06) and zoom in to confirm it is ticked.
 5. Click the dialog's **Publish** button. Success toast: "Successfully published to WordPress!" and a preview tab `?p=<ID>&preview=true` opens.
 6. Verify it is not public: `curl -s -o /dev/null -w "%{http_code}" https://toolpickguide.com/wp-json/wp/v2/posts/<ID>` must return **401**. If it returns 200 (public), raise an ALERT at once and ask the user to switch it back to draft in WordPress.
 7. Record the draft ID in `LOOP.md`, close the tabs.

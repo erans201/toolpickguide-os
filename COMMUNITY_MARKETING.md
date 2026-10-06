@@ -129,7 +129,7 @@ Accounting and coaching are maintain-only this quarter: answer when a great thre
 | 1 | Reddit (§4 subs) | replaced by the Reddit plan in §10 | — | — | — | Skipped (plan changed 2026-10-06) |
 | 2 | Quora (legal) · W2-1 | https://www.quora.com/Which-law-practice-management-software-do-law-firms-use | How firms really decide: size bracket, trust accounting, adoption, exit | `knowledge/community-week2-drafts.md` W2-1 | No | Posted 2026-10-06 |
 | 2 | Quora (legal) · W2-2 | https://www.quora.com/unanswered/How-can-small-law-firms-implement-effective-practice-management-software | 6-step rollout for small firms (unanswered question) | W2-2 | No | Posted 2026-10-06 |
-| 2 | Quora (real estate) · W2-3 | https://www.quora.com/Whats-the-best-transaction-management-software-for-real-estate | Pick by who does the transaction work; contract-date test | W2-3 | No | Ready |
+| 2 | Quora (real estate) · W2-3 | https://www.quora.com/Whats-the-best-transaction-management-software-for-real-estate | Pick by who does the transaction work; contract-date test | W2-3 | No | Posted 2026-10-06 |
 
 ---
 

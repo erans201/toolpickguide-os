@@ -126,7 +126,10 @@ Accounting and coaching are maintain-only this quarter: answer when a great thre
 | 1 | Quora (legal intake) | https://www.quora.com/What-are-some-of-the-questions-that-legal-intake-professionals-should-ask-potential-clients | Conflict check first, then matter, dates, goals, fees; keep the form short | W1-3 | No | Posted 2026-10-05 |
 | 1 | Quora (photographers) | https://www.quora.com/How-do-I-make-photography-contracts-for-clients | Clause checklist + one lawyer review; contract, retainer, questionnaire together | W1-4 | No | Posted 2026-10-05 |
 | 1 | Quora (RE brokers) | https://www.quora.com/What-is-the-best-CRM-to-use-for-real-estate-broker-owners-who-want-to-see-what-their-agents-are-doing | Pipeline visibility, not surveillance; roles + transaction system for compliance | W1-5 | No | Posted 2026-10-05 (user clicked Post) |
-| 1 | Reddit (§4 subs) | replaced by the Reddit plan in §10 (browser agent finds threads from week 2) | — | — | — | Skipped (plan changed 2026-10-06) |
+| 1 | Reddit (§4 subs) | replaced by the Reddit plan in §10 | — | — | — | Skipped (plan changed 2026-10-06) |
+| 2 | Quora (legal) · W2-1 | https://www.quora.com/Which-law-practice-management-software-do-law-firms-use | How firms really decide: size bracket, trust accounting, adoption, exit | `knowledge/community-week2-drafts.md` W2-1 | No | Ready |
+| 2 | Quora (legal) · W2-2 | https://www.quora.com/unanswered/How-can-small-law-firms-implement-effective-practice-management-software | 6-step rollout for small firms (unanswered question) | W2-2 | No | Ready |
+| 2 | Quora (real estate) · W2-3 | https://www.quora.com/Whats-the-best-transaction-management-software-for-real-estate | Pick by who does the transaction work; contract-date test | W2-3 | No | Ready |
 
 ---
 
@@ -138,31 +141,25 @@ Accounting and coaching are maintain-only this quarter: answer when a great thre
 
 ---
 
-## 10. Reddit plan (organized 2026-10-06)
+## 10. Reddit plan (reorganized 2026-10-06)
 
-**Why a separate plan:** Reddit blocks the cloud robot, so it can't find or check threads. The **browser agent** can, because it works in the user's own Chrome where Reddit loads normally. Reddit is also stricter than Quora: many subreddits remove posts from new or low-karma accounts and ban self-promotion.
+**The hard fact (tested 2026-10-06):** no agent tool can open Reddit. The Chrome extension refuses reddit.com ("not allowed due to safety restrictions") and web search refuses it too. So **you** pick the threads (5 minutes a week); everything else is prepared for you.
 
-**Who does what**
+**The weekly loop**
 
 | Step | Who | When |
 |---|---|---|
-| 1. Account ready: your own Reddit account, signed in in Chrome, with a short bio (no link) | User, once | before week 2 |
-| 2. Read each subreddit's rules once and fill in the table below (self-promo allowed? minimum karma or account age? flair needed?) | Browser agent, in Chrome | first Tuesday run, then once a month |
-| 3. Find 2 fresh threads (under 30 days, a real question, no complete answer yet) in the priority subs, write drafts R`<week>`-1/2 into `knowledge/community-week<N>-drafts.md`, add Ready rows to §8 and the PM Tracker | Browser agent | every Tuesday run |
-| 4. The daily email shows each Ready item with the full answer and exact clicks | Cloud robot | daily |
-| 5. Post it yourself, or say "Reddit time" and the agent fills in the comment box for your Post click | User | when the email shows it |
+| 1. The Monday email has a "Reddit picks" block with 3 ready-made search links (below), sorted by New, past week | Weekly robot | Mondays |
+| 2. Click a link, pick **1–2** threads: a real question, under 2 weeks old, not already answered well | You (5 min) | Monday or Tuesday |
+| 3. Hand them over: in the PM Tracker, add a row with Task `Reddit pick`, the thread link in **File / command**, and the post's question text pasted in **Next action** (or paste link + text to the agent in the Claude app) | You (1 min) | same day |
+| 4. The robot writes the answer as `R<week>-<n>` (full draft in `knowledge/community-week<N>-drafts.md`, §8 row Ready) | Daily robot | next morning |
+| 5. The daily email shows it in "Community today" with the full answer and exact clicks; you post it and set the row to Done | You | when shown |
 
-**Pace:** weeks 2–3: 2 comments a week, **no links**, start in r/smallbusiness (largest, friendliest to helpful answers). From week 4: 2–3 a week across the vertical subs; at most 1 in 5 with a link, and **never** a link where the rules ban self-promotion. Skip any sub whose karma or age minimum the account doesn't meet yet.
+**Search links (the Monday email copies these):**
+- r/smallbusiness: https://www.reddit.com/r/smallbusiness/search/?q=CRM%20OR%20onboarding%20OR%20intake&sort=new&t=week
+- r/LawFirm: https://www.reddit.com/r/LawFirm/search/?q=software%20OR%20Clio%20OR%20MyCase%20OR%20intake&sort=new&t=week
+- r/realtors: https://www.reddit.com/r/realtors/search/?q=CRM%20OR%20transaction%20OR%20dotloop&sort=new&t=week
 
-**Subreddits (the browser agent fills the rule columns from each sub's own rules page; nothing here is guessed)**
+**Pace and safety:** weeks 2–3: 1–2 comments a week, **no links**, start in r/smallbusiness. From week 4: 2–3 a week; at most 1 in 5 with a link and never where the rules ban self-promotion. Before your first comment in a subreddit, read its **Rules** box on the right side of the subreddit page (30 seconds): if it bans self-promotion, never mention ToolPickGuide there. If Reddit removes a comment for low karma, keep commenting in r/smallbusiness for a while first.
 
-| Priority | Subreddit | For | Self-promo / links | Karma or age minimum | Rules checked |
-|---|---|---|---|---|---|
-| 1 | r/smallbusiness | all verticals, intake/CRM/onboarding | to check | to check | — |
-| 2 | r/LawFirm | legal (practice management, intake) | to check | to check | — |
-| 3 | r/realtors | real estate CRM, transaction management | to check | to check | — |
-| 4 | r/RealEstateTechnology | real estate tools | to check | to check | — |
-| 5 | r/WeddingPhotography · r/photobusiness | photographer CRM, contracts | to check | to check | — |
-| 6 | r/Entrepreneur | general service-business tools | to check | to check | — |
-
-**How to post a Reddit comment (exact clicks):** open the thread link (signed in) → scroll to the box **"Join the conversation"** / **"Add a comment"** under the post → click it → paste the answer → click **Comment**. Then set its PM Tracker row to **Done**.
+**How to post a Reddit comment (exact clicks):** open the thread link (signed in) → click the box **"Join the conversation"** / **"Add a comment"** under the post → paste the answer → click **Comment**. Then set its PM Tracker row to **Done**.

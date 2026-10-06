@@ -5,7 +5,9 @@
 
 ---
 
-## 1. MUST FIX: Paperbell price rose (post 492, `/client-management-software-for-coaches/`)
+## 1. ✅ DONE: Paperbell price rose (post 492, `/client-management-software-for-coaches/`)
+
+**Status 2026-10-06:** fixed and live. The live page shows "$97/month or $970/year" in the quick ranking, the Paperbell section and the cost table ($970), matching https://paperbell.com/pricing/ re-checked 2026-10-06 ("$97/ month" · "$1164 $970 / year"). Not a task any more.
 
 **Official (https://paperbell.com/pricing/, 2026-10-05):** "$97/ month" · "$1164 $970 / year (2 Mo Free!)". 30-day money-back guarantee and "no transaction fees" unchanged. Confirmed twice (WebFetch + reader).
 

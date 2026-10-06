@@ -18,7 +18,7 @@
 | C | **Article generation in Junia** | **Browser agent** | Opens Junia in your Chrome, fills each field from the brief (keyword, headline, outline, Background/Context, Writing style, settings), generates, saves to WordPress **as a draft** | ✅ built 2026-10-05 (first run: draft 618; local task "tpg-browser-ops", Tue + Fri 10:00) |
 | D | QA and correction | Cloud robot (daily, Tier B) | Export, QA gate, judge new link sites, corrected body from the facts sheet, `--replace-content`, copy stock photos to the Media Library | ✅ live since 2026-10-05 |
 | E | Image check | none needed for Junia images | Junia's images are generally safe (user 2026-10-05); only broken images (not loading, offensive, unrelated) are flagged | ✅ decided |
-| F | **Publish** | Browser robot (daily 10:00, your PC) | `publish_draft.py`: only QA-clean drafts, verifies live, auto-revert | ✅ automatic since 2026-10-06 (user rules added) |
+| F | **Publish** | Browser robot (daily 20:00 Israel time, your PC) | `publish_draft.py`: only QA-clean drafts, verifies live, auto-revert | ✅ automatic since 2026-10-06 (user rules added) |
 | G | Request indexing | Browser agent | Search Console URL inspection → Request indexing for each newly published URL (register: `knowledge/indexing-requests.md`) | ✅ added to tpg-browser-ops 2026-10-05 (user yes) |
 | H | Internal links | Cloud robot (Tier B) + you | `inject_links.py --upload` for normal posts (robot); upgrade-file posts need `--replace-live` (you) | ✅ live / Tier C |
 | I | Price watch and page upgrades | Cloud robot finds · you run | Weekly price check → exact edits → `--replace-live` | Tier C |

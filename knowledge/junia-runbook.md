@@ -27,7 +27,7 @@ Used by the browser agent (`AUTOMATION_PLAN.md` §2) in the user's Chrome, where
    - **Include Feature Image: ON** (every draft needs a main image; a draft without one ends up with no photo).
    - **Include In-Article Images: ON** (real stock photos; QA copies them into the Media Library and uses the first as the featured image).
    - **Include Meta Title & Description:** leave ON (QA overwrites it).
-   - **Include FAQ: OFF** (the outline has our FAQ; this caused duplicate FAQs).
+   - **Include FAQ: ON** (user decision 2026-10-06: Junia writes the FAQ). Keep **Include Feature Image**, **Include In-Article Images** and **Auto External Linking & References** ON too; Image Style stays as set (Realistic).
    - **Auto External Linking & References: ON** (user rule 2026-10-05; QA judges each site).
    - (Internal links are not in this dialog. See step 2a.)
    - ⚠️ The switches only change with real **clicks**, not `form_input`. Click one switch at a time and zoom in to confirm, because the dialog scrolls between clicks.
@@ -52,7 +52,8 @@ Used by the browser agent (`AUTOMATION_PLAN.md` §2) in the user's Chrome, where
 
 ## Known differences from the brief to expect (QA fixes these)
 - Junia may add "Opening" and "Affiliate disclosure" as H2 headings.
-- Junia's outline may skip the last few brief sections: always check for "vs …", "Who should use it", "Don't mess this up" and "FAQs".
+- Junia's outline may skip the last few brief sections: always check for "vs …", "Who should use it" and "Don't mess this up".
+- **FAQ:** Junia adds its own FAQ (setting ON). If the outline also has a FAQ heading from an older brief, **delete that heading** in Step 3 so the article has exactly one FAQ section.
 
 ## Step 5 · Request indexing for newly published pages (user decision 2026-10-05)
 1. Fetch every child sitemap of https://toolpickguide.com/sitemap_index.xml. New = a URL that is not in `knowledge/indexing-requests.md` (neither the "Requested" table nor the baseline list). Max 5 per run.

@@ -243,6 +243,8 @@ Every item: sitemap check + topic gate (`CONTENT_STRATEGY.md`) + facts verified 
 | C8 | Real estate CRM free options (links up to 474) | 90+ | BOFU | Nov 9 |
 | C9 | Proposal template for service businesses | 4,400 (HIGH ads competition) | TOFU template | Nov 16 |
 | C10 | Client onboarding checklist (must link up to 372; not target "client onboarding software") | 170 | TOFU | Nov 16 |
+| C11 | Lawmatics review (intake + legal CRM; links up to 368 and 397) | check in next demand pull | MOFU (promised to Lawmatics in the affiliate reply, 2026-10-07; topic gate + sitemap check first) | after C10 |
+| C12 | Lawmatics vs Clio Grow | check in next demand pull | MOFU comparison (promised to Lawmatics, 2026-10-07) | after C11 |
 
 **Weekly cycle (exact):**
 - **Mon 08:00:** AP writes 2 briefs and puts them in the Weekly Report.

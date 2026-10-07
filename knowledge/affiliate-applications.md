@@ -85,7 +85,7 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 
 | Program | Applied (date) | Status | Link format received | Logged in MEMORY.md |
 |---|---|---|---|---|
-| Lawmatics | 2026-10-04 | Submitted (web form; confirmation shown: team will reach out by email). Asked for a trackable web link | | |
+| Lawmatics | 2026-10-04 | Submitted (web form; confirmation shown: team will reach out by email). Asked for a trackable web link. **2026-10-07:** Lawmatics asked which program + company details; reply drafted (`knowledge/emails/2026-10-07-lawmatics-affiliate.md`), the user sends it. Promises made: a Lawmatics review + comparison pages (TASKS C11, C12); no bidding on the Lawmatics brand in paid search | | |
 | TaxDome | — | Not usable: the publisher program is gone (customer referral only) | | |
 | HoneyBook | 2026-10-04 | Submitted (Google Form: 'Your response has been recorded'). Custom link text requested: toolpickguide | | |
 | Paperbell | 2026-10-04 | **Pending** (FirstPromoter dashboard: 'Your application is pending'). Agent filled the form + consent box (user OK); user set the password and signed up | | |

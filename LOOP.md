@@ -199,3 +199,4 @@ Initialize the core knowledge base and build the Master Vertical Reference Matri
 * 2026-10-07 (autopilot daily): health OK 38/38; refreshed robots baseline after logged publish of 618 (undo: git revert); no drafts, no links, no community Ready, local queue empty. No WordPress writes.
 * 2026-10-07 (local): Lawmatics affiliate reply drafted (Affiliate Partnership; company, pages 368 + 397, plan). The user sends it themselves. Promises kept by user decision: Lawmatics review + Lawmatics vs Clio Grow (TASKS C11, C12); never bid on the Lawmatics brand in paid search.
 * 2026-10-07 (browser ops): no new briefs (all 3 Junia briefs already done); drafts none; indexing requested for none (all 38 sitemap URLs already in the register)
+* 2026-10-07 (local): Saved templates/new-project-starter.md (first message for setting up a new agent project's second-brain files).

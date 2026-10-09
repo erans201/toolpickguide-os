@@ -18,23 +18,39 @@ User decision 2026-10-09: "generate 4 articles of your own each week that will c
 
 ## What is measured (per article)
 
+**Reach (Search Console, `gsc_pull.py`):**
+
+| Metric | Role |
+|---|---|
+| Impressions in the first 42 days | **primary reach score** |
+| Clicks, average position at day 42 | secondary |
+| Days from publish to first impression | secondary |
+
+**User behavior (added by the user 2026-10-09: "judge articles also by user behavior, measured by heat map"):**
+
 | Metric | Source | Role |
 |---|---|---|
-| Impressions in the first 42 days | Search Console (`gsc_pull.py`, pages CSV) | **primary** |
-| Clicks, average position at day 42 | Search Console | secondary |
-| Days from publish to first impression | Search Console | secondary |
-| Repairs before publishing (QA fixes, replaced bodies, failed gate runs) | daily robot log | secondary (effort) |
+| Engagement rate (engaged sessions / sessions) | GA4, `ga_pull.py` landing report | **primary behavior score** |
+| Average session duration | GA4 landing report | secondary |
+| Outbound clicks per 100 sessions (vendor and affiliate links) | GA4 outbound report | secondary (closest signal to earnings) |
+| Scroll depth, rage clicks, dead clicks, quick backs | Microsoft Clarity (`clarity_pull.py`, daily) | secondary |
+| Heatmap review (where readers stop, what they click) | Clarity heatmaps, visual check | qualitative, at the interim and final look |
 
-The weekly robot runs `python3 gsc_pull.py --days 90` and fills the snapshot columns below (cumulative since publish; the 90-day window covers each article's whole life during the test). D42 = the Monday snapshot closest to day 42 (± 3 days).
+Behavior numbers only count with enough visits: a page needs **at least 30 sessions** by day 42 to enter the behavior comparison.
+
+**Effort:** repairs before publishing (QA fixes, replaced bodies, failed gate runs), from the daily robot.
+
+The weekly robot runs `python3 gsc_pull.py --days 90` and `python3 ga_pull.py --property 551985779 --days 90` and fills the snapshot columns below (cumulative since publish). D42 = the Monday snapshot closest to day 42 (within 3 days). Clarity numbers come from `data/clarity-daily.csv`, pulled daily by the local robot once the owner has installed Clarity.
 
 ## Time frame and verdict
 
-- **Interim look:** Monday **Nov 23, 2026** (weekly report): early numbers only, no decision.
+- **Interim look:** Monday **Nov 23, 2026** (weekly report): early numbers plus a heatmap check of the busiest test pages, no decision.
 - **Final verdict:** Monday **Jan 4, 2027** (all 48 articles have reached day 42). The weekly robot writes the verdict into the weekly report and `LOOP.md`; the owner decides.
-- **Winner rule:** an arm wins if it beats the other on primary impressions in **at least 15 of 24 pairs**, or its median D42 impressions are **at least 25% higher**. If both or neither rule applies with mixed direction: **tie**, and the cheaper, simpler arm is recommended (C: no Junia subscription, no browser clicks). Repairs break close calls.
+- **Two scores per pair:** **reach** (D42 impressions) and **behavior** (D42 engagement rate; only pairs where both pages have 30+ sessions).
+- **Winner rule:** an arm wins if it wins **reach** (beats the other in at least 15 of 24 pairs, or its median D42 impressions are at least 25% higher) **and does not lose behavior** (wins or ties the behavior pairs, or behavior has too little data). If one arm wins reach and the other wins behavior, the verdict is **split**: the report shows both, and outbound clicks per 100 sessions (closest to money) decide the recommendation. If neither wins reach: **tie**, broken by behavior, then by the cheaper, simpler arm (C: no Junia subscription, no browser clicks), then by repairs.
 - **Caveat:** the site is young; low numbers on both arms are possible. If fewer than half of the articles have any impressions at D42, the verdict says "not enough data" and proposes a 4-week extension.
 
 ## Tracking table
 
-| Pair | Arm | Slug | Post ID | Published | First impr. | Repairs | D14 impr. | D28 impr. | D42 impr. | D42 clicks | D42 pos. |
-|---|---|---|---|---|---|---|---|---|---|---|---|
+| Pair | Arm | Slug | Post ID | Published | First impr. | Repairs | D14 impr. | D28 impr. | D42 impr. | D42 clicks | D42 pos. | D42 sessions | D42 engagement rate | D42 avg duration (s) | D42 outbound per 100 | D42 scroll depth |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|

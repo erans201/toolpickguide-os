@@ -139,4 +139,20 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Zoho | Received; review 7–10 business days | wait |
 | 8am / MyCase (Impact) | Still in review (daily digests only) | wait |
 
+## 8. Replies since 2026-10-05 (mailbox check 2026-10-09)
+
+| Program | Result | Link / next step |
+|---|---|---|
+| **Pipedrive** | **APPROVED 2026-10-06** (PartnerStack): 20% revenue share for a customer's first 12 months incl. add-ons; extended 30-day trial offer; Net43 payout | Referral link sits in the PartnerStack dashboard (Pipedrive → Links) after accepting Pipedrive's terms. Note: Pipedrive was left out of the agencies CRM page because its prices could not be verified (C2); add it once they can |
+| **Capsule (+ Transpond)** | **APPROVED 2026-10-06** (PartnerStack) | Commissions start only after we publish content about Capsule or Transpond and send them the live link. No Capsule page yet |
+| **Jotform** | **APPROVED 2026-10-06** | Tracking link in the Jotform affiliate dashboard; fits the form-template pages (client intake form template) |
+| **Zoho** | **Questions 2026-10-06** (7 evaluation questions) | Reply drafted: `knowledge/emails/2026-10-09-zoho-affiliate.md` (to calvin.m@zohocorp.com); owner sends it |
+| **HubSpot** | **Declined 2026-10-05** ("not the best match at this time") | none |
+| **PartnerStack Network** | **Declined 2026-10-05** (marketplace access limited; may reapply later). Existing PartnerStack partnerships (Close, Pipedrive, Capsule) are not affected | monday.com and other marketplace-only programs are blocked until a reapply succeeds (after traffic grows) |
+| **Pixieset** | **Declined 2026-10-08**: program open only to Pixieset users | none (our Pixieset review stays without an affiliate link) |
+| Lofty | Support repeated: US phone numbers only | closed |
+| Close | Marketing email: optional Partner Directory listing (partners.close.com/get-listed) | optional |
+
+**Affiliate links live on the site (checked 2026-10-09):** Paperbell + Simply.Coach on /client-management-software-for-coaches/, Close on /best-crm-for-marketing-agencies/.
+
 **Links placed:** 2026-10-05: Paperbell + Simply.Coach links added to `knowledge/upgrade-492-client-management-software-for-coaches.md` (quick ranking + a 'Try …' line under each Bottom line); the uploader marks `?via=` links `sponsored nofollow`, Source/pricing links stay followed. Live after the user runs `--replace-live 492`.

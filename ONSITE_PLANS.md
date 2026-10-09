@@ -101,11 +101,11 @@ Rows were chosen only where the anchor phrase already appears naturally in the s
 | IL-8d | 372 | marketing agencies | /best-crm-for-marketing-agencies/ | DONE |
 | IL-9a | 603 | Close | https://refer.close.com/f1y5ubxmzeo4 | DONE (already linked, verified by dry run 2026-10-08) |
 | IL-7e | 474 | transaction management | /best-real-estate-transaction-management-software/ | WAITING |
-| IL-10a | 338 | Pipedrive | https://aff.trypipedrive.com/699cagphgq7a | WAITING DISCLOSURE |
-| IL-10b | 404 | Pipedrive | https://aff.trypipedrive.com/699cagphgq7a | WAITING DISCLOSURE |
-| IL-10c | 52 | Jotform | https://www.jotform.com/?partner=toolpickguide | WAITING DISCLOSURE |
-| IL-10d | 576 | Jotform | https://www.jotform.com/?partner=toolpickguide | WAITING DISCLOSURE |
-| IL-10e | 358 | Capsule | https://get.capsulenow.io/k6d7hlada1pu | WAITING DISCLOSURE |
+| IL-10a | 338 | Pipedrive | https://aff.trypipedrive.com/699cagphgq7a | TODO |
+| IL-10b | 404 | Pipedrive | https://aff.trypipedrive.com/699cagphgq7a | TODO |
+| IL-10c | 52 | Jotform | https://www.jotform.com/?partner=toolpickguide | TODO |
+| IL-10d | 576 | Jotform | https://www.jotform.com/?partner=toolpickguide | TODO |
+| IL-10e | 358 | Capsule | https://get.capsulenow.io/k6d7hlada1pu | TODO |
 
 - **IL-7d (fixes the only orphan):** add the link in `knowledge/upgrade-487-…md`, then the user runs `python upload_draft.py knowledge/upgrade-487-client-management-software-for-photographers.md --upload --replace-live 487 --force-replace`. The intake-form article (draft 576) also links to 558 once published.
 - **IL-7e:** after draft 586 is published, same route through `knowledge/upgrade-474-…md`.

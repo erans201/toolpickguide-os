@@ -1,0 +1,3 @@
+# Pairs judged NOT to compete, so cannibal_check.py skips them (user rule 2026-10-09: no articles competing each other).
+# Format: slug-a slug-b  # who judged, date, why (different search intent)
+# Add a pair only after reading both pages/briefs; when in doubt, re-angle or merge instead.

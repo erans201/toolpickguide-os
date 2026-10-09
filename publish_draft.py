@@ -9,7 +9,8 @@ status should be published by the agent"; permission rule added by the user). Dr
 Checks before publishing (all must pass):
   - the post is a draft and has a Junia brief whose slug matches (knowledge/briefs/junia/*.md)
   - junia_draft's QA gate is clean (no unknown prices, banned words, long paragraphs, blocked links, missing tools …)
-  - it has a featured image, and its slug is not already live in the sitemap (no cannibalization)
+  - it has a featured image, and its slug is not already live in the sitemap
+  - no live page competes for the same keyword (cannibal_check.py STRONG match; judged exceptions in knowledge/cannibal-ok.txt)
   - under the autopilot (TPG_AUTOPILOT=1): kill switch off and today's publish cap not reached
 After publishing it verifies the page is public (REST 200 without login + the URL loads). If not, it sets the
 post back to draft and records a strike.
@@ -22,6 +23,7 @@ from pathlib import Path
 
 import requests
 
+import cannibal_check as cc
 import junia_draft as jd
 from autopilot import guard
 
@@ -53,6 +55,9 @@ def checks(post, brief):
     out.append((jd.gate_clean(a), "QA gate clean (details: python junia_draft.py --brief <brief> --post-id <ID>)"))
     out.append((bool(post.get("featured_media")), "has a featured image"))
     out.append((brief["slug"] not in live_slugs(), f"/{brief['slug']}/ is not already live"))
+    strong = [c for c in cc.conflicts(brief, cc.live_pages(), []) if c[0] == "STRONG"]
+    out.append((not strong, "no live page competes for the same keyword (cannibal_check)"
+                + "".join(f"\n      ❌ /{c[2]}/ \"{c[3]}\" overlap {c[4]}" for c in strong)))
     return out
 
 

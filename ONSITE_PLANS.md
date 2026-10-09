@@ -101,6 +101,11 @@ Rows were chosen only where the anchor phrase already appears naturally in the s
 | IL-8d | 372 | marketing agencies | /best-crm-for-marketing-agencies/ | DONE |
 | IL-9a | 603 | Close | https://refer.close.com/f1y5ubxmzeo4 | DONE (already linked, verified by dry run 2026-10-08) |
 | IL-7e | 474 | transaction management | /best-real-estate-transaction-management-software/ | WAITING |
+| AF-1 | 338 | Pipedrive | (Pipedrive link from PartnerStack) | WAITING LINK |
+| AF-2 | 404 | Pipedrive | (Pipedrive link from PartnerStack) | WAITING LINK |
+| AF-3 | 52 | Jotform | (Jotform affiliate link) | WAITING LINK |
+| AF-4 | 576 | Jotform | (Jotform affiliate link) | WAITING LINK |
+| AF-5 | 358 | Capsule | (Capsule link from PartnerStack) | WAITING LINK |
 
 - **IL-7d (fixes the only orphan):** add the link in `knowledge/upgrade-487-…md`, then the user runs `python upload_draft.py knowledge/upgrade-487-client-management-software-for-photographers.md --upload --replace-live 487 --force-replace`. The intake-form article (draft 576) also links to 558 once published.
 - **IL-7e:** after draft 586 is published, same route through `knowledge/upgrade-474-…md`.

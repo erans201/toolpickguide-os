@@ -272,5 +272,33 @@ class TestMailTool(unittest.TestCase):
                 mail_tool.main()
 
 
+class TestCannibalCheck(unittest.TestCase):
+    """User rule 2026-10-09: no two articles may compete for the same search intent."""
+
+    def setUp(self):
+        import cannibal_check
+        self.c = cannibal_check
+
+    def lv(self, a, b):
+        return self.c.level(self.c.words(a), self.c.words(b))[0]
+
+    def test_same_intent_is_strong(self):
+        self.assertEqual(self.lv("crm for coaches", "client management software for coaches"), "STRONG")
+        self.assertEqual(self.lv("free real estate crm", "Best Client Management Software for Real Estate"), "STRONG")
+
+    def test_different_topics_pass(self):
+        self.assertIsNone(self.lv("clio vs mycase", "best legal case management software"))
+        self.assertIsNone(self.lv("honeybook pricing", "dubsado pricing"))
+
+    def test_narrower_spoke_is_review_not_strong(self):
+        self.assertEqual(self.lv("capsule crm review", "free client management software"), "REVIEW")
+
+    def test_brief_vs_brief_and_ok_file(self):
+        a = {"slug": "crm-for-coaches", "focus": "crm for coaches", "secondary": []}
+        b = {"slug": "coaching-crm", "focus": "coaching crm", "secondary": []}
+        self.assertEqual(self.c.conflicts(a, [], [b], set())[0][0], "STRONG")
+        self.assertEqual(self.c.conflicts(a, [], [b], {frozenset(("crm-for-coaches", "coaching-crm"))}), [])
+
+
 if __name__ == "__main__":
     unittest.main()

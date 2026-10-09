@@ -242,11 +242,12 @@ Every item: sitemap check + topic gate (`CONTENT_STRATEGY.md`) + facts verified 
 | C5 | Pixieset Studio Manager review | 320 | MOFU (brief ready) | Nov 2 |
 | C6 | Law firm website design (spoke; must not target post 32's terms) | 2,400 | MOFU | Nov 2 |
 | C7 | Client portal software for service businesses | 720 | BOFU | Nov 9 |
-| C8 | Real estate CRM free options (links up to 474) | 90+ | BOFU | Nov 9 |
+| C8 | Real estate CRM free options (links up to 474) **cannibal_check 2026-10-09: STRONG match with live 474; fold into 474 as a section instead of a new page** | 90+ | BOFU | Nov 9 |
 | C9 | Proposal template for service businesses | 4,400 (HIGH ads competition) | TOFU template | Nov 16 |
 | C10 | Client onboarding checklist (must link up to 372; not target "client onboarding software") | 170 | TOFU | Nov 16 |
 | C11 | Lawmatics review (intake + legal CRM; links up to 368 and 397) | check in next demand pull | MOFU (promised to Lawmatics in the affiliate reply, 2026-10-07; topic gate + sitemap check first) | after C10 |
 | C12 | Lawmatics vs Clio Grow | check in next demand pull | MOFU comparison (promised to Lawmatics, 2026-10-07) | after C11 |
+| C13 | Capsule CRM review (we are a Capsule affiliate; commissions start once a Capsule page is live; links up to 358) | check in next demand pull | MOFU review (user OK 2026-10-09; cannibal_check: REVIEW vs 358, a narrower spoke) | next free slot |
 
 **Weekly cycle (exact):**
 - **Mon 08:00:** AP writes 2 briefs and puts them in the Weekly Report.

@@ -153,6 +153,11 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Lofty | Support repeated: US phone numbers only | closed |
 | Close | Marketing email: optional Partner Directory listing (partners.close.com/get-listed) | optional |
 
+**Queued affiliate links (user OK 2026-10-09: "place the new Pipedrive and Jotform links on pages that already mention them, and write a Capsule page"):**
+- Live pages that already mention them: Pipedrive on /crm-operations-best-client-management-software/ (338, 9 mentions), /best-crm-for-law-firms/ (404, 12) and /client-management-software-for-coaches/ (492, upgrade file); Jotform on /best-form-builders-for-lead-capture/ (52, 14) and /client-intake-form-template/ (576, 3); Capsule on /free-client-management-software/ (358, 12).
+- Rows AF-1 to AF-5 in the ONSITE_PLANS.md link roadmap wait for the links. **Blocked on the owner (2026-10-09):** the PartnerStack dashboards for Pipedrive and Capsule show "Terms of service: Confirm agreement" before the Links tab opens (accepting terms is the owner's decision), and the Jotform affiliate dashboard needs the owner's Jotform login. Once a link is known: put it in the row's Target, set Status TODO; the daily robot's `inject_links.py --upload` places it (sponsored nofollow). Pipedrive on 492 goes through its upgrade file + local queue.
+- Capsule commissions start only after we send Capsule a live page about it: the 358 page qualifies once its link is in; a dedicated Capsule review is queued as TASKS C13.
+
 **Affiliate links live on the site (checked 2026-10-09):** Paperbell + Simply.Coach on /client-management-software-for-coaches/, Close on /best-crm-for-marketing-agencies/.
 
 **Links placed:** 2026-10-05: Paperbell + Simply.Coach links added to `knowledge/upgrade-492-client-management-software-for-coaches.md` (quick ranking + a 'Try …' line under each Bottom line); the uploader marks `?via=` links `sponsored nofollow`, Source/pricing links stay followed. Live after the user runs `--replace-live 492`.

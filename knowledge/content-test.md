@@ -7,6 +7,7 @@ User decision 2026-10-09: "generate 4 articles of your own each week that will c
 - **Two arms:** **J** = Junia writes (browser robot, as today). **C** = Claude writes in-house (daily cloud robot).
 - **Volume:** 4 J + 4 C new articles per week. Publishing weeks: **Oct 12 – Nov 22, 2026** (6 weeks, 24 articles per arm).
 - **Fair pairs:** every Monday the weekly robot picks 8 topics (sitemap check + topic gate as always), sorts them into 4 **pairs** of the same type (BOFU / MOFU / TOFU, price-heavy or not) and similar demand, and gives one article of each pair to each arm by coin flip (`python3 -c "import random; random.seed('<pair id>'); print(random.choice('JC'))"` gives the first topic's arm; the second topic gets the other). Pair IDs: `P<week>-<n>` (e.g. P1-1).
+- **No competing articles (user rule 2026-10-09):** the two topics of a pair are different search intents, never two versions of one keyword. Every new brief must pass `python3 cannibal_check.py` (no STRONG match with a live page or any open brief, the other 7 of the week included); `publish_draft.py` blocks a STRONG match with a live page.
 - **Same inputs:** both arms get the same brief format and facts sheet, target ~2,700 words, the same stock-photo rule, the same QA gate (`junia_draft.py`), the same publishing and indexing path. The brief's top table carries `| Test arm | J |` or `| Test arm | C |` and `| Test pair | P1-1 |`.
 - **Daily caps for the test:** publish max 4/day, indexing max 5/day.
 

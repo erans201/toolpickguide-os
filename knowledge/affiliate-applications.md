@@ -155,8 +155,14 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 
 **Queued affiliate links (user OK 2026-10-09: "place the new Pipedrive and Jotform links on pages that already mention them, and write a Capsule page"):**
 - Live pages that already mention them: Pipedrive on /crm-operations-best-client-management-software/ (338, 9 mentions), /best-crm-for-law-firms/ (404, 12) and /client-management-software-for-coaches/ (492, upgrade file); Jotform on /best-form-builders-for-lead-capture/ (52, 14) and /client-intake-form-template/ (576, 3); Capsule on /free-client-management-software/ (358, 12).
-- Rows AF-1 to AF-5 in the ONSITE_PLANS.md link roadmap wait for the links. **Blocked on the owner (2026-10-09):** the PartnerStack dashboards for Pipedrive and Capsule show "Terms of service: Confirm agreement" before the Links tab opens (accepting terms is the owner's decision), and the Jotform affiliate dashboard needs the owner's Jotform login. Once a link is known: put it in the row's Target, set Status TODO; the daily robot's `inject_links.py --upload` places it (sponsored nofollow). Pipedrive on 492 goes through its upgrade file + local queue.
+- Rows IL-10a to IL-10e in the ONSITE_PLANS.md link roadmap wait for the links. **Blocked on the owner (2026-10-09):** the PartnerStack dashboards for Pipedrive and Capsule show "Terms of service: Confirm agreement" before the Links tab opens (accepting terms is the owner's decision), and the Jotform affiliate dashboard needs the owner's Jotform login. Once a link is known: put it in the row's Target, set Status TODO; the daily robot's `inject_links.py --upload` places it (sponsored nofollow). Pipedrive on 492 goes through its upgrade file + local queue.
 - Capsule commissions start only after we send Capsule a live page about it: the 358 page qualifies once its link is in; a dedicated Capsule review is queued as TASKS C13.
+
+**Links collected 2026-10-09 (owner accepted the PartnerStack terms and logged in to Jotform; all three resolve to the vendor):**
+- Pipedrive: `https://aff.trypipedrive.com/699cagphgq7a` (PartnerStack → Pipedrive → Links)
+- Capsule: `https://get.capsulenow.io/k6d7hlada1pu` (PartnerStack → Capsule and Transpond → Links, "Affiliate Partner Triage")
+- Jotform: `https://www.jotform.com/?partner=toolpickguide` (Jotform affiliate dashboard)
+- Roadmap rows IL-10a..e are ready (dry run found a natural spot on all 5 pages) but **WAITING DISCLOSURE**: those 5 pages have no in-article affiliate disclosure (only the footer menu link). Fix: owner uploads `wordpress/toolpickguide-disclosure.php` (adds the standard disclosure + FTC link to any post with a sponsored link and no disclosure); then the rows go to TODO and the daily robot places the links. The coaches page (492) mentions Pipedrive only in a FAQ heading, so no Pipedrive link there. After IL-10e is live, send Capsule the live page link (/free-client-management-software/) to start commissions.
 
 **Affiliate links live on the site (checked 2026-10-09):** Paperbell + Simply.Coach on /client-management-software-for-coaches/, Close on /best-crm-for-marketing-agencies/.
 

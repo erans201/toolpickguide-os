@@ -229,6 +229,8 @@ python junia_draft.py --brief knowledge/briefs/junia/photography-contract-templa
 
 ## CONTENT QUEUE (Phase 1–2, four briefs per week since 2026-10-05 (D3), written by the Weekly Review)
 
+**Content test (2026-10-09 → Nov 22, 2026):** 8 briefs per week in 4 pairs, one per arm (Junia vs in-house). See `knowledge/content-test.md`.
+
 Every item: sitemap check + topic gate (`CONTENT_STRATEGY.md`) + facts verified the same week. Price-heavy items get a full facts sheet inside the paste box.
 
 | # | Article | Google demand/mo | Type | Week |

@@ -227,7 +227,7 @@ python junia_draft.py --brief knowledge/briefs/junia/photography-contract-templa
 
 ---
 
-**Affiliate follow-ups (local session, agent's job):** once IL-10a..e are live (daily robot, `inject_links.py --upload`), check each page shows the link with rel="sponsored" AND the disclosure box (class `tpg-disclosure`); then email Capsule the live link https://toolpickguide.com/free-client-management-software/ to start commissions (affiliate replies are the agent's job, user 2026-10-09).
+**Affiliate follow-ups (local session, agent's job):** once IL-10a..e are live (daily robot, `inject_links.py --upload`), check each page shows the link with rel="sponsored" AND the disclosure box (class `tpg-disclosure`); then email Capsule the live link https://toolpickguide.com/free-client-management-software/ to start commissions (affiliate replies are the agent's job, user 2026-10-09). **2026-10-10 (cloud robot): IL-10a..e live; all 5 pages show the link with rel="sponsored" and the `tpg-disclosure` box. Remaining: the Capsule email (local session).**
 
 ## CONTENT QUEUE (Phase 1–2, four briefs per week since 2026-10-05 (D3), written by the Weekly Review)
 

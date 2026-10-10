@@ -2,6 +2,9 @@
   "days": {
     "2026-10-06": {
       "drafts": 1
+    },
+    "2026-10-10": {
+      "links": 5
     }
   },
   "months": {},
@@ -13,6 +16,46 @@
       "target": "draft 618",
       "detail": "pixieset-studio-manager-review",
       "undo": "python junia_draft.py --restore backups/junia-618-20261006-050748.json"
+    },
+    {
+      "at": "2026-10-10T05:07:02+00:00",
+      "kind": "links",
+      "n": 1,
+      "target": "post 338",
+      "detail": "IL-10a",
+      "undo": "python inject_links.py --restore backups/inject-338-20261010-050700.json"
+    },
+    {
+      "at": "2026-10-10T05:07:04+00:00",
+      "kind": "links",
+      "n": 1,
+      "target": "post 404",
+      "detail": "IL-10b",
+      "undo": "python inject_links.py --restore backups/inject-404-20261010-050702.json"
+    },
+    {
+      "at": "2026-10-10T05:07:07+00:00",
+      "kind": "links",
+      "n": 1,
+      "target": "post 52",
+      "detail": "IL-10c",
+      "undo": "python inject_links.py --restore backups/inject-52-20261010-050704.json"
+    },
+    {
+      "at": "2026-10-10T05:07:08+00:00",
+      "kind": "links",
+      "n": 1,
+      "target": "post 576",
+      "detail": "IL-10d",
+      "undo": "python inject_links.py --restore backups/inject-576-20261010-050707.json"
+    },
+    {
+      "at": "2026-10-10T05:07:10+00:00",
+      "kind": "links",
+      "n": 1,
+      "target": "post 358",
+      "detail": "IL-10e",
+      "undo": "python inject_links.py --restore backups/inject-358-20261010-050708.json"
     }
   ],
   "strikes": []

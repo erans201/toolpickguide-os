@@ -149,7 +149,7 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | **Zoho** | **Questions 2026-10-06** (7 evaluation questions) | **Reply sent 2026-10-09 by the agent** (`knowledge/emails/2026-10-09-zoho-affiliate.md`, to calvin.m@zohocorp.com). Waiting for Zoho's next steps |
 | **HubSpot** | **Declined 2026-10-05** ("not the best match at this time") | none |
 | **PartnerStack Network** | **Declined 2026-10-05** (marketplace access limited; may reapply later). Existing PartnerStack partnerships (Close, Pipedrive, Capsule) are not affected | monday.com and other marketplace-only programs are blocked until a reapply succeeds (after traffic grows) |
-| **Pixieset** | **Declined 2026-10-08**: program open only to Pixieset users | none (our Pixieset review stays without an affiliate link) |
+| **Pixieset** | **Declined 2026-10-08**: program open only to Pixieset users. **Owner opened a free Pixieset account 2026-10-10** | Owner uses it for 2-3 weeks (sample gallery, Studio Manager); **reapply on/after 2026-10-31** as a Pixieset user, pointing to our review /pixieset-studio-manager-review/. The agent writes and sends the application (affiliate replies are the agent's job) |
 | Lofty | Support repeated: US phone numbers only | closed |
 | Close | Marketing email: optional Partner Directory listing (partners.close.com/get-listed) | optional |
 

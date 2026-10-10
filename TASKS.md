@@ -227,6 +227,8 @@ python junia_draft.py --brief knowledge/briefs/junia/photography-contract-templa
 
 ---
 
+**Pixieset reapply (on/after 2026-10-31, agent's job):** the owner opened a free Pixieset account on 2026-10-10. Reapply to the Pixieset Affiliate Program as a Pixieset user, citing the live review /pixieset-studio-manager-review/; the weekly robot mentions it under 'Good to know' in the Nov 2 report.
+
 **Affiliate follow-ups (local session, agent's job):** once IL-10a..e are live (daily robot, `inject_links.py --upload`), check each page shows the link with rel="sponsored" AND the disclosure box (class `tpg-disclosure`); then email Capsule the live link https://toolpickguide.com/free-client-management-software/ to start commissions (affiliate replies are the agent's job, user 2026-10-09). **2026-10-10 (cloud robot): IL-10a..e live; all 5 pages show the link with rel="sponsored" and the `tpg-disclosure` box. Remaining: the Capsule email (local session).**
 
 ## CONTENT QUEUE (Phase 1–2, four briefs per week since 2026-10-05 (D3), written by the Weekly Review)

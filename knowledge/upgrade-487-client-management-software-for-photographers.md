@@ -15,7 +15,7 @@
 | Tags | best client management software for photographers, photography client management software, crm for photographers, client portals for photographers, studio management software, honeybook, dubsado, studio ninja, sprout studio, vsco workspace, tave, pixieset studio manager |
 | Category | Reviews, CRM & Pipelines |
 | Featured image alt | Best client management software for photographers 2026: HoneyBook, Sprout Studio, Dubsado, Pixieset, Studio Ninja and VSCO Workspace ranked |
-| Pricing verified | 2026-09-29 from vendor pricing pages: HoneyBook (2026-09-27), Dubsado, Sprout Studio (USD), VSCO, Studio Ninja (studioninja.co/pricing), Pixieset Studio Manager (pixieset.com/pricing-studio-manager), Bloom (bloom.io/pricing). |
+| Pricing verified | 2026-10-12 Sprout Studio (USD) re-checked on getsproutstudio.com/pricing; others 2026-09-29 from vendor pricing pages and matched in the 2026-10-05 and 2026-10-12 price watches: HoneyBook (2026-09-27), Dubsado, VSCO, Studio Ninja (studioninja.co/pricing), Pixieset Studio Manager (pixieset.com/pricing-studio-manager), Bloom (bloom.io/pricing). |
 | Internal links | Live: `/client-onboarding-software/` · `/best-doc-signing-tools/` · `/free-client-management-software/` · `/client-management-software-for-coaches/` · `/best-client-management-software-real-estate/` |
 | Keyword ownership | "honeybook alternatives" and "honeybook vs dubsado" are reserved for the planned cluster pages. Don't target them here. |
 | Replaces | v1 (5 tools). Backup is taken automatically |
@@ -40,7 +40,7 @@ So this list is ranked by one question: **which tool gets you from inquiry to si
 ## QUICK RANKING (IF YOU JUST WANT THE LIST)
 
 1. **HoneyBook.** Best overall for solo photographers who want polish fast. From $29/month billed annually.
-2. **Sprout Studio.** Best all-in-one with galleries built in. From $24/month.
+2. **Sprout Studio.** Best all-in-one with galleries built in. From $19/month.
 3. **Dubsado.** Best for deep automation and total control. From $335/year.
 4. **Pixieset Studio Manager.** Best free starting point, especially if you already deliver on Pixieset. From $0.
 5. **Studio Ninja.** Best budget pick built only for photographers. From $16/month.
@@ -51,7 +51,7 @@ So this list is ranked by one question: **which tool gets you from inquiry to si
 | Tool | Best for | From | Galleries | Free plan |
 |---|---|---|---|---|
 | HoneyBook | Solo polish, fast setup | $29/mo (annual) | ❌ | ❌ (30-day trial) |
-| Sprout Studio | One login incl. galleries | $24/mo | ✅ | ❌ (30-day trial) |
+| Sprout Studio | One login incl. galleries | $19/mo | ✅ | ❌ (30-day trial) |
 | Dubsado | Automation power users | $335/yr | ❌ | ❌ (21-day trial) |
 | Pixieset Studio Manager | Starting free | $0 | ✅ (Pixieset Client Gallery) | ✅ |
 | Studio Ninja | Focused, affordable admin | $16/mo | ❌ (connects to Pic-Time/ShootProof) | ❌ (7-day trial) |
@@ -121,14 +121,14 @@ CRM, invoicing, contracts, booking, questionnaires, galleries, album proofing, a
 Photographers who want to cancel their separate gallery subscription.
 
 ### Pricing at a glance (USD, monthly)
-- **Lite:** $24/month. 10 active shoots, 50 GB, 3 users
-- **Basic:** $46/month. 20 active shoots, 100 GB
-- **Pro:** $66/month. Unlimited active shoots, 200 GB
-- **Unlimited:** $89/month. Unlimited shoots, storage, users, and brands
-- **Source:** [Sprout Studio's official pricing page](https://getsproutstudio.com/pricing/) (checked September 2026)
+- **Lite:** $19/month. 10 active shoots, 50 GB, 3 users
+- **Basic:** $36/month. 20 active shoots, 100 GB
+- **Pro:** $51/month. Unlimited active shoots, 200 GB
+- **Unlimited:** $69/month. Unlimited shoots, storage, users, and brands
+- **Source:** [Sprout Studio's official pricing page](https://getsproutstudio.com/pricing/) (checked October 12, 2026)
 
 ### One honest downside
-**Active-shoot caps.** A busy wedding season quietly pushes you onto Pro ($66), so price it at Pro, not Lite.
+**Active-shoot caps.** A busy wedding season quietly pushes you onto Pro ($51), so price it at Pro, not Lite.
 
 ### Bottom line
 The best value if galleries are part of your stack.
@@ -291,7 +291,7 @@ Torn between two? Send yourself a fake inquiry through both: proposal, contract,
 | VSCO One (annual) | $499.99 | Yes |
 | Dubsado Premier (annual) | $525 | No |
 | HoneyBook Essentials (annual) | $588 + card fees | No |
-| Sprout Studio Pro (monthly) | $792 | Yes |
+| Sprout Studio Pro (monthly) | $612 | Yes |
 
 **Year 1 cost = subscription + gallery tool + payment fees + (setup hours x your hourly rate)**
 

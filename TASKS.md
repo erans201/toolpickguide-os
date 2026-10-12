@@ -241,17 +241,18 @@ Every item: sitemap check + topic gate (`CONTENT_STRATEGY.md`) + facts verified 
 |---|---|---|---|---|
 | C1 | HoneyBook pricing (plans, fees, alternatives) | 1,600 | price-heavy BOFU (**brief ready 2026-10-05**: `knowledge/briefs/junia/honeybook-pricing.md`) | Oct 19 |
 | C2 | Best CRM for marketing agencies | 1,390 | price-heavy BOFU (**brief ready 2026-10-05**: `knowledge/briefs/junia/best-crm-for-marketing-agencies.md`; Pipedrive left out, prices unverifiable) | Oct 19 |
-| C3 | Service contract template (service businesses) | 2,400 | TOFU template | Oct 26 |
-| C4 | Clio vs MyCase | 260 (CPC $107) | price-heavy MOFU | Oct 26 |
+| C3 | Service contract template (service businesses) | 2,400 | TOFU template (**brief ready 2026-10-12**: `knowledge/briefs/junia/service-contract-template.md`; test P1-1, arm C) | Oct 12 |
+| C4 | Clio vs MyCase | 260 (CPC $107) | price-heavy MOFU (**brief ready 2026-10-12**: `knowledge/briefs/junia/clio-vs-mycase.md`; test P1-2, arm C; Clio prices NOT in the facts sheet: clio.com blocks the cloud robot, local session should add them before writing) | Oct 12 |
 | C5 | Pixieset Studio Manager review | 320 | MOFU (brief ready) | Nov 2 |
-| C6 | Law firm website design (spoke; must not target post 32's terms) | 2,400 | MOFU | Nov 2 |
-| C7 | Client portal software for service businesses | 720 | BOFU | Nov 9 |
+| C6 | Law firm website design (spoke; must not target post 32's terms) | 2,400 | MOFU (**topic gate fail 2026-10-12**: website builders cluster is Maintain, no new web pages (CONTENT_STRATEGY §5); needs an owner decision to reopen) | on hold |
+| C7 | Client portal software for service businesses | 720 | BOFU (passes the gate; held 2026-10-12 because no same-type BOFU partner this week) | Oct 19 |
 | C8 | Real estate CRM free options (links up to 474) **cannibal_check 2026-10-09: STRONG match with live 474; fold into 474 as a section instead of a new page** | 90+ | BOFU | Nov 9 |
-| C9 | Proposal template for service businesses | 4,400 (HIGH ads competition) | TOFU template | Nov 16 |
-| C10 | Client onboarding checklist (must link up to 372; not target "client onboarding software") | 170 | TOFU | Nov 16 |
-| C11 | Lawmatics review (intake + legal CRM; links up to 368 and 397) | check in next demand pull | MOFU (promised to Lawmatics in the affiliate reply, 2026-10-07; topic gate + sitemap check first) | after C10 |
-| C12 | Lawmatics vs Clio Grow | check in next demand pull | MOFU comparison (promised to Lawmatics, 2026-10-07) | after C11 |
-| C13 | Capsule CRM review (we are a Capsule affiliate; commissions start once a Capsule page is live; links up to 358) | check in next demand pull | MOFU review (user OK 2026-10-09; cannibal_check: REVIEW vs 358, a narrower spoke) | next free slot |
+| C9 | Proposal template for service businesses | 4,400 (HIGH ads competition) | TOFU template (**brief ready 2026-10-12**: `knowledge/briefs/junia/proposal-template.md`; test P1-1, arm J) | Oct 12 |
+| C10 | Client onboarding checklist (must link up to 372; not target "client onboarding software") | 170 | TOFU (passes the gate; held 2026-10-12, no TOFU partner left this week) | Oct 19 |
+| C11 | Lawmatics review (intake + legal CRM; links up to 368 and 397) | check in next demand pull | MOFU (**brief ready 2026-10-12**: `knowledge/briefs/junia/lawmatics-review.md`; test P1-3, arm J) | Oct 12 |
+| C12 | Lawmatics vs Clio Grow | check in next demand pull | MOFU comparison (promised to Lawmatics, 2026-10-07; held 2026-10-12: cannibal_check rates it STRONG vs the Lawmatics review brief (all review words inside it); needs a re-angle or merge before a brief) | later |
+| C14 | Follow Up Boss vs Lofty (real estate CRM comparison; links up to 474) | 50 | price-heavy MOFU (**brief ready 2026-10-12**: `knowledge/briefs/junia/follow-up-boss-vs-lofty.md`; test P1-2, arm J; Lofty publishes no prices, Lofty affiliate closed to us) | Oct 12 |
+| C13 | Capsule CRM review (we are a Capsule affiliate; commissions start once a Capsule page is live; links up to 358) | check in next demand pull | MOFU review (**brief ready 2026-10-12**: `knowledge/briefs/junia/capsule-crm-review.md`; test P1-3, arm C) | Oct 12 |
 
 **Weekly cycle (exact):**
 - **Mon 08:00:** AP writes 2 briefs and puts them in the Weekly Report.

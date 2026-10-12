@@ -71,7 +71,7 @@ Tools people commonly shortlist: SkySlope (brokerage compliance), Open to Close 
 The quickest way to cut the list: decide where your **galleries** live, because that's the thing you won't want to move later.
 
 - **You already deliver on Pixieset:** start with Pixieset Studio Manager. It has a free plan, and your CRM and galleries sit under one login.
-- **You want one tool for galleries and admin:** Sprout Studio bundles both (from $24/month as of late September 2026). Watch the active-shoot caps on the lower plans during wedding season.
+- **You want one tool for galleries and admin:** Sprout Studio bundles both (from $19/month as of October 2026). Watch the active-shoot caps on the lower plans during wedding season.
 - **You want polish fast and don't need galleries inside the CRM:** HoneyBook, from $29/month billed annually. Clean proposals, contracts and payments; galleries stay with whatever you use now.
 - **You love building automations and want total control:** Dubsado, from $335/year. More setup time, more flexibility.
 - **Tight budget, photography-only tool:** Studio Ninja, from $16/month.
@@ -80,7 +80,7 @@ Then judge the shortlist on one thing: **the booking flow.** A date shouldn't be
 
 One more tip: card fees add up on big wedding balances, so check whether the tool lets clients pay by bank transfer (ACH) too.
 
-(Disclosure: I write about client management software for photographers at ToolPickGuide and have applied to some of these tools' affiliate programs. Prices from each vendor's pricing page, checked late September 2026.)
+(Disclosure: I write about client management software for photographers at ToolPickGuide and have applied to some of these tools' affiliate programs. Prices from each vendor's pricing page, checked September–October 2026.)
 
 **QA (§7):** ✅ complete without a click · ✅ disclosure present (incl. affiliate applications) · ✅ no link · ✅ prices from `upgrade-487` (verified 2026-09-29; HoneyBook re-checked 2026-10-05), with month · ✅ no "tested" claims, no banned words · ✅ new angle (galleries first, booking-flow test).
 

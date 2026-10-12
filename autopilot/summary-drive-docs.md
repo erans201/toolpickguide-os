@@ -16,15 +16,15 @@ The weekly robot refreshes them every Monday (AUTOPILOT.md §5.2 step 7). Drive 
 
 | File | Doc title | Current Doc ID | Updated |
 |---|---|---|---|
-| 00-project-map.html | 00 · START HERE: Project map | 1BWV6XmbLqxX2JsR84wee-w_nQDI2HEJP0f7aECST8SU | 2026-10-05 |
-| 01-project-and-goals.md | 01 · Project and goals | 1SUyB_MyyJTwGY8tm4vLyPxRdnew4nRL_Wk6re0mjpQ4 | 2026-10-05 |
-| 02-accounts-places-and-security.md | 02 · Accounts, places and security | 1XAPBzApgF4mGjEc8mrnxc9z1xUK3ZLBnGZeK3fJUojE | 2026-10-05 |
-| 03-robots-and-who-does-what.md | 03 · Robots and who does what | 1HJRcmtMSj5_4GGvmRG2lcGElH6s4lwN3QcP2G-7TLxY | 2026-10-05 |
-| 04-articles-and-content-rules.md | 04 · Articles and content rules | 1tshQ9cNzxWSPHVp2CsQp9kbRAANvKdfHpHqgERX42Hc | 2026-10-05 |
-| 05-live-pages.md | 05 · Live pages | 1NH0_HhNirdAFDBs234DWBe-HyGEfvP-NBVEtGGJiGuQ | 2026-10-05 |
-| 06-affiliate-programs.md | 06 · Affiliate programs | 1uQb28PpkNNNPrqfQtEEyIk0tQK_n1GLOXMdRWsVD2mw | 2026-10-05 |
-| 07-commands-and-fixes.md | 07 · Commands and fixes | 1bc-44VtD3XSoQp4HQCR8Njk4wdtt3JmizpxFbHlitL0 | 2026-10-05 |
-| 08-decisions.md | 08 · Your decisions | 1HsS2NquZNSiEpect1TVadecUSbmOe3UTKG_APEDl2iI | 2026-10-05 |
-| 09-open-tasks.md | 09 · Open tasks | 1t1nc0yI4pL2x0DKbX47x-miDdGWoGXzxSKhaXAJR1ls | 2026-10-05 |
-| 10-quora-and-reddit.md | 10 · Quora and Reddit | 1_cgoshBAVD9m2MiYsiwLCncNgboqUWPjx89Byzl5ebY | 2026-10-05 |
-| 11-agent-team.html | 11 · Meet the robot team | 1L5USDrKx0mCEhc6lKY37zuwCDOrUxsr-jgzJn65UVjk | 2026-10-05 |
+| 00-project-map.html | 00 · START HERE: Project map | 1n7HM-cACA9CHH_8-Gr0-oM1yjMtBsbp5T1tb3yZcvYI | 2026-10-12 |
+| 01-project-and-goals.md | 01 · Project and goals | 1h8VFMvUrpJOo4zizCJTsc_-OqO4NH8X9jZZ3Pb4H-50 | 2026-10-12 |
+| 02-accounts-places-and-security.md | 02 · Accounts, places and security | 10tWDKWlN7yzcQ1wQVQLwndeNTvaw4O-lz6Vt459lfBU | 2026-10-12 |
+| 03-robots-and-who-does-what.md | 03 · Robots and who does what | 1HEpJ15qmalklR9RmN4W2oIAKA9S2GVp7zfD5LTiyVnU | 2026-10-12 |
+| 04-articles-and-content-rules.md | 04 · Articles and content rules | 1t9XY5kKASl1ftER3NSNqOEVKqBsJ8OmCmawrv90EvXg | 2026-10-12 |
+| 05-live-pages.md | 05 · Live pages | 10meAClAczhJtCTt2rgWVwzhUrxvIvibd_Ph_gYIuZtM | 2026-10-12 |
+| 06-affiliate-programs.md | 06 · Affiliate programs | 1RE-cUxuZPBX0VCXfjedmeH-GlCr9g7545kf_X_cR2lE | 2026-10-12 |
+| 07-commands-and-fixes.md | 07 · Commands and fixes | 1E6xYnyggA11BeBgBl8aKtkcQAZtN2u1Jax8BLAPCkRk | 2026-10-12 |
+| 08-decisions.md | 08 · Your decisions | 1rW143ltNoOOhg8iFMqbpylxFn8Y9DAfe5Y5-5hktpWg | 2026-10-12 |
+| 09-open-tasks.md | 09 · Open tasks | 1e6i-kaJSghorR_Zzk3N_SIqka_t1jmAVWzIhgCFYFoI | 2026-10-12 |
+| 10-quora-and-reddit.md | 10 · Quora and Reddit | 1mYJS7HqGxOxXFCNmn-h9av0wyaQzajkuzDXfsVYEeVM | 2026-10-12 |
+| 11-agent-team.html | 11 · Meet the robot team | 17PdHSnePS3D4PEsn_Rr2ov-fQ_HUm8LgWDKWkIkDvG4 | 2026-10-12 |

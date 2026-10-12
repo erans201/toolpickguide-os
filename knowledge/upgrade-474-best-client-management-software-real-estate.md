@@ -15,7 +15,7 @@
 | Tags | best client management software for real estate agents, client tracking software, real estate crm, realtor crm, real estate lead management, real estate client tracking tools, follow up boss, wise agent, real geeks, lofty, boldtrail, liondesk alternatives |
 | Category | Reviews, CRM & Pipelines |
 | Featured image alt | Best client management software for real estate agents 2026: Follow Up Boss, Wise Agent, Real Geeks, Lofty and BoldTrail ranked |
-| Pricing verified | 2026-09-28 from vendor pricing pages (Follow Up Boss, Wise Agent, Real Geeks support billing page). Lofty and BoldTrail publish no prices (quote-only); estimates shown in the article are labeled as third-party. LionDesk discontinuation per HousingWire (2025-05-16). |
+| Pricing verified | 2026-10-12 Follow Up Boss re-checked (followupboss.com/pricing: 14-day trial, extra-user prices); others 2026-09-28 from vendor pricing pages (Wise Agent, Real Geeks support billing page). Lofty and BoldTrail publish no prices (quote-only); estimates shown in the article are labeled as third-party. LionDesk discontinuation per HousingWire (2025-05-16). |
 | Internal links | Live: `/best-form-builders-for-lead-capture/` · `/best-doc-signing-tools/` · `/free-client-management-software/` · `/client-management-software-for-photographers/` |
 | Replaces | Live version covered Follow Up Boss, kvCORE, LionDesk (discontinued Sept 2025), Wise Agent, Real Geeks (backup is taken automatically) |
 | Open items | Affiliate links + `Affiliate domains` row · Hands-on testing notes (do **not** claim "tested" until done) |
@@ -90,7 +90,7 @@ It plugs into the lead sources you already pay for, routes leads instantly, and 
 - Connects to a large ecosystem of real estate lead sources and tools
 - Unlimited contacts on every plan
 - Unlimited calling and texting for all users on Pro
-- 7-day free trial, no contract, cancel anytime
+- 14-day free trial, no contract, cancel anytime
 
 ### Who it's best for
 Serious solo agents and teams of any size who already generate leads and need to convert more of them.
@@ -99,7 +99,7 @@ Serious solo agents and teams of any size who already generate leads and need to
 - **Grow:** $69/user/month, or $58/user/month billed annually. Calling add-on $33/user/month (annual)
 - **Pro:** $499/month for 10 users ($416 annual). Unlimited calling and texting, team inboxes, call reporting
 - **Platform:** $1,000/month for 30 users ($833 annual). Teams within teams, priority support
-- **Extra users:** $49/month on Grow and Pro ($41 annual on Pro)
+- **Extra users:** Grow is priced per user · Pro $49/month ($41 annual) · Platform $20/month ($17 annual)
 - **Source:** [Follow Up Boss's official pricing page](https://www.followupboss.com/pricing) (checked September 2026)
 
 ### One honest downside

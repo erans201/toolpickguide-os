@@ -225,6 +225,12 @@ python junia_draft.py --brief knowledge/briefs/junia/photography-contract-templa
 3. For each brief, fill Junia **field by field** from its "Junia fields" Doc in Drive › Plans & Briefs (keyword, headline, outline, Background/Context, Writing style). Never paste the whole brief into one box: drafts 601 and 603 ignored it (2026-10-05).
 - **Done when:** the next Junia draft has no links to untrusted sites and its stock photos are copied into the Media Library (the QA gate and `--apply` confirm).
 
+### T1.18 · Turn on Microsoft Clarity (content-test behavior data) · U then A · due Oct 14
+1. U: https://clarity.microsoft.com → sign in → **+ New project** → name `ToolPickGuide`, site `https://toolpickguide.com` → **Add new project**.
+2. U: **Settings → Overview** → copy the Project ID and give it to the local agent. **Settings → Data Export → Generate new API token** → paste it into `.env` as `CLARITY_API_TOKEN=<token>` (never in chat).
+3. A: put the ID into `wordpress/toolpickguide-clarity.php`; U uploads it to `wp-content/mu-plugins/`; A verifies the tag on a public page and runs `python clarity_pull.py` once.
+- **Done when:** the Clarity tag is on public pages and `data/clarity-daily.csv` has its first rows.
+
 ---
 
 **Pixieset reapply (on/after 2026-10-31, agent's job):** the owner opened a free Pixieset account on 2026-10-10. Reapply to the Pixieset Affiliate Program as a Pixieset user, citing the live review /pixieset-studio-manager-review/; the weekly robot mentions it under 'Good to know' in the Nov 2 report.

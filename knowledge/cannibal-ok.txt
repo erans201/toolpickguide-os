@@ -2,3 +2,8 @@
 # Format: slug-a slug-b  # who judged, date, why (different search intent)
 # Add a pair only after reading both pages/briefs; when in doubt, re-angle or merge instead.
 service-contract-template photography-contract-template  # autopilot weekly 2026-10-12: generic service-business agreement (all service types) vs photographer-only shoot contract; new page avoids photography terms and links to the photography page as the niche version
+capsule-crm-review free-client-management-software  # autopilot weekly 2026-10-12: single-tool Capsule review/plans vs a list of free tools (358 ranks Capsule); narrower spoke, links up to 358, avoids "free client management software"/"free crm" in title, H1, H2s, meta
+capsule-crm-review crm-operations-best-client-management-software  # autopilot weekly 2026-10-12: one-tool review vs ranked "best CRM" list (Capsule not in it); overlap only from crm = client management
+capsule-crm-review what-is-client-relationship-management-software  # autopilot weekly 2026-10-12: tool review vs definition guide (informational); overlap only from crm = client management
+capsule-crm-review client-management-software-for-coaches  # autopilot weekly 2026-10-12: Capsule review vs coaches best-of list (no Capsule focus); overlap only from crm = client management
+capsule-crm-review client-management-software-for-photographers  # autopilot weekly 2026-10-12: Capsule review vs photographers best-of list (no Capsule focus); overlap only from crm = client management

@@ -1,3 +1,4 @@
 # Pairs judged NOT to compete, so cannibal_check.py skips them (user rule 2026-10-09: no articles competing each other).
 # Format: slug-a slug-b  # who judged, date, why (different search intent)
 # Add a pair only after reading both pages/briefs; when in doubt, re-angle or merge instead.
+service-contract-template photography-contract-template  # autopilot weekly 2026-10-12: generic service-business agreement (all service types) vs photographer-only shoot contract; new page avoids photography terms and links to the photography page as the niche version

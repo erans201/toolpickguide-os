@@ -130,6 +130,12 @@ Accounting and coaching are maintain-only this quarter: answer when a great thre
 | 2 | Quora (legal) · W2-1 | https://www.quora.com/Which-law-practice-management-software-do-law-firms-use | How firms really decide: size bracket, trust accounting, adoption, exit | `knowledge/community-week2-drafts.md` W2-1 | No | Posted 2026-10-06 |
 | 2 | Quora (legal) · W2-2 | https://www.quora.com/unanswered/How-can-small-law-firms-implement-effective-practice-management-software | 6-step rollout for small firms (unanswered question) | W2-2 | No | Posted 2026-10-06 |
 | 2 | Quora (real estate) · W2-3 | https://www.quora.com/Whats-the-best-transaction-management-software-for-real-estate | Pick by who does the transaction work; contract-date test | W2-3 | No | Posted 2026-10-06 |
+| 3 | Quora (real estate) · W3-1 | https://www.quora.com/What-is-a-good-CRM-for-realtors | Choose by lead source (online vs sphere) and solo vs team; one-week follow-up trial | `knowledge/community-week3-drafts.md` W3-1 | No | Ready |
+| 3 | Quora (real estate) · W3-2 | https://www.quora.com/What-is-the-best-real-estate-software-to-manage-transactions-for-brokers-transaction-coordinators-agents | Broker, TC and agent in one shared file; start from what the brokerage pays for | `knowledge/community-week3-drafts.md` W3-2 | No | Ready |
+| 3 | Quora (photographers) · W3-3 | https://www.quora.com/Whats-the-best-CRM-software-for-photographers | Decide where galleries live first; booking-flow test (contract + retainer + questionnaire) | `knowledge/community-week3-drafts.md` W3-3 | No | Ready |
+| 3 | Quora (photographers) · W3-4 | https://www.quora.com/How-do-you-keep-up-with-your-clients-and-contracts-as-a-wedding-photographer-videographer | Every task keyed off the wedding date; one list, one master contract | `knowledge/community-week3-drafts.md` W3-4 | No | Ready |
+| 3 | Quora (photographers) · W3-5 | https://www.quora.com/What-should-photographers-ask-wedding-clients | Right questions at the right time (inquiry, 6 weeks, 1 week); full list in the answer | `knowledge/community-week3-drafts.md` W3-5 | Yes (/photography-client-questionnaire/) | Ready |
+| 3 | Quora (coaching) · W3-6 | https://www.quora.com/What-software-or-app-would-you-recommend-for-a-business-coach-as-a-CRM-client-portal-and-why | Packages vs custom proposals; a portal clients need every week; chain the onboarding | `knowledge/community-week3-drafts.md` W3-6 | No | Ready |
 
 ---
 

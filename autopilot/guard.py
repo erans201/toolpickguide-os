@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PAUSE_FILE = ROOT / "AUTOPILOT_PAUSED"
 LEDGER = ROOT / "autopilot" / "ledger.json"
 DAILY_CAPS = {"links": 6, "drafts": 3, "publishes": 0}
-DFS_MONTHLY_USD = 5.00
+DFS_MONTHLY_USD = 10.00  # user 2026-10-13: $10 a month for continuous keyword harvesting
 STRIKES_TO_PAUSE, STRIKE_WINDOW_DAYS = 2, 7
 KEEP_ACTIONS_DAYS = 60
 

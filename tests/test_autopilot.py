@@ -71,12 +71,12 @@ class TestGuard(GuardCase):
 
     def test_dfs_budget(self):
         with self.autopilot():
-            guard.dfs_spent(4.50)
-            guard.dfs_check(0.40)  # 4.90 fits
+            guard.dfs_spent(9.50)  # cap $10/month since 2026-10-13
+            guard.dfs_check(0.40)  # 9.90 fits
             with self.assertRaises(SystemExit):
-                guard.dfs_check(0.60)  # 5.10 does not
+                guard.dfs_check(0.60)  # 10.10 does not
             guard.dfs_spent(0.25)
-            self.assertAlmostEqual(guard.dfs_month_spend(), 4.75)
+            self.assertAlmostEqual(guard.dfs_month_spend(), 9.75)
 
     def test_two_strikes_pause(self):
         with self.autopilot():
@@ -298,6 +298,38 @@ class TestCannibalCheck(unittest.TestCase):
         b = {"slug": "coaching-crm", "focus": "coaching crm", "secondary": []}
         self.assertEqual(self.c.conflicts(a, [], [b], set())[0][0], "STRONG")
         self.assertEqual(self.c.conflicts(a, [], [b], {frozenset(("crm-for-coaches", "coaching-crm"))}), [])
+
+
+class TestKwHarvest(unittest.TestCase):
+    """Continuous keyword harvesting (user decision 2026-10-13): offline checks, no paid requests."""
+
+    def setUp(self):
+        import kw_harvest
+        self.k = kw_harvest
+
+    def test_trend_last3_vs_previous3(self):
+        months = [{"year": 2026, "month": m, "search_volume": v} for m, v in
+                  [(9, 150), (8, 150), (7, 150), (6, 100), (5, 100), (4, 100)]]
+        self.assertEqual(self.k.trend(months), 50)
+        self.assertEqual(self.k.trend(months[:4]), "")
+
+    def test_scope_filter(self):
+        bank = {}
+        self.assertTrue(self.k.upsert(bank, "2026-10-13", {"keyword": "legal practice management software"}, "ideas"))
+        self.assertFalse(self.k.upsert(bank, "2026-10-13", {"keyword": "employee scheduling software"}, "ideas"))
+        self.assertFalse(self.k.upsert(bank, "2026-10-13", {"keyword": "pizza near me"}, "ideas"))
+        self.assertEqual(bank["legal practice management software"]["vertical"], "Legal")
+
+    def test_score_prefers_money_and_low_difficulty(self):
+        easy = {"volume": 100, "cpc": 20, "difficulty": 5}
+        hard = {"volume": 100, "cpc": 20, "difficulty": 80}
+        self.assertGreater(self.k.score(easy), self.k.score(hard))
+
+    def test_variants_collapse(self):
+        rows = [{"keyword": "crm for coaches"}, {"keyword": "coaching crm"}, {"keyword": "proposal template"}]
+        out = self.k.distinct(rows, 10)
+        self.assertEqual([r["keyword"] for r in out], ["crm for coaches", "proposal template"])
+        self.assertEqual(out[0]["variants"], 2)
 
 
 if __name__ == "__main__":

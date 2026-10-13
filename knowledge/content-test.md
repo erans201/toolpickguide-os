@@ -55,9 +55,9 @@ The weekly robot runs `python3 gsc_pull.py --days 90` and `python3 ga_pull.py --
 
 | Pair | Arm | Slug | Post ID | Published | First impr. | Repairs | D14 impr. | D28 impr. | D42 impr. | D42 clicks | D42 pos. | D42 sessions | D42 engagement rate | D42 avg duration (s) | D42 outbound per 100 | D42 scroll depth |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| P1-1 | C | service-contract-template | | | | | | | | | | | | | | |
-| P1-1 | J | proposal-template | | | | | | | | | | | | | | |
-| P1-2 | C | clio-vs-mycase | | | | | | | | | | | | | | |
-| P1-2 | J | follow-up-boss-vs-lofty | | | | | | | | | | | | | | |
+| P1-1 | C | service-contract-template | 645 | | | | | | | | | | | | | |
+| P1-1 | J | proposal-template | 649 | | | | | | | | | | | | | |
+| P1-2 | C | clio-vs-mycase | 647 | | | | | | | | | | | | | |
+| P1-2 | J | follow-up-boss-vs-lofty | 651 | | | | | | | | | | | | | |
 | P1-3 | J | lawmatics-review | | | | | | | | | | | | | | |
 | P1-3 | C | capsule-crm-review | | | | | | | | | | | | | | |

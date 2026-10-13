@@ -232,10 +232,12 @@ def build_for_article(article_path, title, tools):
     stock photo). Generated illustrations are never used any more (user rule 2026-10-06: "do not create those
     kind of pictures, use Junia's style"). With no photo, the uploader keeps the post's current image."""
     article_path = Path(article_path)
-    for ext in (".webp", ".jpg", ".jpeg", ".png"):
-        photo = article_path.parent / "images" / f"{article_path.stem}-photo{ext}"
-        if photo.is_file():
-            return photo
+    # knowledge/<file>.md -> knowledge/images; knowledge/articles/<file>.md (content test, arm C) -> knowledge/images too
+    for folder in (article_path.parent / "images", article_path.parent.parent / "images"):
+        for ext in (".webp", ".jpg", ".jpeg", ".png"):
+            photo = folder / f"{article_path.stem}-photo{ext}"
+            if photo.is_file():
+                return photo
     return None
 
 

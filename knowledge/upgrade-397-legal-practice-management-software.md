@@ -2,15 +2,15 @@
 
 | Parameter | Value |
 |---|---|
-| Status | UPGRADE LIVE POST 397 · v1 (plan: `knowledge/plan-legal-397-368.md`; not a scheduler job) |
+| Status | UPGRADE LIVE POST 397 · v2 2026-10-13: keyword-harvest expansion (attorney + cloud intent; data/kw-insights-2026-10-13.md, data/dfs-serp-2026-10-13.csv) · v1 (plan: `knowledge/plan-legal-397-368.md`; not a scheduler job) |
 | Live post ID | 397 |
 | Funnel stage | TOFU explainer + buyer's guide (owns the head term; links down to BOFU 368) |
 | Focus keyword | legal practice management software |
-| Secondary keywords | law practice management software · cloud-based legal practice management software · practice management software for lawyers · what is legal practice management software · legal practice management software cost |
+| Secondary keywords | law practice management software · cloud-based legal practice management software · practice management software for attorneys · practice management software for lawyers · what is legal practice management software · legal practice management software cost |
 | Slug | `/legal-practice-management-software/` |
-| SEO title (Rank Math) | What Is Legal Practice Management Software? (%currentyear% Guide) |
-| Meta description | Legal practice management software explained: what it does, how it differs from case management, what it costs in 2026, and how to choose one without regret. |
-| H1 | What Is Legal Practice Management Software? (2026 Guide) |
+| SEO title (Rank Math) | Legal Practice Management Software: %currentyear% Guide for Attorneys |
+| Meta description | Legal practice management software explained for attorneys: what it does, cloud security, 2026 prices, and how solo and small firms should choose one. |
+| H1 | Legal Practice Management Software: A 2026 Guide for Attorneys |
 | Schema | Rank Math: Article + BreadcrumbList (automatic). Uploader adds FAQPage JSON-LD (no ItemList: this is not a ranking) |
 | Tags | legal practice management software, law firm practice management, law firm software, legal case management, iolta trust accounting, legal intake automation, legal client portal, legal tech |
 | Category | Legal Software |
@@ -23,7 +23,7 @@
 
 ---
 
-# What Is Legal Practice Management Software? (2026 Guide)
+# Legal Practice Management Software: A 2026 Guide for Attorneys
 
 **Legal practice management software** is the system a law firm runs on: matters, deadlines, documents, time, billing, trust money, and client communication, all tied to the matter they belong to.
 
@@ -191,13 +191,58 @@ A rough year-one formula:
 
 Sometimes the "more expensive" platform is cheaper once you count the hours.
 
-## Cloud-based vs on-premise
+## Cloud-based vs on-premise legal practice management software
 
 **Cloud-based legal practice management software** runs in the browser and on phones. It's faster to deploy, easier for remote work, and updates arrive automatically. Most new firms start here.
 
 **On-premise and legacy desktop systems** still exist. LexisNexis, for example, still sells [PCLaw](https://www.lexisnexis.com/en-us/products/pclaw.page) and [Time Matters](https://www.lexisnexis.com/en-us/products/time-matters.page). Firms that have run them for years often have deep customization and habits built around them.
 
 If you're on a legacy system, you don't automatically need to leave. But do an honest audit. If it blocks remote work, slows billing, or makes documents hard to find, the cost is real, even if it doesn't show up on an invoice.
+
+### What to check before you trust a cloud platform with client data
+
+Moving client files to a vendor's servers doesn't move your duty. The ABA's [Model Rule 1.6(c)](https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_6_confidentiality_of_information/) asks lawyers to make reasonable efforts to prevent unauthorized access to client information. With a cloud system, those reasonable efforts start with the questions you ask before you sign.
+
+Ask every vendor, in writing:
+
+- **Encryption:** is data encrypted in transit and at rest?
+- **Sign-in security:** can you require multi-factor authentication for every user?
+- **Independent audit:** do they have a current third-party security report, such as a [SOC 2 report](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2), and will they share it under NDA?
+- **Permissions and logs:** can you limit who sees which matters, and see who opened or changed what?
+- **Backups and outages:** how often is data backed up, and what happens during an outage?
+- **Getting out:** can you export everything (matters, documents, time entries, trust ledgers) in a usable format, and what happens to your data if you cancel?
+
+A vendor that answers these clearly and quickly is usually a vendor that takes security seriously. Vague answers are an answer too.
+
+## Practice management software for attorneys: what changes with firm size
+
+The right system for a solo attorney is rarely the right one for a 15-lawyer firm.
+
+The core features are the same; what changes is where the pain sits.
+
+### Solo attorneys
+
+You're the lawyer, the paralegal and the billing department.
+
+Look for fast setup, a clean mobile app, built-in payments, and trust accounting that keeps you out of trouble without a bookkeeper.
+
+Solo-friendly plans exist, such as PracticePanther's Solo plan and Clio's Starter plan (see the price table above). Skip heavy customization: you won't have time to maintain it.
+
+### Small firms (roughly 2–10 lawyers)
+
+Now the problem is coordination. Who owns this deadline? Did anyone call the client back?
+
+Prioritize shared calendars with deadline rules, task templates for repeat matter types, conflict checks, and a client portal so updates stop living in one person's inbox.
+
+This is also the stage where intake starts leaking, so check how the system handles new leads, or pair it with an intake tool (our [best CRM for law firms](/best-crm-for-law-firms/) guide covers that layer).
+
+### Growing and mid-sized firms
+
+At this size, reporting, permissions and standard workflows matter most. You need to see utilization and realization by lawyer and practice area, limit access by team, and make every new associate follow the same process.
+
+Expect longer demos, a migration plan and a named implementation contact. Platforms with configurable workflows (Filevine, Actionstep) or deep integration ecosystems (Clio) tend to show up on these shortlists.
+
+**Want them ranked, with prices and demo questions?** See the [best legal case management software](/best-legal-case-management-software/), including a section for solo attorneys.
 
 ## The platforms you'll see when researching
 
@@ -292,7 +337,7 @@ Case management covers the legal work inside a matter: timeline, tasks, document
 Published starting prices are around $49–$50 per user per month: Clio from $49, PracticePanther from $49 and MyCase from $50, each billed yearly (checked October 2, 2026). Smokeball, Lawmatics, and Filevine quote prices individually. Add-ons, migration, and training add to the real cost.
 
 ### Is cloud-based legal practice management software safe?
-Established cloud vendors encrypt data, back it up, and offer permissions and audit trails, often with more security staff than a small firm could hire. Still ask each vendor about encryption, backups, multi-factor authentication, data export, and what happens to your data if you cancel.
+Established cloud vendors encrypt data, back it up, and offer permissions and audit trails, often with more security staff than a small firm could hire. Still ask each vendor about encryption, backups, multi-factor authentication, an independent security audit (such as a SOC 2 report), data export, and what happens to your data if you cancel. The ABA's Model Rule 1.6(c) expects reasonable efforts to protect client information, and those questions are where they start.
 
 ### Do solo lawyers need practice management software?
 Usually yes, once you have more than a handful of active matters or hold client funds in trust. Solo-friendly plans exist, such as PracticePanther's Solo plan and Clio's Starter plan, both from $49 per user per month billed yearly.

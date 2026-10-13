@@ -2,11 +2,11 @@
 
 | Parameter | Value |
 |---|---|
-| Status | UPGRADE LIVE POST 368 · v1 (plan: `knowledge/plan-legal-397-368.md`; not a scheduler job) |
+| Status | UPGRADE LIVE POST 368 · v2 2026-10-13: small-firm section from the keyword harvest (data/kw-insights-2026-10-13.md) · v1 (plan: `knowledge/plan-legal-397-368.md`; not a scheduler job) |
 | Live post ID | 368 |
 | Funnel stage | BOFU ranked list (buying intent; links up to TOFU 397) |
 | Focus keyword | legal case management software |
-| Secondary keywords | best legal practice management software · best law practice management software for solo attorneys · law firm case management software · case management software for lawyers · attorney case management software |
+| Secondary keywords | best legal practice management software · case management software for small law firms · best law practice management software for solo attorneys · law firm case management software · case management software for lawyers · attorney case management software |
 | Slug | `/best-legal-case-management-software/` |
 | SEO title (Rank Math) | Best Legal Case Management Software (%currentyear%): 6 Compared |
 | Meta description | The best legal case management software for solo and small firms: Clio, MyCase, PracticePanther, Smokeball, Filevine and Lawmatics, with verified 2026 prices. |
@@ -315,6 +315,20 @@ Solo budgets are tight, and you're the attorney, the paralegal, and the billing 
 **Our take for solos:** if you want the lowest published entry price with automation, start with PracticePanther Solo. If you expect to hire within a year and want the biggest integration ecosystem, Clio Starter. If your clients need a lot of hand-holding, MyCase Basic.
 
 Whichever you choose, sign engagement letters online. Our guide to [doc signing tools](/best-doc-signing-tools/) covers that piece.
+
+## Best case management software for small law firms
+
+Once you have two to ten lawyers, the question shifts from price to coordination: shared deadlines, handoffs between attorneys and staff, and clients who want updates without calling.
+
+| If your firm… | Start your shortlist with | Why |
+|---|---|---|
+| wants the easiest rollout and lots of client contact | MyCase | Simple to adopt, with a strong client portal and payments |
+| expects to grow and wants many integrations | Clio Manage | A large ecosystem of integrations to grow into |
+| is document-heavy and loses billable time | Smokeball | Automatic time capture and document automation |
+| runs litigation with strict, repeatable steps | Filevine | Configurable workflows for process-driven casework |
+
+Prices for each are in the comparison table above. Whatever you pick, run the demo with your real matter types, and have the person who will own the system in the room.
+
 
 ## How to choose: five questions that decide it
 

@@ -8,6 +8,7 @@ Put them in .env:  DATAFORSEO_LOGIN=...  DATAFORSEO_PASSWORD=...   (never in cha
     python dfs_pull.py --volume                # Google search volume for data/target-keywords.csv (1 request)
     python dfs_pull.py --gap                   # competitor keyword gaps: data/competitors.txt vs toolpickguide.com (1 request per competitor)
     python dfs_pull.py --serp --top 15         # Google top 10 + AI Overview citations for the 15 biggest targets (1 request each)
+    python dfs_pull.py --serp --keywords "proposal template,clio vs mycase"   # the same for exact keywords (1 request each)
     python dfs_pull.py --volume --gap --serp   # everything; the report combines what exists
 
 US, English. Every run prints the number of paid requests first and the actual cost (from the API) at the end.
@@ -130,10 +131,13 @@ def refs(node, out):
     return out
 
 
-def serp(creds, stamp, top):
-    vol_files = sorted(DATA.glob("dfs-volume-*.csv"))
-    rows = list(csv.DictReader(vol_files[-1].open(encoding="utf-8"))) if vol_files else targets()
-    rows = sorted(rows, key=lambda r: -int(r.get("google_volume") or 0))[:top]
+def serp(creds, stamp, top, keywords=None):
+    if keywords:  # exact keywords (e.g. this week's new topics), in the given order
+        rows = [{"keyword": k} for k in keywords][:top]
+    else:
+        vol_files = sorted(DATA.glob("dfs-volume-*.csv"))
+        rows = list(csv.DictReader(vol_files[-1].open(encoding="utf-8"))) if vol_files else targets()
+        rows = sorted(rows, key=lambda r: -int(r.get("google_volume") or 0))[:top]
     out = []
     for r in rows:
         res = call(creds, "serp/google/organic/live/advanced", [{
@@ -195,7 +199,11 @@ def main():
     ap.add_argument("--gap", action="store_true")
     ap.add_argument("--serp", action="store_true")
     ap.add_argument("--top", type=int, default=15)
+    ap.add_argument("--keywords", help="with --serp: comma-separated keywords to check instead of the biggest targets")
     a = ap.parse_args()
+    kws = [k.strip() for k in (a.keywords or "").split(",") if k.strip()]
+    if kws:
+        a.top = min(a.top, len(kws)) if a.top != 15 else len(kws)
     creds = auth()
     if a.check:
         res = call(creds, "appendix/user_data")
@@ -217,7 +225,7 @@ def main():
         gap(creds, stamp)
     if a.serp:
         print(f"SERP + AI Overview for top {a.top} targets…")
-        serp(creds, stamp, a.top)
+        serp(creds, stamp, a.top, kws)
     report(stamp)
     print(f"💲 Cost of this run (reported by DataForSEO): ${spent:.4f}")
 

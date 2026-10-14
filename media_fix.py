@@ -10,6 +10,8 @@ media_fix.py: fix images in a WordPress post, and purge stale LiteSpeed cache by
   --rehost               copy external images (e.g. images.unsplash.com) into the Media Library and point
                          the post at the local copy (Unsplash license: free to use, no credit required)
   --alt TEXT             alt text for the remaining content images and the featured image
+  --replace-img PATTERN PHOTO ALT  swap the content image whose src contains PATTERN for a local photo (uploaded to the
+                         Media Library) with this alt text; the figure, caption and position stay (user 2026-10-14)
   --featured-from-content  make the first remaining content image the featured image
   --featured-media ID    make this Media Library item the featured image (e.g. a re-hosted photo already in the post)
   --touch IDS            re-save these posts without changing content (LiteSpeed purges a post's cache on save)
@@ -79,6 +81,9 @@ def main():
     ap.add_argument("--post-id", type=int)
     ap.add_argument("--remove-img", action="append", default=[], metavar="PATTERN")
     ap.add_argument("--rehost", action="store_true")
+    ap.add_argument("--replace-img", nargs=3, action="append", default=[], metavar=("PATTERN", "PHOTO", "ALT"))
+    ap.add_argument("--set-alt", nargs=2, action="append", default=[], metavar=("PATTERN", "ALT"),
+                    help="set the alt text of the one content image whose src contains PATTERN (other images untouched)")
     ap.add_argument("--alt")
     ap.add_argument("--featured-from-content", action="store_true")
     ap.add_argument("--featured-media", type=int, metavar="ID")
@@ -106,6 +111,16 @@ def main():
             print(f"  − remove image: {src[:95]}")
         for _, _, src in keep:
             print(f"  {'↻ re-host' if a.rehost and is_external(src) else '= keep   '} image: {src[:95]}")
+        for pat, photo, alt in a.replace_img:
+            hits = [src for _, _, src in keep if pat in src]
+            if len(hits) != 1 or not Path(photo).is_file():
+                sys.exit(f"ABORT: --replace-img {pat}: needs exactly one matching content image (found {len(hits)}) and an existing photo file.")
+            print(f"  ⇄ replace image: {hits[0][:80]} → {photo} (alt: {alt[:60]})")
+        for pat, alt in a.set_alt:
+            hits = [src for _, _, src in keep if pat in src]
+            if len(hits) != 1:
+                sys.exit(f"ABORT: --set-alt {pat}: needs exactly one matching content image (found {len(hits)}).")
+            print(f"  ✎ alt for {hits[0].rsplit('/', 1)[-1]}: {alt[:70]}")
         if a.featured_from_content:
             print(f"  ★ featured image ← first kept image{' (after re-hosting)' if a.rehost else ''}")
         if a.featured_media:
@@ -143,6 +158,28 @@ def main():
         keep, remove = plan(content, a.remove_img)
         content = remove_spans(content, remove)
         print(f"   − removed {len(remove)} image(s)")
+        for pat, photo, alt in a.replace_img:
+            mid = upload_image(session, API, Path(photo), alt, f"{post['slug']}-photo")
+            new_src = wp(session, "GET", f"{API}/media/{mid}", "Could not read uploaded image.")["source_url"]
+            tag = next(m.group(0) for m in re.finditer(r"<img\b[^>]*>", content) if pat in m.group(0))
+            old_id = (re.search(r"wp-image-(\d+)", tag) or [None, None])[1]
+            new_tag = re.sub(r'\s(srcset|sizes)="[^"]*"', "", tag)
+            new_tag = re.sub(r'src="[^"]*"', f'src="{new_src}"', new_tag, count=1)
+            new_tag = re.sub(r'\salt="[^"]*"', f' alt="{html_lib.escape(alt)}"', new_tag, count=1) if ' alt="' in new_tag                 else new_tag.replace("<img", f'<img alt="{html_lib.escape(alt)}"', 1)
+            if old_id:
+                new_tag = new_tag.replace(f"wp-image-{old_id}", f"wp-image-{mid}")
+                content = content.replace(f'"id":{old_id}', f'"id":{mid}')
+            content = content.replace(tag, new_tag, 1)
+            print(f"   ⇄ replaced image ({pat}) → media {mid}")
+        for pat, alt in a.set_alt:
+            tag = next(m.group(0) for m in re.finditer(r"<img\b[^>]*>", content) if pat in m.group(0))
+            new_tag = (re.sub(r'\salt="[^"]*"', f' alt="{html_lib.escape(alt)}"', tag, count=1) if ' alt="' in tag
+                       else tag.replace("<img", f'<img alt="{html_lib.escape(alt)}"', 1))
+            content = content.replace(tag, new_tag, 1)
+            img_id = (re.search(r"wp-image-(\d+)", tag) or [None, None])[1]
+            if img_id:
+                wp(session, "POST", f"{API}/media/{img_id}", "Could not set alt text.", json={"alt_text": alt})
+            print(f"   ✎ alt set ({pat})")
 
         first_media = None
         for _, _, src in plan(content, [])[0]:
@@ -180,7 +217,7 @@ def main():
         if result.get("status") != post["status"] or result.get("slug") != post["slug"]:
             sys.exit(f"SAFETY ERROR: status/slug changed. Restore: python media_fix.py --restore {backup}")
         print(f"✅ Post {a.post_id} updated (status {result['status']}, same URL)"
-              f"{f' · featured image → media {first_media}' if 'featured_media' in payload else ''}")
+              f"{f' · featured image → media {payload['featured_media']}' if 'featured_media' in payload else ''}")
         print(f"   Undo: python media_fix.py --restore {backup}")
 
     for t in a.touch:

@@ -5,6 +5,9 @@
     },
     "2026-10-10": {
       "links": 5
+    },
+    "2026-10-14": {
+      "drafts": 3
     }
   },
   "months": {
@@ -60,6 +63,30 @@
       "target": "post 358",
       "detail": "IL-10e",
       "undo": "python inject_links.py --restore backups/inject-358-20261010-050708.json"
+    },
+    {
+      "at": "2026-10-14T05:11:32+00:00",
+      "kind": "drafts",
+      "n": 1,
+      "target": "draft 649",
+      "detail": "proposal-template",
+      "undo": "python junia_draft.py --restore backups/junia-649-20261014-051114.json"
+    },
+    {
+      "at": "2026-10-14T05:11:46+00:00",
+      "kind": "drafts",
+      "n": 1,
+      "target": "draft 651",
+      "detail": "follow-up-boss-vs-lofty",
+      "undo": "python junia_draft.py --restore backups/junia-651-20261014-051141.json"
+    },
+    {
+      "at": "2026-10-14T05:12:02+00:00",
+      "kind": "drafts",
+      "n": 1,
+      "target": "draft 645",
+      "detail": "service-contract-template",
+      "undo": "python junia_draft.py --restore backups/junia-645-20261014-051158.json"
     }
   ],
   "strikes": []

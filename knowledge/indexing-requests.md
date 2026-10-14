@@ -11,6 +11,8 @@ The browser agent ("TPG Browser Ops") requests indexing in Search Console for ev
 | 2026-10-06 | https://toolpickguide.com/pixieset-studio-manager-review/ |
 | 2026-10-13 | https://toolpickguide.com/legal-practice-management-software/ (re-index after the keyword expansion) |
 | 2026-10-13 | https://toolpickguide.com/best-legal-case-management-software/ (re-index after the small-firm section) |
+| 2026-10-14 | https://toolpickguide.com/service-contract-template/ |
+| 2026-10-14 | https://toolpickguide.com/clio-vs-mycase/ |
 
 ## Baseline (live on 2026-10-05; indexing handled earlier or not needed)
 

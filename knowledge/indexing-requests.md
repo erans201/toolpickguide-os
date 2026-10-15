@@ -13,6 +13,8 @@ The browser agent ("TPG Browser Ops") requests indexing in Search Console for ev
 | 2026-10-13 | https://toolpickguide.com/best-legal-case-management-software/ (re-index after the small-firm section) |
 | 2026-10-14 | https://toolpickguide.com/service-contract-template/ |
 | 2026-10-14 | https://toolpickguide.com/clio-vs-mycase/ |
+| 2026-10-15 | https://toolpickguide.com/proposal-template/ |
+| 2026-10-15 | https://toolpickguide.com/follow-up-boss-vs-lofty/ |
 
 ## Baseline (live on 2026-10-05; indexing handled earlier or not needed)
 

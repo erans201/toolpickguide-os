@@ -60,4 +60,4 @@ The weekly robot runs `python3 gsc_pull.py --days 90` and `python3 ga_pull.py --
 | P1-2 | C | clio-vs-mycase | 647 | 2026-10-14 | | 1 | | | | | | | | | | |
 | P1-2 | J | follow-up-boss-vs-lofty | 651 | 2026-10-14 | | 1 | | | | | | | | | | |
 | P1-3 | J | lawmatics-review | | | | | | | | | | | | | | |
-| P1-3 | C | capsule-crm-review | | | | | | | | | | | | | | |
+| P1-3 | C | capsule-crm-review | 670 | | | | | | | | | | | | | |

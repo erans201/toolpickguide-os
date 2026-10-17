@@ -11,3 +11,4 @@ The browser agent ("TPG Browser Ops") skips every slug listed here. One line per
 | 2026-10-13 | clio-vs-mycase | 647 | published 2026-10-14 (local agent, publish_draft.py) (arm C, content test P1-2) |
 | 2026-10-13 | proposal-template | 649 | published 2026-10-14 (local agent, publish_draft.py) (arm J, content test P1-1) |
 | 2026-10-13 | follow-up-boss-vs-lofty | 651 | published 2026-10-14 (local agent, publish_draft.py) (arm J, content test P1-2) |
+| 2026-10-17 | capsule-crm-review | 670 | draft (arm C, content test P1-3) |

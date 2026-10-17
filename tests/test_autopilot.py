@@ -57,10 +57,13 @@ class TestGuard(GuardCase):
         self.assertEqual(len(data["actions"]), 2)
         self.assertEqual(data["actions"][0]["undo"], "restore a")
 
-    def test_draft_cap_and_zero_publishes(self):
+    def test_draft_cap_and_publish_cap(self):
         with self.autopilot():
             guard.record("drafts", 3, target="draft 9")
             self.assertEqual(guard.allowance("drafts", 1), 0)
+            # cloud publishing allowed since 2026-10-17, max 4 a day
+            self.assertEqual(guard.allowance("publishes", 5), 4)
+            guard.record("publishes", 4, target="posts 1-4")
             self.assertEqual(guard.allowance("publishes", 1), 0)
 
     def test_kill_switch(self):

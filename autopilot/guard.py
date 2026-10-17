@@ -23,7 +23,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PAUSE_FILE = ROOT / "AUTOPILOT_PAUSED"
 LEDGER = ROOT / "autopilot" / "ledger.json"
-DAILY_CAPS = {"links": 6, "drafts": 3, "publishes": 0}
+# publishes: the cloud robot publishes QA-clean drafts itself since 2026-10-17 (user: "I allow the cloud robot to
+# publish, within those limits" = max 4 per day, verify live, back to draft on failure)
+DAILY_CAPS = {"links": 6, "drafts": 3, "publishes": 4}
 DFS_MONTHLY_USD = 10.00  # user 2026-10-13: $10 a month for continuous keyword harvesting
 STRIKES_TO_PAUSE, STRIKE_WINDOW_DAYS = 2, 7
 KEEP_ACTIONS_DAYS = 60

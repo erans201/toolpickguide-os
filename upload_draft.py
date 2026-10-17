@@ -384,7 +384,14 @@ def upload_image(session, api, image_path, alt, slug):
     media = wp(session, "POST", f"{api}/media", "Could not upload the featured image.", data=data, timeout=120,
                headers={"Content-Type": IMAGE_TYPES.get(ext, "image/png"),
                         "Content-Disposition": f'attachment; filename="{slug}{ext if ext in IMAGE_TYPES else ".png"}"'})
-    wp(session, "POST", f"{api}/media/{media['id']}", "Could not set image alt text.", json={"alt_text": alt, "title": alt})
+    meta = {"alt_text": alt, "title": alt}
+    credit_file = image_path.with_suffix(".credit.json")  # written by stock_photo.py for Pexels photos
+    if credit_file.is_file():
+        c = json.loads(credit_file.read_text(encoding="utf-8"))
+        meta["caption"] = (f'Photo by <a href="{html_lib.escape(c["photographer_url"])}" rel="noopener">'
+                           f'{html_lib.escape(c["photographer"])}</a> on '
+                           f'<a href="{html_lib.escape(c["photo_url"])}" rel="noopener">Pexels</a>')
+    wp(session, "POST", f"{api}/media/{media['id']}", "Could not set image alt text.", json=meta)
     return media["id"]
 
 
@@ -628,17 +635,24 @@ def main():
         print(f"\nDRY RUN: nothing sent. Preview written to {preview}")
         return
 
+    from autopilot import guard  # daily cap on uploads under the autopilot (no effect outside TPG_AUTOPILOT=1)
+    if guard.allowance("uploads", 1) < 1:
+        sys.exit(f"AUTOPILOT: daily cap reached ({guard.DAILY_CAPS['uploads']} uploads per day). Nothing sent.")
+
     if args.replace_live:
         post, backup, rank_math_ok, rank_math_err = replace_live(article, image_path, args.replace_live, args.force_replace, args.refresh_image)
         print(f"\n✅ Live post replaced: ID {post['id']} (status: {post['status']}, same URL)")
         print(f"   View: {post.get('link', '')}")
         print(f"   Undo: python upload_draft.py --restore {backup}")
         print("   Rank Math meta saved." if rank_math_ok else "   ⚠️ Rank Math meta NOT saved:\n" + rank_math_err)
+        guard.record("uploads", 1, target=f"post {post['id']}", detail="replace-live",
+                     undo=f"python upload_draft.py --restore {backup}")
         return
 
     post, rank_math_ok, rank_math_err = publish(article, image_path, args.post_id, args.expect_modified, args.overwrite_wp_edits)
     verb = "updated" if args.post_id else "created"
     print(f"\n✅ Draft {verb}: ID {post['id']} (status: {post['status']})")
+    guard.record("uploads", 1, target=f"post {post['id']}", detail=f"draft {verb}")
     print(f"   modified_gmt: {post.get('modified_gmt')}")
     print(f"   Edit: {post.get('link', '')}")
     if rank_math_ok:

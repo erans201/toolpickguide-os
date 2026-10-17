@@ -143,6 +143,9 @@ def main():
         return
 
     from upload_draft import make_session, upload_image, wp
+    from autopilot import guard  # daily cap on image fixes under the autopilot (no effect outside TPG_AUTOPILOT=1)
+    if a.post_id and guard.allowance("images", 1) < 1:
+        sys.exit(f"AUTOPILOT: daily cap reached ({guard.DAILY_CAPS['images']} image fixes per day). Nothing changed.")
     session, _ = make_session()
 
     if a.post_id:
@@ -219,6 +222,8 @@ def main():
         print(f"✅ Post {a.post_id} updated (status {result['status']}, same URL)"
               f"{f' · featured image → media {payload['featured_media']}' if 'featured_media' in payload else ''}")
         print(f"   Undo: python media_fix.py --restore {backup}")
+        guard.record("images", 1, target=f"post {a.post_id}", detail="image fix",
+                     undo=f"python media_fix.py --restore {backup}")
 
     for t in a.touch:
         p = wp(session, "GET", f"{API}/posts/{t}", f"Could not load post {t}.", params={"context": "edit"})

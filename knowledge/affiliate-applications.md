@@ -158,6 +158,18 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 - Rows IL-10a to IL-10e in the ONSITE_PLANS.md link roadmap wait for the links. **Blocked on the owner (2026-10-09):** the PartnerStack dashboards for Pipedrive and Capsule show "Terms of service: Confirm agreement" before the Links tab opens (accepting terms is the owner's decision), and the Jotform affiliate dashboard needs the owner's Jotform login. Once a link is known: put it in the row's Target, set Status TODO; the daily robot's `inject_links.py --upload` places it (sponsored nofollow). Pipedrive on 492 goes through its upgrade file + local queue.
 - Capsule commissions start only after we send Capsule a live page about it: the 358 page qualifies once its link is in; a dedicated Capsule review is queued as TASKS C13.
 
+## 9. Mailbox check 2026-10-19 (emails since 2026-10-09)
+
+| Program | What happened | Next step |
+|---|---|---|
+| **SignWell** | **Accepted 2026-10-14**: invite to the "Friends of SignWell" referral program coming separately; asked how we handle placements and how long they stay, and to include SignWell in sales/legal guides and listicles | **Reply sent 2026-10-19 by the agent** (`knowledge/emails/2026-10-19-signwell-affiliate.md`): editorial placements, no paid positions, kept while the tool fits; asked for the trackable link. Watch for the invite |
+| **8am / MyCase** (Impact) | **Declined 2026-10-14**: "Partner location mismatch" (account in Israel) | none. The MyCase review (P2-3) goes ahead without an affiliate link |
+| **Capsule** | Reminder 2026-10-11: commissions activate only after we submit a live Capsule page in PartnerStack's "Challenge" box | Pages are live now: /capsule-crm-review/ (published 2026-10-19 by the cloud robot) and /free-client-management-software/ (affiliate link). Submit in PartnerStack (needs the owner's OK: form submit in their account) |
+| **Pixieset** | Account verification email (2026-10-10) for the free account opened for the reapply | **Owner** clicks "verify" in that email (account step); reapply on/after 2026-10-31 |
+| Lofty | Support closed the ticket (US phone numbers only) | closed |
+| Simply.Coach, Close, Jotform | Onboarding / marketing emails only | none |
+| Still no answer | HoneyBook (applied 10-04), Clio (10-04), Webflow, Help Scout, Freshworks (10-05), Zoho (our reply 10-09), Lawmatics (owner's reply 10-07) | wait; follow up after 3 weeks of silence (from ~2026-10-26) |
+
 **Links collected 2026-10-09 (owner accepted the PartnerStack terms and logged in to Jotform; all three resolve to the vendor):**
 - Pipedrive: `https://aff.trypipedrive.com/699cagphgq7a` (PartnerStack → Pipedrive → Links)
 - Capsule: `https://get.capsulenow.io/k6d7hlada1pu` (PartnerStack → Capsule and Transpond → Links, "Affiliate Partner Triage")

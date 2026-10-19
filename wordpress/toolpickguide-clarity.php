@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'TPG_CLARITY_PROJECT_ID', 'PUT-PROJECT-ID-HERE' );
+define( 'TPG_CLARITY_PROJECT_ID', 'z0871xdyf4' );
 
 add_action( 'wp_head', function () {
 	if ( is_user_logged_in() || is_admin() || ! preg_match( '/^[a-z0-9]{6,20}$/', TPG_CLARITY_PROJECT_ID ) ) {

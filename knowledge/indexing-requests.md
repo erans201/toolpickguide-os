@@ -15,6 +15,7 @@ The browser agent ("TPG Browser Ops") requests indexing in Search Console for ev
 | 2026-10-14 | https://toolpickguide.com/clio-vs-mycase/ |
 | 2026-10-15 | https://toolpickguide.com/proposal-template/ |
 | 2026-10-15 | https://toolpickguide.com/follow-up-boss-vs-lofty/ |
+| 2026-10-19 | https://toolpickguide.com/capsule-crm-review/ (published by the cloud robot; accepted) |
 
 ## Baseline (live on 2026-10-05; indexing handled earlier or not needed)
 

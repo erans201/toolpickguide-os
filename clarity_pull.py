@@ -71,6 +71,10 @@ def main():
     DATA.mkdir(exist_ok=True)
     (DATA / f"clarity-{day}.json").write_text(json.dumps(payload, indent=1), encoding="utf-8")
     rows = flatten(day, payload)
+    foreign = sorted({r["url"].split("/")[2] for r in rows if "//" in r["url"]} - {"toolpickguide.com", "www.toolpickguide.com"})
+    if foreign:  # token from another Clarity project (e.g. Crow & Coffin): never mix its data into ours
+        sys.exit(f"ALERT: this CLARITY_API_TOKEN returns data for {', '.join(foreign)}, not toolpickguide.com. "
+                 "Nothing saved. Create the token inside the 'Tool Pick Guide' Clarity project.")
     out = DATA / "clarity-daily.csv"
     new = not out.exists()
     with out.open("a", newline="", encoding="utf-8") as f:

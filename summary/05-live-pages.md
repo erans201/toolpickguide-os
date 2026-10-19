@@ -1,4 +1,4 @@
-# 05 · Live pages (2026-10-12)
+# 05 · Live pages (2026-10-19)
 
 Address = toolpickguide.com/*slug*/ · **U** = upgrade-file page (changed only through its upgrade file and a replace, run by the PC robot) · **$** = affiliate links live, with the disclosure box.
 
@@ -13,8 +13,13 @@ Address = toolpickguide.com/*slug*/ · **U** = upgrade-file page (changed only t
 | | 558 | photography-client-questionnaire | |
 | | 572 | photography-contract-template | Junia |
 | | 601 | honeybook-pricing | Junia |
-| | 618 | pixieset-studio-manager-review | Junia · **live Oct 6** |
+| | 618 | pixieset-studio-manager-review | Junia |
 | Agencies | 603 | best-crm-for-marketing-agencies | Junia · $ Close |
+| Test week 1 | 645 | service-contract-template | own robot (C) · live Oct 14 |
+| | 647 | clio-vs-mycase | own robot (C) · live Oct 14 |
+| | 649 | proposal-template | Junia (J) · live Oct 14 · images swapped Oct 14 |
+| | 651 | follow-up-boss-vs-lofty | Junia (J) · live Oct 14 · image swapped Oct 14 |
+| | 670 | capsule-crm-review | own robot (C) · live Oct 18 (cloud publish) |
 | Accounting | 412 | best-practice-management-accountants | U |
 | Coaches | 492 | client-management-software-for-coaches | U · $ Paperbell, Simply.Coach |
 | CRM | 338 | crm-operations-best-client-management-software | $ Pipedrive |
@@ -28,9 +33,9 @@ Address = toolpickguide.com/*slug*/ · **U** = upgrade-file page (changed only t
 | | 78 | best-doc-signing-tools | |
 | | 32 | website-builders-for-service-businesses | maintain only |
 
-**23 articles** in the sitemap (checked 2026-10-12), plus the blog list page `/latest-reviews/`.
-**Main images:** 412, 474, 487, 492 and 618 got real stock photos on Oct 6 (illustrations removed).
+**28 articles** in the sitemap (checked 2026-10-19, all 43 URLs load), plus the blog list page `/latest-reviews/`.
+**Upgraded Oct 13:** 397 (attorneys head term, cloud-security checklist) and 368 (small-firm section); 474 + 487 prices fixed.
 **Hidden from Google:** 82, 85, 87, 103, 105, 110, 112 (home-office posts). The duplicate `/home/` page is still in the sitemap (fix due Oct 23).
 **Retired with redirects:** 508 → accountants page · 509 → coaches page.
 **Old drafts:** 554, 556 (never published). Draft 217 has the same topic as 556: never publish both.
-**Coming:** about 8 new test articles a week from Oct 13 (page 04).
+**Coming:** Lawmatics review (week 1) and 6 week-2 test articles (page 04).

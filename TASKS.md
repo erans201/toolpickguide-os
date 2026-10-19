@@ -251,14 +251,21 @@ Every item: sitemap check + topic gate (`CONTENT_STRATEGY.md`) + facts verified 
 | C4 | Clio vs MyCase | 260 (CPC $107) | price-heavy MOFU (**brief ready 2026-10-12**: `knowledge/briefs/junia/clio-vs-mycase.md`; test P1-2, arm C; Clio prices NOT in the facts sheet: clio.com blocks the cloud robot, local session should add them before writing) | Oct 12 |
 | C5 | Pixieset Studio Manager review | 320 | MOFU (brief ready) | Nov 2 |
 | C6 | Law firm website design (spoke; must not target post 32's terms) | 2,400 | MOFU (**topic gate fail 2026-10-12**: website builders cluster is Maintain, no new web pages (CONTENT_STRATEGY §5); needs an owner decision to reopen) | on hold |
-| C7 | Client portal software for service businesses | 720 | BOFU (passes the gate; held 2026-10-12 because no same-type BOFU partner this week) | Oct 19 |
+| C7 | Client portal software for service businesses | 720 | BOFU price-heavy (**brief ready 2026-10-19**: `knowledge/briefs/junia/client-portal-software.md`; test P2-1, arm C) | Oct 19 |
 | C8 | Real estate CRM free options (links up to 474) **cannibal_check 2026-10-09: STRONG match with live 474; fold into 474 as a section instead of a new page** | 90+ | BOFU | Nov 9 |
 | C9 | Proposal template for service businesses | 4,400 (HIGH ads competition) | TOFU template (**brief ready 2026-10-12**: `knowledge/briefs/junia/proposal-template.md`; test P1-1, arm J) | Oct 12 |
-| C10 | Client onboarding checklist (must link up to 372; not target "client onboarding software") | 170 | TOFU (passes the gate; held 2026-10-12, no TOFU partner left this week) | Oct 19 |
+| C10 | Client onboarding checklist (must link up to 372; not target "client onboarding software") | 170 | TOFU (**brief ready 2026-10-19**: `knowledge/briefs/junia/client-onboarding-checklist.md`; test P2-2, arm C) | Oct 19 |
 | C11 | Lawmatics review (intake + legal CRM; links up to 368 and 397) | check in next demand pull | MOFU (**brief ready 2026-10-12**: `knowledge/briefs/junia/lawmatics-review.md`; test P1-3, arm J) | Oct 12 |
 | C12 | Lawmatics vs Clio Grow | check in next demand pull | MOFU comparison (promised to Lawmatics, 2026-10-07; held 2026-10-12: cannibal_check rates it STRONG vs the Lawmatics review brief (all review words inside it); needs a re-angle or merge before a brief) | later |
 | C14 | Follow Up Boss vs Lofty (real estate CRM comparison; links up to 474) | 50 | price-heavy MOFU (**brief ready 2026-10-12**: `knowledge/briefs/junia/follow-up-boss-vs-lofty.md`; test P1-2, arm J; Lofty publishes no prices, Lofty affiliate closed to us) | Oct 12 |
 | C13 | Capsule CRM review (we are a Capsule affiliate; commissions start once a Capsule page is live; links up to 358) | check in next demand pull | MOFU review (**brief ready 2026-10-12**: `knowledge/briefs/junia/capsule-crm-review.md`; test P1-3, arm C) | Oct 12 |
+| C15 | Dubsado alternatives (photographers, coaches, creatives; links up to /honeybook-pricing/ and the vertical CRM pages) | 110 (CPC $132, plutio #2) | price-heavy BOFU (**brief ready 2026-10-19**: `knowledge/briefs/junia/dubsado-alternatives.md`; test P2-1, arm J) | Oct 19 |
+| C16 | Graphic design contract template (design agencies + freelance designers; links to /service-contract-template/) | 320 + variants (~1,500 combined, difficulty 1-3, plutio #2-3) | TOFU template (**brief ready 2026-10-19**: `knowledge/briefs/junia/graphic-design-contract-template.md`; test P2-2, arm J) | Oct 19 |
+| C17 | MyCase review (single-tool; links up to /clio-vs-mycase/, 368, 397, 404) | 210 "mycase legal software" (CPC $153) | price-heavy MOFU (**brief ready 2026-10-19**: `knowledge/briefs/junia/mycase-review.md`; test P2-3, arm C; REVIEW vs /clio-vs-mycase/ judged OK) | Oct 19 |
+| C18 | Paperbell review (approved Paperbell affiliate, $100/customer; links up to 492) | 170 + 170 (difficulty 3) | price-heavy MOFU (**brief ready 2026-10-19**: `knowledge/briefs/junia/paperbell-review.md`; test P2-3, arm J) | Oct 19 |
+| C19 | HoneyBook vs Dubsado | 390 (2026-10-01) | price-heavy MOFU comparison (passes the gate and cannibal_check 2026-10-19; held: no same-type partner this week) | Oct 26 |
+| C20 | Smokeball review (legal; lawyerist #2) | 70 | MOFU review (passes the gate; Smokeball publishes no prices, quote-based only; needs a non-price-heavy MOFU partner) | later |
+| C21 | Clio Grow (review / what it is) | 8,100 (lawyerist #5) | MOFU (in scope, but clio.com blocks the cloud robot (403), so prices can't be verified; local session must collect Clio facts first; check vs C12) | needs local facts |
 
 **Weekly cycle (exact):**
 - **Mon 08:00:** AP writes 2 briefs and puts them in the Weekly Report.

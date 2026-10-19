@@ -1,4 +1,4 @@
-# 01 · Project and goals (2026-10-12)
+# 01 · Project and goals (2026-10-19)
 
 **ToolPickGuide.com** compares software for small service businesses and earns affiliate commissions when readers sign up through our links. Rankings never change because of commissions, and every price links to the vendor's official pricing page.
 
@@ -13,12 +13,12 @@
 
 Topic: client-operations software (CRM, intake, onboarding, contracts, e-sign). The old home-office posts are hidden from Google.
 
-## Where we are (2026-10-12)
-- **23 live articles** (the Pixieset review went live on Oct 6). Google traffic is still tiny, which is normal for a new site (4–8 months).
-- **$0 revenue** so far. **6 affiliate programs** now have links on **7 pages** (see page 06).
-- **Fully automated since Oct 6:** the robots write, check, publish and ask Google to index. You keep only Quora/Reddit and the rare password, captcha, payment or tax step.
-- **Content test started Oct 9:** Junia vs our own robot writer, 4 + 4 new articles a week from Oct 12 to Nov 22. Verdict on **Jan 4, 2027** (page 04).
-- Newest Google numbers are from Oct 1: the cloud robot has no Google key, so the next pull comes from your PC.
+## Where we are (2026-10-19)
+- **28 live articles** (5 test articles went live Oct 14–18). Google traffic is still tiny, which is normal for a new site (4–8 months).
+- **$0 revenue** so far. **6 affiliate programs** have links on **7 pages**; the Capsule review is live (page 06).
+- **Fully automated since Oct 6:** the robots write, check, publish and ask Google to index. Since Oct 17 the cloud robot also publishes, so publishing no longer needs your PC. You keep only Quora/Reddit and the rare password, captcha, payment or tax step.
+- **Content test:** Junia vs our own robot writer. Week 1: 5 of 6 live; week 2: 6 briefs ready. Verdict on **Jan 4, 2027** (page 04).
+- Newest Google numbers are still from Oct 1: the PC robot's Sunday pull has not run yet (it missed Oct 18).
 
 ## Where we're going
 | | Jan 2027 | Apr 2027 | **Oct 2027** |

@@ -1,4 +1,4 @@
-# 06 · Affiliate programs (2026-10-12)
+# 06 · Affiliate programs (2026-10-19)
 
 ## ✅ Approved, links live
 | Program | Pays | Placed on |
@@ -10,11 +10,11 @@
 | Jotform (Oct 6) | see Jotform dashboard | form builders 52 · intake form 576 |
 | Capsule (Oct 6) | 20–30% lifetime share | free CRM 358 |
 
-Links placed by the robot on Oct 10, each marked `sponsored nofollow`, with the **disclosure box** plugin (uploaded Oct 9). **Capsule** pays only after we send them a live page link: that email is the agent's next step, and a full Capsule review is being written this week.
+Links placed by the robot on Oct 10, each marked `sponsored nofollow`, with the **disclosure box** plugin (uploaded Oct 9). **Capsule** pays only after we send them a live page link: the Capsule review is live since Oct 18 (/capsule-crm-review/), so that email is the agent's next local step. A **Paperbell review** (our approved $100 program) is in this week's briefs.
 
 ## 💬 Talking
 - **Zoho:** asked 7 questions (Oct 6); the agent answered on Oct 9. Waiting.
-- **Lawmatics:** asked for details (Oct 7); our reply (drafted Oct 7) promises a Lawmatics review (being written this week), a Lawmatics vs Clio Grow page (later), and no ads on their name.
+- **Lawmatics:** asked for details (Oct 7); our reply (drafted Oct 7) promises a Lawmatics review (Junia draft due Oct 20), a Lawmatics vs Clio Grow page (later), and no ads on their name.
 
 ## ⏳ Waiting for an answer
 HoneyBook · Clio · 8am/MyCase (Impact) · Help Scout · Freshworks · Webflow · SignWell · Zendesk (emailed; its apply link is broken).

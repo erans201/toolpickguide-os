@@ -1,4 +1,4 @@
-# 10 · Quora and Reddit (2026-10-12)
+# 10 · Quora and Reddit (2026-10-19)
 
 **This is the one regular job that stays yours** (your decision of Oct 6). The robots find questions and write the answers; you post them from your own accounts.
 
@@ -25,10 +25,11 @@ Reddit shows up near the top of most of our buying searches, and Google's AI ans
 - **Before your first comment in a subreddit,** read its Rules box; if it bans self-promotion, never mention ToolPickGuide there.
 - **Reddit pace:** weeks 2–3: 1–2 comments a week in r/smallbusiness, **no links**. From week 4: 2–3 a week, at most 1 in 5 with a link.
 
-## Status (2026-10-12)
+## Status (2026-10-19)
 - **Quora week 1:** 5 of 5 posted on Oct 5, no links.
 - **Quora week 2:** 3 of 3 posted on Oct 6, no links.
-- **Quora week 3:** drafts being added today; they appear in the daily email.
+- **Quora week 3:** 6 drafts ready since Oct 12; none posted yet.
+- **Quora week 4:** 6 new drafts (legal, real estate, agencies, contracts, photographers, coaches; 1 with a link). Phone copy: Drive › Plans & Briefs.
 - **Reddit:** no picks yet. Start this week with 1–2 threads.
 - Your credential: "Founder at Tool Pick Guide (2026–present)".
 - **Nov 1:** keep what got replies and upvotes, drop the rest.

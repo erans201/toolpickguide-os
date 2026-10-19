@@ -265,7 +265,7 @@ Every item: sitemap check + topic gate (`CONTENT_STRATEGY.md`) + facts verified 
 | C18 | Paperbell review (approved Paperbell affiliate, $100/customer; links up to 492) | 170 + 170 (difficulty 3) | price-heavy MOFU (**brief ready 2026-10-19**: `knowledge/briefs/junia/paperbell-review.md`; test P2-3, arm J) | Oct 19 |
 | C19 | HoneyBook vs Dubsado | 390 (2026-10-01) | price-heavy MOFU comparison (passes the gate and cannibal_check 2026-10-19; held: no same-type partner this week) | Oct 26 |
 | C20 | Smokeball review (legal; lawyerist #2) | 70 | MOFU review (passes the gate; Smokeball publishes no prices, quote-based only; needs a non-price-heavy MOFU partner) | later |
-| C21 | Clio Grow (review / what it is) | 8,100 (lawyerist #5) | MOFU (in scope, but clio.com blocks the cloud robot (403), so prices can't be verified; local session must collect Clio facts first; check vs C12) | needs local facts |
+| C21 | Clio Grow (review / what it is; intake + CRM layer, links up to 404, 368, 397) | 8,100 (lawyerist #5) | MOFU, **not price-heavy** (Clio publishes only Starter from $49/user; Clio Grow has no public price). **UNBLOCKED 2026-10-19:** facts in `knowledge/facts-clio-2026-10-19.md` (collected in Chrome; the cloud gets 403 from clio.com, so use this file, valid until 2026-11-19). Pair with a MOFU partner next week | Oct 26 |
 
 **Weekly cycle (exact):**
 - **Mon 08:00:** AP writes 2 briefs and puts them in the Weekly Report.

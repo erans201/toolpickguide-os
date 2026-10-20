@@ -59,11 +59,11 @@ The weekly robot runs `python3 gsc_pull.py --days 90` and `python3 ga_pull.py --
 | P1-1 | J | proposal-template | 649 | 2026-10-14 | | 1 | | | | | | | | | | |
 | P1-2 | C | clio-vs-mycase | 647 | 2026-10-14 | | 1 | | | | | | | | | | |
 | P1-2 | J | follow-up-boss-vs-lofty | 651 | 2026-10-14 | | 1 | | | | | | | | | | |
-| P1-3 | J | lawmatics-review | | | | | | | | | | | | | | |
+| P1-3 | J | lawmatics-review | 679 | | | | | | | | | | | | | |
 | P1-3 | C | capsule-crm-review | 670 | 2026-10-18 | | 1 | | | | | | | | | | |
-| P2-1 | C | client-portal-software | | | | | | | | | | | | | | |
-| P2-1 | J | dubsado-alternatives | | | | | | | | | | | | | | |
+| P2-1 | C | client-portal-software | 675 | | | | | | | | | | | | | |
+| P2-1 | J | dubsado-alternatives | 681 | | | | | | | | | | | | | |
 | P2-2 | J | graphic-design-contract-template | | | | | | | | | | | | | | |
-| P2-2 | C | client-onboarding-checklist | | | | | | | | | | | | | | |
+| P2-2 | C | client-onboarding-checklist | 677 | | | | | | | | | | | | | |
 | P2-3 | C | mycase-review | | | | | | | | | | | | | | |
 | P2-3 | J | paperbell-review | | | | | | | | | | | | | | |

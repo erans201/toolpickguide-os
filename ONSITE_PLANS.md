@@ -106,6 +106,7 @@ Rows were chosen only where the anchor phrase already appears naturally in the s
 | IL-10c | 52 | Jotform | https://www.jotform.com/?partner=toolpickguide | DONE (verified live 2026-10-10) |
 | IL-10d | 576 | Jotform | https://www.jotform.com/?partner=toolpickguide | DONE (verified live 2026-10-10) |
 | IL-10e | 358 | Capsule | https://get.capsulenow.io/k6d7hlada1pu | DONE (verified live 2026-10-10) |
+| IL-11a | 78 | SignWell | https://www.signwell.com/?via=eran-shalev | DONE 2026-10-20 (local; sponsored + disclosure box verified; undo: python inject_links.py --restore backups/inject-78-20261020-221929.json) |
 
 - **IL-7d (fixes the only orphan):** add the link in `knowledge/upgrade-487-…md`, then the user runs `python upload_draft.py knowledge/upgrade-487-client-management-software-for-photographers.md --upload --replace-live 487 --force-replace`. The intake-form article (draft 576) also links to 558 once published.
 - **IL-7e:** after draft 586 is published, same route through `knowledge/upgrade-474-…md`.

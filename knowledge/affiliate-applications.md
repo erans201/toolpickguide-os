@@ -175,7 +175,7 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Program | What happened | Next step |
 |---|---|---|
 | **Capsule** | Automatic "final reminder" (2026-10-20) crossed with our Challenge submission of 2026-10-19 (the dashboard no longer shows the Challenge box) | **Reply sent 2026-10-20 by the agent** (`knowledge/emails/2026-10-20-capsule-affiliate.md`) with both live links. Wait for activation |
-| **SignWell** | Says the Friends of SignWell invite was sent last week and re-sent 2026-10-19; it needs acceptance, then we can customize the referral link | **Owner**: find the invite in the eran@ mailbox (it may come from their referral platform, not signwell.com, so the agent can't see it), accept it (terms = owner). Then the agent collects the link |
+| **SignWell** | Says the Friends of SignWell invite was sent last week and re-sent 2026-10-19; it needs acceptance, then we can customize the referral link | **Invite accepted by the owner 2026-10-20.** Link `https://www.signwell.com/?via=eran-shalev` (verified 200); placed on /best-doc-signing-tools/ (post 78, roadmap IL-11a, sponsored + disclosure). SignWell is mentioned on no other live page yet |
 | **Close** | Q4 promo code **STACK20**: an extra 20% off the first year of an annual plan, on top of annual-billing savings (email 2026-10-19, via PartnerStack). End date not stated in the email | Optional: mention it next to the Close link on /best-crm-for-marketing-agencies/ once the terms/end date are confirmed in PartnerStack Resources |
 | Simply.Coach | Onboarding email ("first 2 weeks") | none |
 

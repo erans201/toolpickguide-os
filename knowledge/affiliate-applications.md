@@ -170,6 +170,15 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | Simply.Coach, Close, Jotform | Onboarding / marketing emails only | none |
 | Still no answer | HoneyBook (applied 10-04), Clio (10-04), Webflow, Help Scout, Freshworks (10-05), Zoho (our reply 10-09), Lawmatics (owner's reply 10-07) | wait; follow up after 3 weeks of silence (from ~2026-10-26) |
 
+## 10. Mailbox check 2026-10-20
+
+| Program | What happened | Next step |
+|---|---|---|
+| **Capsule** | Automatic "final reminder" (2026-10-20) crossed with our Challenge submission of 2026-10-19 (the dashboard no longer shows the Challenge box) | **Reply sent 2026-10-20 by the agent** (`knowledge/emails/2026-10-20-capsule-affiliate.md`) with both live links. Wait for activation |
+| **SignWell** | Says the Friends of SignWell invite was sent last week and re-sent 2026-10-19; it needs acceptance, then we can customize the referral link | **Owner**: find the invite in the eran@ mailbox (it may come from their referral platform, not signwell.com, so the agent can't see it), accept it (terms = owner). Then the agent collects the link |
+| **Close** | Q4 promo code **STACK20**: an extra 20% off the first year of an annual plan, on top of annual-billing savings (email 2026-10-19, via PartnerStack). End date not stated in the email | Optional: mention it next to the Close link on /best-crm-for-marketing-agencies/ once the terms/end date are confirmed in PartnerStack Resources |
+| Simply.Coach | Onboarding email ("first 2 weeks") | none |
+
 **Links collected 2026-10-09 (owner accepted the PartnerStack terms and logged in to Jotform; all three resolve to the vendor):**
 - Pipedrive: `https://aff.trypipedrive.com/699cagphgq7a` (PartnerStack → Pipedrive → Links)
 - Capsule: `https://get.capsulenow.io/k6d7hlada1pu` (PartnerStack → Capsule and Transpond → Links, "Affiliate Partner Triage")

@@ -104,7 +104,12 @@ def main():
         return
 
     if a.post_id:
-        pub = requests.get(f"{API}/posts/{a.post_id}", params={"_fields": "id,slug,status,content,featured_media"}, timeout=30).json()
+        pub = requests.get(f"{API}/posts/{a.post_id}", params={"_fields": "id,slug,status,content,featured_media"}, timeout=30)
+        if pub.status_code == 401:  # a draft: read it with the WordPress login (still read-only in a dry run)
+            from upload_draft import make_session
+            pub = make_session()[0].get(f"{API}/posts/{a.post_id}", timeout=30,
+                                        params={"_fields": "id,slug,status,content,featured_media", "context": "edit"})
+        pub = pub.json()
         keep, remove = plan(pub["content"]["rendered"], a.remove_img)
         print(f"Post {a.post_id} /{pub['slug']}/ ({pub['status']})")
         for _, _, src in remove:

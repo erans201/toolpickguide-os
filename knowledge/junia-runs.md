@@ -12,7 +12,7 @@ The browser agent ("TPG Browser Ops") skips every slug listed here. One line per
 | 2026-10-13 | proposal-template | 649 | published 2026-10-14 (local agent, publish_draft.py) (arm J, content test P1-1) |
 | 2026-10-13 | follow-up-boss-vs-lofty | 651 | published 2026-10-14 (local agent, publish_draft.py) (arm J, content test P1-2) |
 | 2026-10-17 | capsule-crm-review | 670 | published 2026-10-18 (cloud) (arm C, content test P1-3) |
-| 2026-10-20 | client-portal-software | 675 | draft (arm C, content test P2-1) |
-| 2026-10-20 | client-onboarding-checklist | 677 | draft (arm C, content test P2-2) |
-| 2026-10-20 | lawmatics-review | 679 | draft (arm J, content test P1-3) |
-| 2026-10-20 | dubsado-alternatives | 681 | draft (arm J, content test P2-1) |
+| 2026-10-20 | client-portal-software | 675 | published 2026-10-21 (cloud) (arm C, content test P2-1) |
+| 2026-10-20 | client-onboarding-checklist | 677 | published 2026-10-21 (cloud) (arm C, content test P2-2) |
+| 2026-10-20 | lawmatics-review | 679 | published 2026-10-21 (cloud) (arm J, content test P1-3; corrected body knowledge/junia-679-lawmatics-review.md) |
+| 2026-10-20 | dubsado-alternatives | 681 | draft (arm J, content test P2-1; fails QA gate 2026-10-21, corrected body next run) |

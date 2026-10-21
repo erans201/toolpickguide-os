@@ -12,6 +12,10 @@
     "2026-10-18": {
       "drafts": 1,
       "publishes": 1
+    },
+    "2026-10-21": {
+      "drafts": 3,
+      "publishes": 3
     }
   },
   "months": {
@@ -107,6 +111,54 @@
       "target": "post 670",
       "detail": "https://toolpickguide.com/capsule-crm-review/",
       "undo": "python publish_draft.py --post-id 670 --unpublish --apply"
+    },
+    {
+      "at": "2026-10-21T05:13:44+00:00",
+      "kind": "drafts",
+      "n": 1,
+      "target": "draft 675",
+      "detail": "client-portal-software",
+      "undo": "python junia_draft.py --restore backups/junia-675-20261021-051340.json"
+    },
+    {
+      "at": "2026-10-21T05:13:55+00:00",
+      "kind": "drafts",
+      "n": 1,
+      "target": "draft 677",
+      "detail": "client-onboarding-checklist",
+      "undo": "python junia_draft.py --restore backups/junia-677-20261021-051352.json"
+    },
+    {
+      "at": "2026-10-21T05:15:18+00:00",
+      "kind": "drafts",
+      "n": 1,
+      "target": "draft 679",
+      "detail": "lawmatics-review",
+      "undo": "python junia_draft.py --restore backups/junia-679-20261021-051514.json"
+    },
+    {
+      "at": "2026-10-21T05:16:18+00:00",
+      "kind": "publishes",
+      "n": 1,
+      "target": "post 675",
+      "detail": "https://toolpickguide.com/client-portal-software/",
+      "undo": "python publish_draft.py --post-id 675 --unpublish --apply"
+    },
+    {
+      "at": "2026-10-21T05:16:30+00:00",
+      "kind": "publishes",
+      "n": 1,
+      "target": "post 677",
+      "detail": "https://toolpickguide.com/client-onboarding-checklist/",
+      "undo": "python publish_draft.py --post-id 677 --unpublish --apply"
+    },
+    {
+      "at": "2026-10-21T05:16:43+00:00",
+      "kind": "publishes",
+      "n": 1,
+      "target": "post 679",
+      "detail": "https://toolpickguide.com/lawmatics-review/",
+      "undo": "python publish_draft.py --post-id 679 --unpublish --apply"
     }
   ],
   "strikes": []

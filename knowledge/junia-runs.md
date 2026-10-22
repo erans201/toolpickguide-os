@@ -15,4 +15,4 @@ The browser agent ("TPG Browser Ops") skips every slug listed here. One line per
 | 2026-10-20 | client-portal-software | 675 | published 2026-10-21 (cloud) (arm C, content test P2-1) |
 | 2026-10-20 | client-onboarding-checklist | 677 | published 2026-10-21 (cloud) (arm C, content test P2-2) |
 | 2026-10-20 | lawmatics-review | 679 | published 2026-10-21 (cloud) (arm J, content test P1-3; corrected body knowledge/junia-679-lawmatics-review.md) |
-| 2026-10-20 | dubsado-alternatives | 681 | draft (arm J, content test P2-1; fails QA gate 2026-10-21, corrected body next run) |
+| 2026-10-20 | dubsado-alternatives | 681 | published 2026-10-22 (cloud) (arm J, content test P2-1; QA-corrected body knowledge/junia-681-dubsado-alternatives.md applied 2026-10-22) |

@@ -62,7 +62,7 @@ The weekly robot runs `python3 gsc_pull.py --days 90` and `python3 ga_pull.py --
 | P1-3 | J | lawmatics-review | 679 | 2026-10-21 | | 1 | | | | | | | | | | |
 | P1-3 | C | capsule-crm-review | 670 | 2026-10-18 | | 1 | | | | | | | | | | |
 | P2-1 | C | client-portal-software | 675 | 2026-10-21 | | 1 | | | | | | | | | | |
-| P2-1 | J | dubsado-alternatives | 681 | | | 1 | | | | | | | | | | |
+| P2-1 | J | dubsado-alternatives | 681 | 2026-10-22 | | 2 | | | | | | | | | | |
 | P2-2 | J | graphic-design-contract-template | | | | | | | | | | | | | | |
 | P2-2 | C | client-onboarding-checklist | 677 | 2026-10-21 | | 1 | | | | | | | | | | |
 | P2-3 | C | mycase-review | | | | | | | | | | | | | | |

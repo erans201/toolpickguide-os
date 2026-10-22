@@ -16,6 +16,10 @@
     "2026-10-21": {
       "drafts": 3,
       "publishes": 3
+    },
+    "2026-10-22": {
+      "drafts": 1,
+      "publishes": 1
     }
   },
   "months": {
@@ -159,6 +163,22 @@
       "target": "post 679",
       "detail": "https://toolpickguide.com/lawmatics-review/",
       "undo": "python publish_draft.py --post-id 679 --unpublish --apply"
+    },
+    {
+      "at": "2026-10-22T05:17:59+00:00",
+      "kind": "drafts",
+      "n": 1,
+      "target": "draft 681",
+      "detail": "dubsado-alternatives",
+      "undo": "python junia_draft.py --restore backups/junia-681-20261022-051742.json"
+    },
+    {
+      "at": "2026-10-22T05:18:46+00:00",
+      "kind": "publishes",
+      "n": 1,
+      "target": "post 681",
+      "detail": "https://toolpickguide.com/dubsado-alternatives/",
+      "undo": "python publish_draft.py --post-id 681 --unpublish --apply"
     }
   ],
   "strikes": []

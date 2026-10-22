@@ -17,6 +17,10 @@ The browser agent ("TPG Browser Ops") requests indexing in Search Console for ev
 | 2026-10-15 | https://toolpickguide.com/follow-up-boss-vs-lofty/ |
 | 2026-10-19 | https://toolpickguide.com/capsule-crm-review/ (published by the cloud robot; accepted) |
 | 2026-10-19 | https://toolpickguide.com/follow-up-boss-vs-lofty/ (re-index after the reviews section; accepted) |
+| 2026-10-22 | https://toolpickguide.com/dubsado-alternatives/ |
+| 2026-10-22 | https://toolpickguide.com/lawmatics-review/ (already on Google, no request needed) |
+| 2026-10-22 | https://toolpickguide.com/client-onboarding-checklist/ (already on Google, no request needed) |
+| 2026-10-22 | https://toolpickguide.com/client-portal-software/ (already on Google, no request needed) |
 
 ## Baseline (live on 2026-10-05; indexing handled earlier or not needed)
 

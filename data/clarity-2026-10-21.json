@@ -1,0 +1,175 @@
+[
+ {
+  "metricName": "DeadClickCount",
+  "information": [
+   {
+    "sessionsCount": 1,
+    "sessionsWithMetricPercentage": 0,
+    "sessionsWithoutMetricPercentage": 100,
+    "pagesViews": 0,
+    "subTotal": 0,
+    "Url": "https://toolpickguide.com/best-crm-for-marketing-agencies/"
+   },
+   {
+    "sessionsCount": 3,
+    "sessionsWithMetricPercentage": 0,
+    "sessionsWithoutMetricPercentage": 100,
+    "pagesViews": 0,
+    "subTotal": 0,
+    "Url": "https://toolpickguide.com/"
+   }
+  ]
+ },
+ {
+  "metricName": "ExcessiveScroll",
+  "information": [
+   {
+    "sessionsCount": 1,
+    "sessionsWithMetricPercentage": 0,
+    "sessionsWithoutMetricPercentage": 100,
+    "pagesViews": 0,
+    "subTotal": 0,
+    "Url": "https://toolpickguide.com/best-crm-for-marketing-agencies/"
+   },
+   {
+    "sessionsCount": 3,
+    "sessionsWithMetricPercentage": 0,
+    "sessionsWithoutMetricPercentage": 100,
+    "pagesViews": 0,
+    "subTotal": 0,
+    "Url": "https://toolpickguide.com/"
+   }
+  ]
+ },
+ {
+  "metricName": "RageClickCount",
+  "information": [
+   {
+    "sessionsCount": 1,
+    "sessionsWithMetricPercentage": 0,
+    "sessionsWithoutMetricPercentage": 100,
+    "pagesViews": 0,
+    "subTotal": 0,
+    "Url": "https://toolpickguide.com/best-crm-for-marketing-agencies/"
+   },
+   {
+    "sessionsCount": 3,
+    "sessionsWithMetricPercentage": 0,
+    "sessionsWithoutMetricPercentage": 100,
+    "pagesViews": 0,
+    "subTotal": 0,
+    "Url": "https://toolpickguide.com/"
+   }
+  ]
+ },
+ {
+  "metricName": "QuickbackClick",
+  "information": [
+   {
+    "sessionsCount": 1,
+    "sessionsWithMetricPercentage": 0,
+    "sessionsWithoutMetricPercentage": 100,
+    "pagesViews": 0,
+    "subTotal": 0,
+    "Url": "https://toolpickguide.com/best-crm-for-marketing-agencies/"
+   },
+   {
+    "sessionsCount": 3,
+    "sessionsWithMetricPercentage": 0,
+    "sessionsWithoutMetricPercentage": 100,
+    "pagesViews": 0,
+    "subTotal": 0,
+    "Url": "https://toolpickguide.com/"
+   }
+  ]
+ },
+ {
+  "metricName": "ScriptErrorCount",
+  "information": [
+   {
+    "sessionsCount": 1,
+    "sessionsWithMetricPercentage": 0,
+    "sessionsWithoutMetricPercentage": 100,
+    "pagesViews": 0,
+    "subTotal": 0,
+    "Url": "https://toolpickguide.com/best-crm-for-marketing-agencies/"
+   },
+   {
+    "sessionsCount": 3,
+    "sessionsWithMetricPercentage": 0,
+    "sessionsWithoutMetricPercentage": 100,
+    "pagesViews": 0,
+    "subTotal": 0,
+    "Url": "https://toolpickguide.com/"
+   }
+  ]
+ },
+ {
+  "metricName": "ErrorClickCount",
+  "information": [
+   {
+    "sessionsCount": 1,
+    "sessionsWithMetricPercentage": 0,
+    "sessionsWithoutMetricPercentage": 100,
+    "pagesViews": 0,
+    "subTotal": 0,
+    "Url": "https://toolpickguide.com/best-crm-for-marketing-agencies/"
+   },
+   {
+    "sessionsCount": 3,
+    "sessionsWithMetricPercentage": 0,
+    "sessionsWithoutMetricPercentage": 100,
+    "pagesViews": 0,
+    "subTotal": 0,
+    "Url": "https://toolpickguide.com/"
+   }
+  ]
+ },
+ {
+  "metricName": "ScrollDepth",
+  "information": [
+   {
+    "averageScrollDepth": 72,
+    "Url": "https://toolpickguide.com/best-crm-for-marketing-agencies/"
+   },
+   {
+    "averageScrollDepth": 43,
+    "Url": "https://toolpickguide.com/"
+   }
+  ]
+ },
+ {
+  "metricName": "Traffic",
+  "information": [
+   {
+    "totalSessionCount": 1,
+    "totalBotSessionCount": 0,
+    "distinctUserCount": 1,
+    "pagesPerSessionPercentage": 1,
+    "Url": "https://toolpickguide.com/best-crm-for-marketing-agencies/"
+   },
+   {
+    "totalSessionCount": 3,
+    "totalBotSessionCount": 3,
+    "distinctUserCount": 3,
+    "pagesPerSessionPercentage": 1,
+    "Url": "https://toolpickguide.com/"
+   }
+  ]
+ },
+ {
+  "metricName": "EngagementTime",
+  "information": [
+   {
+    "totalTime": 326,
+    "activeTime": 197,
+    "Url": "https://toolpickguide.com/best-crm-for-marketing-agencies/"
+   },
+   {
+    "totalTime": 2,
+    "activeTime": 2,
+    "Url": "https://toolpickguide.com/"
+   }
+  ]
+ }
+]

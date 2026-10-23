@@ -13,8 +13,9 @@ import sys
 from pathlib import Path
 
 downloads = Path.home() / "Downloads"
+project_key = Path(__file__).resolve().parent / "gsc-key.json"  # the key the local pulls already use (2026-10-23)
 candidates = []
-for f in downloads.glob("*.json"):
+for f in list(downloads.glob("*.json")) + ([project_key] if project_key.is_file() else []):
     try:
         data = json.loads(f.read_text(encoding="utf-8"))
     except (ValueError, OSError):
@@ -32,6 +33,9 @@ subprocess.run(["clip"], input=one_line.encode("utf-8"), check=True)
 
 print(f"✅ Copied! (from the file: {path.name})")
 print("   Now go to the Claude form, click right after  GSC_KEY_JSON=  and press Ctrl+V.")
+if path == project_key:
+    print("   (This is the project's own key file; it stays where it is.)")
+    sys.exit(0)
 answer = input("\nAfter you have pasted it and saved the form, type  y  and press Enter to delete the downloaded key file (or just press Enter to keep it): ")
 if answer.strip().lower() == "y":
     path.unlink()

@@ -386,8 +386,8 @@ def upload_image(session, api, image_path, alt, slug):
                         "Content-Disposition": f'attachment; filename="{slug}{ext if ext in IMAGE_TYPES else ".png"}"'})
     meta = {"alt_text": alt, "title": alt}
     credit_file = image_path.with_suffix(".credit.json")  # written by stock_photo.py for Pexels photos
-    if credit_file.is_file():
-        c = json.loads(credit_file.read_text(encoding="utf-8"))
+    c = json.loads(credit_file.read_text(encoding="utf-8")) if credit_file.is_file() else {}
+    if c.get("source") == "Pexels":  # Pexels asks for a credit; Pixabay needs none
         meta["caption"] = (f'Photo by <a href="{html_lib.escape(c["photographer_url"])}" rel="noopener">'
                            f'{html_lib.escape(c["photographer"])}</a> on '
                            f'<a href="{html_lib.escape(c["photo_url"])}" rel="noopener">Pexels</a>')

@@ -48,6 +48,12 @@ Applies to every in-house edit, every Junia brief, and every Junia draft QA. Sou
 
 ---
 
+## ☁️ All-cloud operation (owner decision 2026-10-23, overrides older PC-robot and Junia notes below)
+- "I would like to move the entire operation to Claude to prevent stuck when the PC is off", then (same day) **"keep Junia until Nov 22 for the test going on"**. So the PC robot `tpg-browser-ops` runs **only Sun + Tue + Fri**: Junia drafts (arm J of the content test) and their indexing requests on Tue + Fri, and the Sunday `gsc_pull.py` / `ga_pull.py` until `GSC_KEY_JSON` is in the cloud environment. After 2026-11-22 it is switched off and the cloud writes everything. The content test continues (`knowledge/content-test.md`).
+- The cloud robots do everything else: write the in-house articles (arm C until Nov 22; all articles after that), QA and publish both arms, pick stock photos with `stock_photo.py` (Pixabay, key `PIXABAY_API_KEY`; Pexels as fallback), upload drafts, QA + image check, publish (max 4 a day), apply live-page changes, swap images, run the keyword harvest, and pull Google data (`gsc_pull.py` / `ga_pull.py` via `GSC_KEY_JSON`) and Clarity (`clarity_pull.py` via `CLARITY_API_TOKEN`) from the cloud environment.
+- **Indexing requests** happen only on the PC's Junia nights (Search Console needs the owner's browser); otherwise new pages are found through the sitemap. Affiliate email replies stay with the local agent in chat sessions (the cloud blocks mail connections).
+- Where older notes below say "Junia", "the local robot", "browser ops" or "PC robot", read: the cloud robot does it, except the Junia drafts (PC, until Nov 22).
+
 ## 🌐 Website Manager: WordPress Publishing
 - The agent does **not** log in to or write to the live WordPress site. Read-only public requests (sitemap, REST GETs without credentials, page fetches) are allowed for audits and for verifying changes after the user runs them.
 - The upload tooling lives in the root folder: `upload_draft.py` (uploader), `make_featured_image.py` (featured images), `auto_scheduler.py` + `run_scheduler.bat` (scheduler). It pushes compiled Markdown (HTML, JSON-LD schema, Rank Math meta, tags, image) via the WordPress REST API.

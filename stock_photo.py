@@ -1,9 +1,12 @@
 """
-stock_photo.py: find and download free stock photos from Pexels for our pages (user decisions 2026-10-17:
-the cloud robot picks photos itself; Pexels instead of Unsplash, whose API terms forbid self-hosted copies).
+stock_photo.py: find and download free stock photos for our pages, from Pixabay (PIXABAY_API_KEY, preferred since
+2026-10-23: Pexels paused new API keys) or Pexels (PEXELS_API_KEY). User decisions 2026-10-17/23: the cloud robot picks
+photos itself; Unsplash is not used here because its API terms forbid self-hosted copies. Pixabay's license needs no
+attribution and its API terms ask us to download images rather than hotlink them, which is what we do.
 
     python stock_photo.py --search "lawyer reviewing documents with client"   # 8 candidates + thumbnails to look at
-    python stock_photo.py --get 3184465 --out knowledge/images/<stem>-photo.jpg
+    python stock_photo.py --get 3184465 --out knowledge/images/<stem>-photo.jpg          # Pexels ID
+    python stock_photo.py --get pixabay-1838584 --out knowledge/images/<stem>-photo.jpg  # Pixabay ID (as --search prints it)
 
 --search prints each candidate (ID, photographer, Pexels description) and saves small previews to
 knowledge/_preview/pexels/<id>.jpg so the robot can LOOK at them before choosing (realistic photo, no logos,
@@ -25,6 +28,27 @@ import requests
 
 API = "https://api.pexels.com/v1"
 PREVIEW = Path("knowledge/_preview/pexels")
+
+
+PIXABAY = "https://pixabay.com/api/"
+
+
+def env(name):
+    try:
+        from dotenv import load_dotenv
+        load_dotenv()
+    except ImportError:
+        pass
+    return os.environ.get(name, "").strip()
+
+
+def pixabay_search(query, n):
+    k = env("PIXABAY_API_KEY")
+    r = requests.get(PIXABAY, params={"key": k, "q": query, "image_type": "photo", "orientation": "horizontal",
+                                      "safesearch": "true", "per_page": max(n, 3), "min_width": 1200}, timeout=60)
+    if r.status_code != 200:
+        sys.exit(f"ERROR: Pixabay HTTP {r.status_code}: {r.text[:200].replace(k, '[REDACTED]')}")
+    return r.json().get("hits", [])
 
 
 def key():
@@ -49,6 +73,15 @@ def call(path, params):
 
 def search(query, n):
     PREVIEW.mkdir(parents=True, exist_ok=True)
+    if env("PIXABAY_API_KEY"):
+        hits = pixabay_search(query, n)
+        if not hits:
+            print("No results. Try a broader query.")
+        for h in hits[:n]:
+            thumb = PREVIEW / f"pixabay-{h['id']}.jpg"
+            thumb.write_bytes(requests.get(h["webformatURL"], timeout=60).content)
+            print(f"pixabay-{h['id']} | {h['imageWidth']}x{h['imageHeight']} | by {h['user']} | {h.get('tags', '')} | preview: {thumb}")
+        return
     photos = call("search", {"query": query, "orientation": "landscape", "per_page": n}).get("photos", [])
     if not photos:
         print("No results. Try a broader query.")
@@ -59,6 +92,8 @@ def search(query, n):
 
 
 def get(photo_id, out):
+    if str(photo_id).startswith("pixabay-"):
+        return get_pixabay(str(photo_id).split("-", 1)[1], out)
     p = call(f"photos/{photo_id}", {})
     raw = requests.get(p["src"]["original"], timeout=120).content
     out = Path(out)
@@ -75,6 +110,30 @@ def get(photo_id, out):
               "photo_url": p["url"], "pexels_id": p["id"], "alt_hint": p.get("alt") or ""}
     out.with_suffix(".credit.json").write_text(json.dumps(credit, indent=1), encoding="utf-8")
     print(f"✅ Saved {out} (by {p['photographer']} on Pexels) + {out.with_suffix('.credit.json').name}")
+
+
+def get_pixabay(pid, out):
+    k = env("PIXABAY_API_KEY")
+    r = requests.get(PIXABAY, params={"key": k, "id": pid}, timeout=60)
+    hits = r.json().get("hits", []) if r.status_code == 200 else []
+    if not hits:
+        sys.exit(f"ERROR: Pixabay photo {pid} not found (HTTP {r.status_code}).")
+    h = hits[0]
+    raw = requests.get(h["largeImageURL"], timeout=120).content
+    out = Path(out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        from PIL import Image
+        im = Image.open(io.BytesIO(raw)).convert("RGB")
+        if im.width > 1200:
+            im = im.resize((1200, round(im.height * 1200 / im.width)))
+        im.save(out, "JPEG", quality=82)
+    except ImportError:
+        out.write_bytes(raw)
+    credit = {"source": "Pixabay", "photographer": h["user"], "photo_url": h["pageURL"], "pixabay_id": h["id"],
+              "alt_hint": h.get("tags", "")}
+    out.with_suffix(".credit.json").write_text(json.dumps(credit, indent=1), encoding="utf-8")
+    print(f"✅ Saved {out} (Pixabay {h['id']} by {h['user']}; no attribution required) + {out.with_suffix('.credit.json').name}")
 
 
 def main():

@@ -1,5 +1,7 @@
 # 🤖 AUTOPILOT: Autonomous Operations Policy
 
+> **2026-10-23: all-cloud operation (owner decision), except Junia.** The PC robot runs only Tue + Fri for Junia drafts until 2026-11-22 (content test continues); every other job is the cloud robot's. Wherever this file mentions the PC/local robot, browser ops, Junia drafts or indexing requests, the cloud robot now does the job itself (photos via `stock_photo.py` with Pixabay), or the step is dropped (manual indexing). The evening-robot ALERT check in 6.1 no longer applies.
+
 - **Status:** APPROVED in principle 2026-10-03 (user decisions below). Goes live after setup tasks T0.1–T0.9 in `TASKS.md`.
 - **Runs in:** Anthropic cloud (Claude Code routines) against the private GitHub repo `toolpickguide-os`. Every run starts with zero memory, reads this file, does its job, then commits its log and reports back to the repo.
 - **Priority:** for a scheduled cloud run, this file decides what may happen without the user. Anything not explicitly allowed here falls back to the normal rules in `CLAUDE.md` (the user runs it).

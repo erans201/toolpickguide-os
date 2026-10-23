@@ -2,6 +2,10 @@
 
 User decision 2026-10-09: "generate 4 articles of your own each week that will compete Junia's, track them through Google Search Console and judge the results within a specific time frame." For this test only, the in-house writing ban (CLAUDE.md interpretation note, MANDATE.md Content Writer OFF-DUTY) is lifted for the **In-house** arm. MANDATE.md stays verbatim.
 
+## 2026-10-23: test continues, Junia kept until Nov 22 (owner decision)
+
+The owner moved everything else to the cloud ("move the entire operation to Claude to prevent stuck when the PC is off"), then decided: **"keep Junia until Nov 22 for the test going on"**. So arm J (Junia) stays on the PC robot, which now runs **only on Tuesdays and Fridays** for Junia drafts; arm C, uploads, photos, QA, publishing and data pulls run in the cloud. If the PC is off on a Junia day, that pair's Junia draft comes a day late. After Nov 22 Junia stops and the cloud writes everything.
+
 ## Design
 
 - **Two arms:** **J** = Junia writes (browser robot, as today). **C** = Claude writes in-house (daily cloud robot).

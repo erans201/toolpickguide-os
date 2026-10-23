@@ -8,6 +8,7 @@ older pages). Built 2026-10-19 for the keyword-harvest page expansions (knowledg
     python patch_live.py --post-id 372 --meta-description "New Rank Math description"
     ... --apply                                                               # write (backup first)
     python patch_live.py --restore backups/patch-<id>-<time>.json
+    python patch_live.py --post-id 276 --page --replace "old" "new"            # a WordPress page (e.g. the homepage)
 
 Safety: dry run by default; every --replace / --insert-before anchor must match the raw content exactly once;
 full backup (raw content, title, live meta description) before writing; refuses posts that have an upgrade file
@@ -47,6 +48,7 @@ def main():
     ap.add_argument("--replace", nargs=2, action="append", default=[], metavar=("OLD", "NEW"))
     ap.add_argument("--insert-before", nargs=2, action="append", default=[], metavar=("ANCHOR", "HTML_FILE"))
     ap.add_argument("--meta-description")
+    ap.add_argument("--page", action="store_true", help="the ID is a WordPress page (e.g. the homepage), not a post")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--restore", metavar="BACKUP.json")
     a = ap.parse_args()
@@ -56,7 +58,7 @@ def main():
 
     if a.restore:
         data = json.loads(Path(a.restore).read_text(encoding="utf-8"))
-        wp(session, "POST", f"{API}/posts/{data['id']}", "Restore failed.", json={"content": data["content"]})
+        wp(session, "POST", f"{API}/{data.get('kind', 'posts')}/{data['id']}", "Restore failed.", json={"content": data["content"]})
         if data.get("meta_description"):
             session.post(f"{SITE}/wp-json/rankmath/v1/updateMeta", timeout=60, json={
                 "objectType": "post", "objectID": data["id"], "meta": {"rank_math_description": data["meta_description"]}})
@@ -65,9 +67,10 @@ def main():
 
     if not a.post_id:
         sys.exit("Use --post-id (or --restore).")
+    kind = "pages" if a.page else "posts"
     if a.post_id in upgrade_file_ids():
         sys.exit(f"ABORT: post {a.post_id} has a knowledge/upgrade-{a.post_id}-*.md file. Edit it and use upload_draft.py --replace-live.")
-    post = wp(session, "GET", f"{API}/posts/{a.post_id}", f"Could not load post {a.post_id}.", params={"context": "edit"})
+    post = wp(session, "GET", f"{API}/{kind}/{a.post_id}", f"Could not load post {a.post_id}.", params={"context": "edit"})
     raw = post["content"]["raw"]
     print(f"Post {a.post_id} /{post['slug']}/ ({post['status']}) · {len(raw)} characters")
 
@@ -104,16 +107,16 @@ def main():
         sys.exit(f"AUTOPILOT: daily cap reached ({guard.DAILY_CAPS['uploads']} uploads per day). Nothing changed.")
     BACKUP_DIR.mkdir(parents=True, exist_ok=True)
     backup = BACKUP_DIR / f"patch-{a.post_id}-{datetime.now():%Y%m%d-%H%M%S}.json"
-    backup.write_text(json.dumps({"backed_up_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "id": a.post_id,
+    backup.write_text(json.dumps({"backed_up_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "id": a.post_id, "kind": kind,
                                   "content": raw, "title": post["title"]["raw"],
                                   "meta_description": live_meta_description(post["link"])}, indent=2, ensure_ascii=False),
                       encoding="utf-8")
     print(f"\n💾 Backup: {backup}")
     undo = f"python patch_live.py --restore {backup}"
     if new != raw:
-        result = wp(session, "POST", f"{API}/posts/{a.post_id}", "WordPress rejected the update.", json={"content": new})
+        result = wp(session, "POST", f"{API}/{kind}/{a.post_id}", "WordPress rejected the update.", json={"content": new})
         if result.get("status") != post["status"] or result.get("slug") != post["slug"]:
-            wp(session, "POST", f"{API}/posts/{a.post_id}", f"RESTORE FAILED: run {undo}", json={"content": raw})
+            wp(session, "POST", f"{API}/{kind}/{a.post_id}", f"RESTORE FAILED: run {undo}", json={"content": raw})
             sys.exit("SAFETY ERROR: status/slug changed; content restored.")
     if a.meta_description:
         rm = session.post(f"{SITE}/wp-json/rankmath/v1/updateMeta", timeout=60, json={

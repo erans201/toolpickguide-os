@@ -9,6 +9,7 @@ older pages). Built 2026-10-19 for the keyword-harvest page expansions (knowledg
     ... --apply                                                               # write (backup first)
     python patch_live.py --restore backups/patch-<id>-<time>.json
     python patch_live.py --post-id 276 --page --replace "old" "new"            # a WordPress page (e.g. the homepage)
+    python patch_live.py --post-id 276 --page --spec knowledge/snippets/home-buttons-276.json   # replacements from a JSON file
 
 Safety: dry run by default; every --replace / --insert-before anchor must match the raw content exactly once;
 full backup (raw content, title, live meta description) before writing; refuses posts that have an upgrade file
@@ -47,6 +48,7 @@ def main():
     ap.add_argument("--show", metavar="PHRASE")
     ap.add_argument("--replace", nargs=2, action="append", default=[], metavar=("OLD", "NEW"))
     ap.add_argument("--insert-before", nargs=2, action="append", default=[], metavar=("ANCHOR", "HTML_FILE"))
+    ap.add_argument("--spec", metavar="FILE.json", help='JSON list of ["old", "new"] pairs (same rules as --replace)')
     ap.add_argument("--meta-description")
     ap.add_argument("--page", action="store_true", help="the ID is a WordPress page (e.g. the homepage), not a post")
     ap.add_argument("--apply", action="store_true")
@@ -80,6 +82,8 @@ def main():
         return
 
     new = raw
+    if a.spec:
+        a.replace += [tuple(pair) for pair in json.loads(Path(a.spec).read_text(encoding="utf-8"))]
     for old, rep in a.replace:
         n = new.count(old)
         if n != 1:

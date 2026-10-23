@@ -109,12 +109,33 @@ def seeds(bank):
     own = [r["keyword"] for r in csv.DictReader((DATA / "target-keywords.csv").open(encoding="utf-8"))]
     for f in Path("knowledge/briefs/junia").glob("*.md"):
         own.append(dfs_focus(f))
+    own = brand_seeds() + own
     pool = list(dict.fromkeys(k for k in own if k))
     rest = sorted((r for r in bank.values() if r["keyword"] not in pool),
                   key=lambda r: (r.get("last_seen", ""), -(num(r.get("volume")) or 0)))
     pool += [r["keyword"] for r in rest]
     start = date.today().toordinal() // 7 * SEEDS_PER_RUN % max(len(pool), 1)  # rotate weekly
     return (pool[start:] + pool[:start])[:SEEDS_PER_RUN]
+
+
+def brand_seeds(limit=3):
+    """The affiliate radar's side of the loop (AUTOPILOT.md 5.2 step 2e): brands with a program we can earn from
+    (program-found / owner-to-apply / applied / approved / link-placed) seed review, pricing and alternatives keywords,
+    a few brands per week in rotation, so the harvest finds the content topics that pay."""
+    f = DATA / "affiliate-radar.csv"
+    if not f.exists():
+        return []
+    earn = {"program-found", "owner-to-apply", "applied", "approved", "link-placed"}
+    brands = list(dict.fromkeys(r["brand"].strip().lower() for r in csv.DictReader(f.open(encoding="utf-8"))
+                                if r.get("status") in earn and r.get("brand")))
+    if not brands:
+        return []
+    start = date.today().toordinal() // 7 * limit % len(brands)
+    pick = (brands[start:] + brands[:start])[:limit]
+    return [f"{b} {s}" for b in pick for s in ("review", "pricing", "alternatives")]
+
+
+QUESTION = re.compile(r"^(how|what|why|when|which|who|can|do|does|is|are|should|will)\b")
 
 
 def dfs_focus(path):
@@ -235,6 +256,7 @@ def report(bank, today, note=""):
                    key=lambda r: rank(r) - num(r["prev_our_rank"]))[:15]
     gaps = distinct(sorted([r for r in rows if r.get("best_competitor") and (num(r.get("competitor_rank")) or 99) <= 10
                             and not rank(r)], key=lambda r: -vol(r)), 15)
+    questions = sorted([r for r in rows if QUESTION.search(r["keyword"]) and vol(r) >= 20], key=lambda r: -vol(r))[:15]
     rising = sorted([r for r in rows if (num(r.get("trend_3m_pct")) or 0) >= 25 and vol(r) >= 30],
                     key=lambda r: -(num(r.get("trend_3m_pct")) or 0))[:10]
 
@@ -261,6 +283,8 @@ def report(bank, today, note=""):
     L += table("5. Competitor gaps (a competitor is top 10, we don't rank)", gaps,
                ["keyword", "best_competitor", "competitor_rank", "volume", "owner_page"])
     L += table("6. Rising searches (+25% or more over 3 months)", rising, ["keyword", "trend_3m_pct", "volume"])
+    L += table("6b. Questions people ask (FAQ answers on the owner page, or a TOFU topic when no page owns them)",
+               questions, ["keyword", "volume", "owner_page", "our_rank"])
     if cand:
         c = list(csv.DictReader(cand[-1].open(encoding="utf-8")))[:8]
         L += table(f"7. New competitor candidates ({cand[-1].name})", c, ["domain", "avg_position", "etv", "keywords"])

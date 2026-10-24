@@ -20,6 +20,12 @@
     "2026-10-22": {
       "drafts": 1,
       "publishes": 1
+    },
+    "2026-10-24": {
+      "images": 1,
+      "drafts": 2,
+      "publishes": 2,
+      "uploads": 4
     }
   },
   "months": {
@@ -179,6 +185,78 @@
       "target": "post 681",
       "detail": "https://toolpickguide.com/dubsado-alternatives/",
       "undo": "python publish_draft.py --post-id 681 --unpublish --apply"
+    },
+    {
+      "at": "2026-10-24T05:14:48+00:00",
+      "kind": "images",
+      "n": 1,
+      "target": "post 699",
+      "detail": "image fix",
+      "undo": "python media_fix.py --restore backups/media-699-20261024-051447.json"
+    },
+    {
+      "at": "2026-10-24T05:15:53+00:00",
+      "kind": "drafts",
+      "n": 1,
+      "target": "draft 697",
+      "detail": "graphic-design-contract-template",
+      "undo": "python junia_draft.py --restore backups/junia-697-20261024-051545.json"
+    },
+    {
+      "at": "2026-10-24T05:16:03+00:00",
+      "kind": "drafts",
+      "n": 1,
+      "target": "draft 699",
+      "detail": "paperbell-review",
+      "undo": "python junia_draft.py --restore backups/junia-699-20261024-051600.json"
+    },
+    {
+      "at": "2026-10-24T05:16:40+00:00",
+      "kind": "publishes",
+      "n": 1,
+      "target": "post 697",
+      "detail": "https://toolpickguide.com/graphic-design-contract-template/",
+      "undo": "python publish_draft.py --post-id 697 --unpublish --apply"
+    },
+    {
+      "at": "2026-10-24T05:16:51+00:00",
+      "kind": "publishes",
+      "n": 1,
+      "target": "post 699",
+      "detail": "https://toolpickguide.com/paperbell-review/",
+      "undo": "python publish_draft.py --post-id 699 --unpublish --apply"
+    },
+    {
+      "at": "2026-10-24T05:17:25+00:00",
+      "kind": "uploads",
+      "n": 1,
+      "target": "post 699",
+      "detail": "patch_live",
+      "undo": "python patch_live.py --restore backups/patch-699-20261024-051723.json"
+    },
+    {
+      "at": "2026-10-24T05:17:45+00:00",
+      "kind": "uploads",
+      "n": 1,
+      "target": "post 681",
+      "detail": "patch_live",
+      "undo": "python patch_live.py --restore backups/patch-681-20261024-051743.json"
+    },
+    {
+      "at": "2026-10-24T05:18:08+00:00",
+      "kind": "uploads",
+      "n": 1,
+      "target": "post 709",
+      "detail": "draft created",
+      "undo": ""
+    },
+    {
+      "at": "2026-10-24T05:20:48+00:00",
+      "kind": "uploads",
+      "n": 1,
+      "target": "post 603",
+      "detail": "patch_live",
+      "undo": "python patch_live.py --restore backups/patch-603-20261024-052047.json"
     }
   ],
   "strikes": []

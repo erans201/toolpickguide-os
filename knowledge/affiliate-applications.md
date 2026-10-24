@@ -178,6 +178,7 @@ Don't state visitor numbers you don't have. If a form requires a number, give th
 | **SignWell** | Says the Friends of SignWell invite was sent last week and re-sent 2026-10-19; it needs acceptance, then we can customize the referral link | **Invite accepted by the owner 2026-10-20.** Link `https://www.signwell.com/?via=eran-shalev` (verified 200); placed on /best-doc-signing-tools/ (post 78, roadmap IL-11a, sponsored + disclosure). SignWell is mentioned on no other live page yet |
 | **Close** | Q4 promo code **STACK20**: an extra 20% off the first year of an annual plan, on top of annual-billing savings (email 2026-10-19, via PartnerStack). End date not stated in the email. **Confirmed by Michael Taylor (Close) 2026-10-22: valid through 2026-12-31, all annual plans, new customers only** | Add one line next to the Close link on /best-crm-for-marketing-agencies/ (page-expansions.md row 2026-10-23); remove it on 2027-01-01 |
 | Simply.Coach | Onboarding email ("first 2 weeks") | none |
+| Close | 2026-10-23 bulk PartnerStack email: ready-made STACK20 holiday social graphics (Halloween, Thanksgiving, Christmas); repeats the 2026-12-31 end date (read by the cloud robot 2026-10-24) | none: no reply needed; we don't run social accounts |
 
 **Links collected 2026-10-09 (owner accepted the PartnerStack terms and logged in to Jotform; all three resolve to the vendor):**
 - Pipedrive: `https://aff.trypipedrive.com/699cagphgq7a` (PartnerStack → Pipedrive → Links)

@@ -233,6 +233,8 @@ python junia_draft.py --brief knowledge/briefs/junia/photography-contract-templa
 
 ---
 
+**Close STACK20 line, remove on 2027-01-01 (cloud robot's job):** on /best-crm-for-marketing-agencies/ (post 603) delete the list item 'Offer through December 31, 2026: code STACK20 ...' under Close's pricing with `python3 patch_live.py --post-id 603 --replace '<li>Offer through December 31, 2026: code STACK20 ...</li>' ''` (exact text from `--show STACK20`), or restore the pre-change backup only if nothing else changed since: backups/patch-603-20261024-052047.json. Added 2026-10-24.
+
 **Pixieset reapply (on/after 2026-10-31, agent's job):** the owner opened a free Pixieset account on 2026-10-10. Reapply to the Pixieset Affiliate Program as a Pixieset user, citing the live review /pixieset-studio-manager-review/; the weekly robot mentions it under 'Good to know' in the Nov 2 report.
 
 **Affiliate follow-ups (local session, agent's job):** once IL-10a..e are live (daily robot, `inject_links.py --upload`), check each page shows the link with rel="sponsored" AND the disclosure box (class `tpg-disclosure`); then email Capsule the live link https://toolpickguide.com/free-client-management-software/ to start commissions (affiliate replies are the agent's job, user 2026-10-09). **2026-10-10 (cloud robot): IL-10a..e live; all 5 pages show the link with rel="sponsored" and the `tpg-disclosure` box. Remaining: the Capsule email (local session).**

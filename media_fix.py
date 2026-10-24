@@ -225,7 +225,7 @@ def main():
         if result.get("status") != post["status"] or result.get("slug") != post["slug"]:
             sys.exit(f"SAFETY ERROR: status/slug changed. Restore: python media_fix.py --restore {backup}")
         print(f"✅ Post {a.post_id} updated (status {result['status']}, same URL)"
-              f"{f' · featured image → media {payload['featured_media']}' if 'featured_media' in payload else ''}")
+              f"{' · featured image → media ' + str(payload['featured_media']) if 'featured_media' in payload else ''}")
         print(f"   Undo: python media_fix.py --restore {backup}")
         guard.record("images", 1, target=f"post {a.post_id}", detail="image fix",
                      undo=f"python media_fix.py --restore {backup}")
